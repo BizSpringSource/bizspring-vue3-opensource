@@ -1,0 +1,83 @@
+@media screen and (max-width: 992px) {
+  .avue-sidebar {
+    position: fixed;
+    top: 0;
+    left: -265px;
+    z-index: 1024;
+  }
+
+  .avue-logo {
+    display: none;
+  }
+
+  .avue--collapse {
+    .avue-sidebar {
+      left: 0;
+      width: $sidebar_width !important;
+    }
+
+    .avue-main {
+      margin-left: $sidebar_width;
+    }
+  }
+
+  // ele的自适应
+  .el-dialog,
+  .el-message-box {
+    width: 98%;
+  }
+
+  //登录页面
+  .login-left {
+    display: none !important;
+    width: 100%;
+    min-height: auto;
+
+    .title {
+      margin-top: 20px;
+      font-size: 20px;
+      text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+    }
+
+    .img {
+      width: 50px;
+    }
+  }
+
+  .login-logo {
+    padding-top: 30px;
+    margin-left: -30px;
+  }
+
+  .login-border {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100% !important;
+  }
+
+  .login-main {
+    width: 100% !important;
+    background-color: #fff;
+    padding: 10px 20px !important;
+    box-shadow: none
+  }
+
+  .login-container {
+    &::before {
+      margin-left: 0
+    }
+  }
+
+  .top-bar__item {
+    display: none;
+  }
+
+  .top-bar__img {
+    display: none;
+  }
+
+  .current-user {
+    display: none;
+  }
+}
