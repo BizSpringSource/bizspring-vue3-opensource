@@ -17,9 +17,8 @@
 [https://gitee.com/BizSpring/bizspring-vue3-opensource.git](https://gitee.com/BizSpring/bizspring-vue3-opensource.git)
 <a name="rhsI8"></a>
 ## 核心技术
-<code>
 核心框架:spring boot2、spring cloud、spring cloud alibaba<br />注册中心:nacos<br />负载均衡:Spring Cloud Load balancer<br />服务调用:open feign<br />服务容错:Alibaba sentinel<br />api网关：spring cloud gateway<br />分布式事务:seata<br />持久层框架：MyBatis-plus<br />高性能缓存：redis redisson<br />文件管理：Alibaba oss<br />SMS短信: Alibaba SMS<br />安全：oauth2+jwt<br />数据库：mysql8+<br />API管理：swagger<br />搜索引擎：elasticsearch<br />JDK版本：Java8+<br />PC端前段框架：vue3+elementPlus<br />移动端框架：Uniapp(移动全端)
-</code>
+
 <a name="c27eff71"></a>
 # BizSpring电商平台概述
 
