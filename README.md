@@ -17,9 +17,9 @@
 [https://gitee.com/BizSpring/bizspring-vue3-opensource.git](https://gitee.com/BizSpring/bizspring-vue3-opensource.git)
 <a name="rhsI8"></a>
 ## 核心技术
-:::info
+<code>
 核心框架:spring boot2、spring cloud、spring cloud alibaba<br />注册中心:nacos<br />负载均衡:Spring Cloud Load balancer<br />服务调用:open feign<br />服务容错:Alibaba sentinel<br />api网关：spring cloud gateway<br />分布式事务:seata<br />持久层框架：MyBatis-plus<br />高性能缓存：redis redisson<br />文件管理：Alibaba oss<br />SMS短信: Alibaba SMS<br />安全：oauth2+jwt<br />数据库：mysql8+<br />API管理：swagger<br />搜索引擎：elasticsearch<br />JDK版本：Java8+<br />PC端前段框架：vue3+elementPlus<br />移动端框架：Uniapp(移动全端)
-:::
+</code>
 <a name="c27eff71"></a>
 # BizSpring电商平台概述
 
@@ -122,8 +122,7 @@ BizSpring电商平台实现移动全渠道消费者覆盖，手机触屏商城�
 # 实施及售后
 <a name="d2271ab4"></a>
 ### 安装前准备
-我方提供电商平台的部署实施工作，客户需要准备的硬件环境，软件环境，网络环境，见[部署准备](/operation/overview/%E9%83%A8%E7%BD%B2%E5%87%86%E5%A4%87(deploy-prepare).html)。
-<a name="c3a1e9f9"></a>
+我方提供电商平台的部署实施工作，客户需要准备的硬件环境，软件环境，网络环境，见部署准备文档
 ### 售后内容
 **技术支持**
 
