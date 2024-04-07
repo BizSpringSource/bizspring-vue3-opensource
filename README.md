@@ -86,13 +86,20 @@ BizSpring电商平台实现移动全渠道消费者覆盖，手机触屏商城�
 
 # 试用体验
 
+| 端 | 二维码 | URL | | |
+|--|--|--|--|--|
+|  | ![](https://upload-images.jianshu.io/upload_images/28926578-a28bc778b0299bee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) | [https://cross-border.bizspring.cn/shop/#](https://cross-border.bizspring.cn/shop/#) | ![](https://upload-images.jianshu.io/upload_images/28926578-a28bc778b0299bee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) | [https://cross-border.bizspring.cn/shop/#](https://cross-border.bizspring.cn/shop/#) |
+|  | ![](https://upload-images.jianshu.io/upload_images/28926578-a28bc778b0299bee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) |  | ![](https://upload-images.jianshu.io/upload_images/28926578-a28bc778b0299bee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) | [https://cross-border.bizspring.cn/shop/#](https://cross-border.bizspring.cn/shop/#) |
+
 **商城**
 [https://cross-border.bizspring.cn/shop/#](https://cross-border.bizspring.cn/shop/#)
+
 **商城APP-Android**
 [https://cross-border.bizspring.cn/shop.apk](https://cross-border.bizspring.cn/shop.apk)
 
 **商家**
 [https://cross-border.bizspring.cn/business/#](https://cross-border.bizspring.cn/business/#)
+
 **商城APP-Android**
 [https://cross-border.bizspring.cn/business.apk](https://cross-border.bizspring.cn/business.apk)
 
