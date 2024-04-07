@@ -86,26 +86,11 @@ BizSpring电商平台实现移动全渠道消费者覆盖，手机触屏商城�
 
 # 试用体验
 
-| 系统 | H5二维码 | APP下载 | H5 |
+| 系统 | H5二维码 | APP下载 | H5 URL |
 |--|--|--|--|
 | 商城 | ![](https://raw.githubusercontent.com/BizSpringSource/bizspring-vue3-opensource/master/public/img/shop-h5.png) | ![](https://raw.githubusercontent.com/BizSpringSource/bizspring-vue3-opensource/master/public/img/shop-apk.png) | https://cross-border.bizspring.cn/shop/# |
 | 商家 | ![](https://raw.githubusercontent.com/BizSpringSource/bizspring-vue3-opensource/master/public/img/business-h5.png) | ![](https://raw.githubusercontent.com/BizSpringSource/bizspring-vue3-opensource/master/public/img/business-apk.png) | https://cross-border.bizspring.cn/business/# |
 | 管理 | https://cross-border.bizspring.cn/shop/# |  |  https://cross-border.bizspring.cn/shop/# |
-
-**商城**
-[https://cross-border.bizspring.cn/shop/#](https://cross-border.bizspring.cn/shop/#)
-
-**商城APP-Android**
-[https://cross-border.bizspring.cn/shop.apk](https://cross-border.bizspring.cn/shop.apk)
-
-**商家**
-[https://cross-border.bizspring.cn/business/#](https://cross-border.bizspring.cn/business/#)
-
-**商城APP-Android**
-[https://cross-border.bizspring.cn/business.apk](https://cross-border.bizspring.cn/business.apk)
-
-**管理**
-[https://cross-border.bizspring.cn](https://cross-border.bizspring.cn)
 
 # 实施及售后
 ### 安装前准备
