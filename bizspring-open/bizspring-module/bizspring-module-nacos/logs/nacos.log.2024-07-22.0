@@ -1,0 +1,12 @@
+2024-07-22 08:05:47,833 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b5eaef5 (The last packet successfully received from the server was 30,003,618 milliseconds ago.  The last packet sent successfully to the server was 30,003,618 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2024-07-22 08:05:48,003 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5941c503 (The last packet successfully received from the server was 30,003,780 milliseconds ago.  The last packet sent successfully to the server was 30,003,780 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2024-07-22 08:05:56,824 WARN clearConfigHistory start
+
+2024-07-22 08:06:17,049 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h20m32s611ms299µs).
+
+2024-07-22 08:08:11,821 INFO [capacityManagement] start correct usage
+
+2024-07-22 08:08:11,823 INFO [capacityManagement] end correct usage, cost: 0s
+

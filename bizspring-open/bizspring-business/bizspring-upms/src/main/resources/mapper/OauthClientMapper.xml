@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.OauthClientMapper">
+
+	<resultMap id="oauthClientMap" type="cn.bizspring.cloud.upms.common.entity.OauthClient">
+		<id property="id" column="id"/>
+		<result property="resourceIds" column="resource_ids"/>
+		<result property="clientSecret" column="client_secret"/>
+		<result property="scope" column="scope"/>
+		<result property="authorizedGrantTypes" column="authorized_grant_types"/>
+		<result property="webServerRedirectUri" column="web_server_redirect_uri"/>
+		<result property="authorities" column="authorities"/>
+		<result property="accessTokenValidity" column="access_token_validity"/>
+		<result property="refreshTokenValidity" column="refresh_token_validity"/>
+		<result property="additionalInformation" column="additional_information"/>
+		<result property="autoapprove" column="autoapprove"/>
+	</resultMap>
+</mapper>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.OrderItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.OrderItem">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="is_delivery" property="isDelivery" />
+        <result column="name" property="name" />
+        <result column="price" property="price" />
+        <result column="quantity" property="quantity" />
+        <result column="shipped_quantity" property="shippedQuantity" />
+        <result column="sn" property="sn" />
+        <result column="specifications" property="specifications" jdbcType="LONGVARCHAR"
+				javaType="java.util.ArrayList" typeHandler="cn.bizspring.cloud.common.core.handlers.SpecificationConverter" />
+        <result column="thumbnail" property="thumbnail" />
+        <result column="weight" property="weight" />
+		<result column="order_id" property="orderId" />
+		<result column="sku_id"  property="skuId"   />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, is_delivery, name, price, quantity, shipped_quantity, sn, specifications, thumbnail, weight, order_id, sku_id, 'order_item_id'
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_item`
+		WHERE
+			`id` = #{id}
+	</select>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAllByEntity" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_item` order_item
+		<where>
+			<if test="null != entity ">
+				<if test=" null != entity.orderId ">
+					AND order_item.order_id = #{entity.orderId}
+				</if>
+			</if>
+		</where>
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_item`
+		WHERE
+			${propertyName} = #{propertyValue}
+		ORDER BY
+			`created_time` ASC
+	</select>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.order.common.entity.OrderItem">
+		INSERT INTO biz_order_item(
+		id ,
+		created_time ,
+		version ,
+		is_delivery ,
+		`name` ,
+		price ,
+		quantity ,
+		shipped_quantity ,
+		sn ,
+		specifications ,
+		thumbnail ,
+		weight ,
+		order_id ,
+		sku_id
+		) VALUES
+			(
+			#{entity.id},
+			#{entity.createdTime},
+			#{entity.version},
+			#{entity.isDelivery},
+			#{entity.name},
+			#{entity.price},
+			#{entity.quantity},
+			#{entity.shippedQuantity},
+			#{entity.sn},
+			#{entity.specifications, typeHandler=cn.bizspring.cloud.common.core.handlers.SpecificationConverter},
+			#{entity.thumbnail},
+			#{entity.weight},
+			#{entity.orderId},
+			#{entity.skuId}
+			)
+	</insert>
+
+	<!-- 保存 -->
+	<insert id="saveBatch" parameterType="cn.bizspring.cloud.order.common.entity.OrderItem">
+   		INSERT INTO biz_order_item(
+			id ,
+			created_time ,
+			version ,
+			is_delivery ,
+			`name` ,
+			price ,
+			quantity ,
+			shipped_quantity ,
+			sn ,
+			specifications ,
+			thumbnail ,
+			weight ,
+			order_id ,
+			sku_id
+		) VALUES 
+		<foreach collection="entitys" item="entity" index="index" separator=",">
+			(
+				#{entity.id}, 
+				#{entity.createdTime},
+				#{entity.version}, 
+				#{entity.isDelivery},
+				#{entity.name},
+				#{entity.price},
+				#{entity.quantity}, 
+				#{entity.shippedQuantity},
+				#{entity.sn},
+				#{entity.specifications, typeHandler=cn.bizspring.cloud.common.core.handlers.SpecificationConverter},
+				#{entity.thumbnail}, 
+				#{entity.weight},
+				#{entity.orderId},
+				#{entity.skuId}
+			)
+		</foreach>
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.order.common.entity.OrderItem">
+    	UPDATE biz_order_item
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			is_delivery = #{entity.isDelivery},
+			`name` = #{entity.name},
+			price = #{entity.price},
+			quantity = #{entity.quantity},
+			shipped_quantity = #{entity.shippedQuantity},
+			sn = #{entity.sn},
+			specifications = #{entity.specifications, typeHandler=cn.bizspring.cloud.common.core.handlers.SpecificationConverter},
+			thumbnail = #{entity.thumbnail},
+			weight = #{entity.weight}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version}
+  	</update>
+  
+</mapper>

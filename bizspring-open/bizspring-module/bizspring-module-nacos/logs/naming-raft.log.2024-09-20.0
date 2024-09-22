@@ -1,0 +1,54 @@
+2024-09-20 12:20:25,310 INFO raft peers changed: [Member{ip='192.168.3.2', port=8878, state=UP, extendInfo={raftPort=7878}}]
+
+2024-09-20 12:20:25,329 INFO initializing Raft sub-system
+
+2024-09-20 12:20:25,329 INFO finish loading all datums, size: 0 cost 0 ms.
+
+2024-09-20 12:20:25,332 INFO cache loaded, datum count: 0, current term: 0
+
+2024-09-20 12:20:25,332 INFO finish to load data from disk, cost: 3 ms.
+
+2024-09-20 12:20:25,335 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2024-09-20 12:20:25,755 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2024-09-20 12:20:25,767 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2024-09-20 12:20:30,300 WARN start to close old raft protocol!!!
+
+2024-09-20 12:20:30,300 WARN stop old raft protocol task for notifier
+
+2024-09-20 12:20:30,300 WARN stop old raft protocol task for master task
+
+2024-09-20 12:20:30,300 WARN stop old raft protocol task for heartbeat task
+
+2024-09-20 12:20:30,300 WARN clean old cache datum for old raft
+
+2024-09-20 12:20:30,300 WARN start to close old raft protocol!!!
+
+2024-09-20 12:20:30,300 WARN stop old raft protocol task for notifier
+
+2024-09-20 12:20:30,300 WARN stop old raft protocol task for master task
+
+2024-09-20 12:20:30,300 WARN stop old raft protocol task for heartbeat task
+
+2024-09-20 12:20:30,300 WARN clean old cache datum for old raft
+
+2024-09-20 12:20:30,300 WARN start to move old raft protocol metadata
+
+2024-09-20 12:20:30,303 WARN start to move old raft protocol metadata
+
+2024-09-20 12:20:30,303 INFO raft peers changed: [Member{ip='192.168.3.2', port=8878, state=UP, extendInfo={lastRefreshTime=1726806030303, raftPort=7878, version=1.4.1}}]
+
+2024-09-20 12:22:13,806 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-20 12:22:18,103 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-20 12:22:37,109 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-20 12:22:40,280 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-goods
+
+2024-09-20 12:22:45,417 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-20 12:22:48,001 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-store
+

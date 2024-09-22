@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.AddressMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.upms.common.entity.Address">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="address" property="address" />
+        <result column="region_name" property="regionName" />
+        <result column="consignee" property="consignee" />
+        <result column="is_default" property="isDefault" />
+        <result column="phone" property="phone" />
+        <result column="zip_code" property="zipCode" />
+        <result property="regionId"   column="region_id"  />
+        <result property="memberId"  column="member_id" />
+    </resultMap>
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id,
+        version,
+        created_time, updated_time, address, region_name, consignee, is_default, phone, zip_code, region_id, member_id
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_address`
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_address`
+		WHERE
+		${propertyName} = #{propertyValue}
+		ORDER BY
+		is_default DESC ,
+		created_time DESC
+	</select>
+
+	<!-- 查找默认收货地址 -->
+	<select id="findDefault" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_address`
+		WHERE
+		member_id = #{member.id}
+		AND is_default = TRUE
+	</select>
+
+	<!-- 查找收货地址 -->
+	<select id="findList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_address`
+		<where>
+			<if test="member != null">
+				AND member_id = #{member.id}
+			</if>
+		</where>
+	</select>
+
+	<!-- 查找收货地址分页 -->
+	<select id="findPage" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_address`
+		<where>
+			<if test="member != null">
+				AND member_id = #{member.id}
+			</if>
+			${queryWrapper.sqlSegment}
+		</where>
+	</select>
+
+	<!-- 清除默认 -->
+	<update id="clearDefault">
+		UPDATE biz_address SET is_default = FALSE WHERE member_id = #{memberId} AND is_default = TRUE
+	</update>
+
+	<!-- 清除默认 -->
+	<update id="clearDefaultExclude">
+		UPDATE biz_address SET is_default = FALSE WHERE member_id = #{memberId} AND is_default = TRUE AND id != #{excludeId}
+	</update>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.upms.common.entity.Address">
+		INSERT INTO biz_address(
+			id ,
+			created_time ,
+			version ,
+			address ,
+			region_name ,
+			consignee ,
+			is_default ,
+			phone ,
+			zip_code ,
+			region_id ,
+			member_id
+		) VALUES (
+					 #{entity.id},
+					 #{entity.createdTime},
+					 #{entity.version},
+					 #{entity.address},
+					 #{entity.regionName},
+					 #{entity.consignee},
+					 #{entity.isDefault},
+					 #{entity.phone},
+					 #{entity.zipCode},
+					 #{entity.regionId},
+					 #{entity.memberId}
+				 )
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.upms.common.entity.Address">
+		UPDATE biz_address
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			address = #{entity.address},
+			region_name = #{entity.regionName},
+			consignee = #{entity.consignee},
+			is_default = #{entity.isDefault},
+			phone = #{entity.phone},
+			zip_code = #{entity.zipCode},
+			region_id = #{entity.regionId}
+		WHERE
+			id = #{entity.id}
+		  AND version = #{entity.version}
+	</update>
+  
+</mapper>

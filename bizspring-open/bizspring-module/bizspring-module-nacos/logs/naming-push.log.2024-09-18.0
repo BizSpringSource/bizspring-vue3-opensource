@@ -1,0 +1,904 @@
+2024-09-18 14:37:03,079 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-18 14:37:03,101 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,13912929581000
+
+2024-09-18 14:37:03,101 INFO send udp packet: 192.168.3.2,49667,13912929581000
+
+2024-09-18 14:37:03,129 INFO received ack: {"type": "push-ack", "lastRefTime":"13912929581000", "data":""} from: 192.168.3.2:49667, cost: 28 ms, unacked: 0, total push: 1
+
+2024-09-18 14:37:07,614 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-18 14:37:07,626 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,13917467120100
+
+2024-09-18 14:37:07,626 INFO send udp packet: 192.168.3.2,49668,13917467120100
+
+2024-09-18 14:37:07,646 INFO received ack: {"type": "push-ack", "lastRefTime":"13917467120100", "data":""} from: 192.168.3.2:49668, cost: 20 ms, unacked: 0, total push: 2
+
+2024-09-18 14:37:26,773 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-18 14:37:26,773 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,13936614523800
+
+2024-09-18 14:37:26,773 INFO send udp packet: 192.168.3.2,57981,13936614523800
+
+2024-09-18 14:37:26,810 INFO received ack: {"type": "push-ack", "lastRefTime":"13936614523800", "data":""} from: 192.168.3.2:57981, cost: 37 ms, unacked: 0, total push: 3
+
+2024-09-18 14:37:27,813 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-18 14:37:27,814 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,13937655190000
+
+2024-09-18 14:37:27,814 INFO send udp packet: 192.168.3.2,53233,13937655190000
+
+2024-09-18 14:37:27,842 INFO received ack: {"type": "push-ack", "lastRefTime":"13937655190000", "data":""} from: 192.168.3.2:53233, cost: 28 ms, unacked: 0, total push: 4
+
+2024-09-18 14:37:30,325 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-18 14:37:30,325 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,13940166789800
+
+2024-09-18 14:37:30,325 INFO send udp packet: 192.168.3.2,53234,13940166789800
+
+2024-09-18 14:37:30,376 INFO received ack: {"type": "push-ack", "lastRefTime":"13940166789800", "data":""} from: 192.168.3.2:53234, cost: 51 ms, unacked: 0, total push: 5
+
+2024-09-18 14:37:31,215 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-18 14:37:31,215 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,13941056562700
+
+2024-09-18 14:37:31,215 INFO send udp packet: 192.168.3.2,53235,13941056562700
+
+2024-09-18 14:37:31,247 INFO received ack: {"type": "push-ack", "lastRefTime":"13941056562700", "data":""} from: 192.168.3.2:53235, cost: 32 ms, unacked: 0, total push: 6
+
+2024-09-18 15:54:25,700 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-18 15:54:25,702 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,18564140004600
+
+2024-09-18 15:54:25,703 INFO send udp packet: 192.168.3.2,53233,18564140004600
+
+2024-09-18 15:54:25,707 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"hosts":[{"ip":"192.168.3.2","port":5879,"valid":true,"healthy":true,"marked":false,"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"enabled":true,"weight":1.0,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","ephemeral":true}],"dom":"DEFAULT_GROUP@@bizspring-goods","name":"DEFAULT_GROUP@@bizspring-goods","cacheMillis":10000,"lastRefTime":1726646065701,"checksum":"9865421c66bbf45d2485878c5ffb969e","useSpecifiedURL":false,"clusters":"DEFAULT","env":"","metadata":{}}, lastRefTime=18564140004600} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,708 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18564140004600
+
+2024-09-18 15:54:25,708 INFO send udp packet: 192.168.3.2,49667,18564140004600
+
+2024-09-18 15:54:25,709 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"hosts":[{"ip":"192.168.3.2","port":5879,"valid":true,"healthy":true,"marked":false,"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"enabled":true,"weight":1.0,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","ephemeral":true}],"dom":"DEFAULT_GROUP@@bizspring-goods","name":"DEFAULT_GROUP@@bizspring-goods","cacheMillis":10000,"lastRefTime":1726646065708,"checksum":"9865421c66bbf45d2485878c5ffb969e","useSpecifiedURL":false,"clusters":"","env":"","metadata":{}}, lastRefTime=18564140004600} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,709 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-18 15:54:25,709 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18564147293000
+
+2024-09-18 15:54:25,710 INFO send udp packet: 192.168.3.2,53235,18564147293000
+
+2024-09-18 15:54:25,710 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-order","name":"DEFAULT_GROUP@@bizspring-order","cacheMillis":10000,"lastRefTime":1726646065709,"checksum":"8a3136b7f536aee793f61ce3e0f41d07","useSpecifiedURL":false,"clusters":"DEFAULT","env":"","hosts":[],"metadata":{}}, lastRefTime=18564147293000} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,710 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18564147293000
+
+2024-09-18 15:54:25,710 INFO send udp packet: 192.168.3.2,49667,18564147293000
+
+2024-09-18 15:54:25,710 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-order","name":"DEFAULT_GROUP@@bizspring-order","cacheMillis":10000,"lastRefTime":1726646065710,"checksum":"8a3136b7f536aee793f61ce3e0f41d07","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564147293000} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,710 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-18 15:54:25,710 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18564148200200
+
+2024-09-18 15:54:25,710 INFO send udp packet: 192.168.3.2,49667,18564148200200
+
+2024-09-18 15:54:25,710 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-upms","name":"DEFAULT_GROUP@@bizspring-upms","cacheMillis":10000,"lastRefTime":1726646065710,"checksum":"8f95ccdc53d18a95e07090b4ae1d64a6","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564148200200} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,710 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,18564148200200
+
+2024-09-18 15:54:25,710 INFO send udp packet: 192.168.3.2,57981,18564148200200
+
+2024-09-18 15:54:25,710 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-upms","name":"DEFAULT_GROUP@@bizspring-upms","cacheMillis":10000,"lastRefTime":1726646065710,"checksum":"8f95ccdc53d18a95e07090b4ae1d64a6","useSpecifiedURL":false,"clusters":"DEFAULT","env":"","hosts":[],"metadata":{}}, lastRefTime=18564148200200} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,711 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18564148200200
+
+2024-09-18 15:54:25,711 INFO send udp packet: 192.168.3.2,53235,18564148200200
+
+2024-09-18 15:54:25,711 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-upms","name":"DEFAULT_GROUP@@bizspring-upms","cacheMillis":10000,"lastRefTime":1726646065710,"checksum":"8f95ccdc53d18a95e07090b4ae1d64a6","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564148200200} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,711 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-18 15:54:25,711 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18564149038500
+
+2024-09-18 15:54:25,711 INFO send udp packet: 192.168.3.2,49667,18564149038500
+
+2024-09-18 15:54:25,711 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-module-gateway","name":"DEFAULT_GROUP@@bizspring-module-gateway","cacheMillis":10000,"lastRefTime":1726646065711,"checksum":"48d36a1ed6ac34ee37b8d656fea8b68c","useSpecifiedURL":false,"clusters":"DEFAULT","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149038500} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,711 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-18 15:54:25,711 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18564149287700
+
+2024-09-18 15:54:25,711 INFO send udp packet: 192.168.3.2,53235,18564149287700
+
+2024-09-18 15:54:25,711 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-store","name":"DEFAULT_GROUP@@bizspring-store","cacheMillis":10000,"lastRefTime":1726646065711,"checksum":"27f3a58624fcb374ad42de945ad60984","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149287700} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,711 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18564149287700
+
+2024-09-18 15:54:25,711 INFO send udp packet: 192.168.3.2,49667,18564149287700
+
+2024-09-18 15:54:25,711 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-store","name":"DEFAULT_GROUP@@bizspring-store","cacheMillis":10000,"lastRefTime":1726646065711,"checksum":"27f3a58624fcb374ad42de945ad60984","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149287700} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,712 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,18564149287700
+
+2024-09-18 15:54:25,712 INFO send udp packet: 192.168.3.2,53233,18564149287700
+
+2024-09-18 15:54:25,712 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-store","name":"DEFAULT_GROUP@@bizspring-store","cacheMillis":10000,"lastRefTime":1726646065712,"checksum":"27f3a58624fcb374ad42de945ad60984","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149287700} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,712 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-18 15:54:25,712 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18564149855300
+
+2024-09-18 15:54:25,712 INFO send udp packet: 192.168.3.2,49667,18564149855300
+
+2024-09-18 15:54:25,712 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-auth","name":"DEFAULT_GROUP@@bizspring-auth","cacheMillis":10000,"lastRefTime":1726646065712,"checksum":"10790daca8aed68976e21c296dffb44e","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149855300} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,712 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,18564149855300
+
+2024-09-18 15:54:25,712 INFO send udp packet: 192.168.3.2,57981,18564149855300
+
+2024-09-18 15:54:25,712 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-auth","name":"DEFAULT_GROUP@@bizspring-auth","cacheMillis":10000,"lastRefTime":1726646065712,"checksum":"10790daca8aed68976e21c296dffb44e","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149855300} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,712 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18564149855300
+
+2024-09-18 15:54:25,712 INFO send udp packet: 192.168.3.2,53235,18564149855300
+
+2024-09-18 15:54:25,712 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-auth","name":"DEFAULT_GROUP@@bizspring-auth","cacheMillis":10000,"lastRefTime":1726646065712,"checksum":"10790daca8aed68976e21c296dffb44e","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149855300} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:25,712 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,18564149855300
+
+2024-09-18 15:54:25,713 INFO send udp packet: 192.168.3.2,53233,18564149855300
+
+2024-09-18 15:54:25,713 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"dom":"DEFAULT_GROUP@@bizspring-auth","name":"DEFAULT_GROUP@@bizspring-auth","cacheMillis":10000,"lastRefTime":1726646065712,"checksum":"10790daca8aed68976e21c296dffb44e","useSpecifiedURL":false,"clusters":"","env":"","hosts":[],"metadata":{}}, lastRefTime=18564149855300} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:27,969 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-18 15:54:27,969 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18566407398900
+
+2024-09-18 15:54:27,969 INFO send udp packet: 192.168.3.2,53235,18566407398900
+
+2024-09-18 15:54:27,970 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"hosts":[{"ip":"192.168.3.2","port":5579,"valid":true,"healthy":true,"marked":false,"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"enabled":true,"weight":1.0,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","ephemeral":true}],"dom":"DEFAULT_GROUP@@bizspring-store","name":"DEFAULT_GROUP@@bizspring-store","cacheMillis":10000,"lastRefTime":1726646067969,"checksum":"35914a59b64b33845fa78a3318e85927","useSpecifiedURL":false,"clusters":"","env":"","metadata":{}}, lastRefTime=18566407398900} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:27,970 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18566407398900
+
+2024-09-18 15:54:27,971 INFO send udp packet: 192.168.3.2,49667,18566407398900
+
+2024-09-18 15:54:27,971 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"hosts":[{"ip":"192.168.3.2","port":5579,"valid":true,"healthy":true,"marked":false,"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"enabled":true,"weight":1.0,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","ephemeral":true}],"dom":"DEFAULT_GROUP@@bizspring-store","name":"DEFAULT_GROUP@@bizspring-store","cacheMillis":10000,"lastRefTime":1726646067970,"checksum":"35914a59b64b33845fa78a3318e85927","useSpecifiedURL":false,"clusters":"","env":"","metadata":{}}, lastRefTime=18566407398900} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:27,971 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,18566407398900
+
+2024-09-18 15:54:27,971 INFO send udp packet: 192.168.3.2,53233,18566407398900
+
+2024-09-18 15:54:27,971 ERROR [NACOS-PUSH] failed to push data: {type=dom, data={"hosts":[{"ip":"192.168.3.2","port":5579,"valid":true,"healthy":true,"marked":false,"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"enabled":true,"weight":1.0,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","ephemeral":true}],"dom":"DEFAULT_GROUP@@bizspring-store","name":"DEFAULT_GROUP@@bizspring-store","cacheMillis":10000,"lastRefTime":1726646067971,"checksum":"35914a59b64b33845fa78a3318e85927","useSpecifiedURL":false,"clusters":"","env":"","metadata":{}}, lastRefTime=18566407398900} to client: 192.168.3.2, error: {}
+
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.net.DualStackPlainDatagramSocketImpl.socketSend(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.send(DualStackPlainDatagramSocketImpl.java:136)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at com.alibaba.nacos.naming.push.PushService.udpPush(PushService.java:615)
+	at com.alibaba.nacos.naming.push.PushService.lambda$onApplicationEvent$1(PushService.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-18 15:54:29,067 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-18 15:54:29,068 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18567505684900
+
+2024-09-18 15:54:29,069 INFO send udp packet: 192.168.3.2,53235,18567505684900
+
+2024-09-18 15:54:29,069 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18567505684900
+
+2024-09-18 15:54:29,069 INFO send udp packet: 192.168.3.2,49667,18567505684900
+
+2024-09-18 15:54:29,070 INFO received ack: {"type": "push-ack", "lastRefTime":"18567505684900", "data":""} from: 192.168.3.2:53235, cost: 1 ms, unacked: 1, total push: 26
+
+2024-09-18 15:54:29,070 INFO received ack: {"type": "push-ack", "lastRefTime":"18567505684900", "data":""} from: 192.168.3.2:49667, cost: 1 ms, unacked: 0, total push: 26
+
+2024-09-18 15:54:29,294 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-18 15:54:29,294 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18567731690200
+
+2024-09-18 15:54:29,294 INFO send udp packet: 192.168.3.2,49667,18567731690200
+
+2024-09-18 15:54:29,294 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,18567731690200
+
+2024-09-18 15:54:29,294 INFO send udp packet: 192.168.3.2,57981,18567731690200
+
+2024-09-18 15:54:29,295 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,18567731690200
+
+2024-09-18 15:54:29,295 INFO received ack: {"type": "push-ack", "lastRefTime":"18567731690200", "data":""} from: 192.168.3.2:49667, cost: 1 ms, unacked: 1, total push: 28
+
+2024-09-18 15:54:29,295 INFO send udp packet: 192.168.3.2,49668,18567731690200
+
+2024-09-18 15:54:29,295 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18567731690200
+
+2024-09-18 15:54:29,295 INFO send udp packet: 192.168.3.2,53235,18567731690200
+
+2024-09-18 15:54:29,295 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,18567731690200
+
+2024-09-18 15:54:29,295 INFO send udp packet: 192.168.3.2,53234,18567731690200
+
+2024-09-18 15:54:29,296 INFO received ack: {"type": "push-ack", "lastRefTime":"18567731690200", "data":""} from: 192.168.3.2:57981, cost: 2 ms, unacked: 3, total push: 31
+
+2024-09-18 15:54:29,296 INFO received ack: {"type": "push-ack", "lastRefTime":"18567731690200", "data":""} from: 192.168.3.2:53235, cost: 1 ms, unacked: 2, total push: 31
+
+2024-09-18 15:54:29,298 INFO received ack: {"type": "push-ack", "lastRefTime":"18567731690200", "data":""} from: 192.168.3.2:49668, cost: 2 ms, unacked: 1, total push: 31
+
+2024-09-18 15:54:29,298 INFO received ack: {"type": "push-ack", "lastRefTime":"18567731690200", "data":""} from: 192.168.3.2:53234, cost: 3 ms, unacked: 0, total push: 31
+
+2024-09-18 15:54:30,199 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-18 15:54:30,199 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18568637542900
+
+2024-09-18 15:54:30,199 INFO send udp packet: 192.168.3.2,49667,18568637542900
+
+2024-09-18 15:54:30,199 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,18568637542900
+
+2024-09-18 15:54:30,199 INFO send udp packet: 192.168.3.2,57981,18568637542900
+
+2024-09-18 15:54:30,199 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,18568637542900
+
+2024-09-18 15:54:30,199 INFO send udp packet: 192.168.3.2,49668,18568637542900
+
+2024-09-18 15:54:30,200 INFO received ack: {"type": "push-ack", "lastRefTime":"18568637542900", "data":""} from: 192.168.3.2:49667, cost: 1 ms, unacked: 2, total push: 34
+
+2024-09-18 15:54:30,200 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,18568637542900
+
+2024-09-18 15:54:30,200 INFO send udp packet: 192.168.3.2,53235,18568637542900
+
+2024-09-18 15:54:30,200 INFO received ack: {"type": "push-ack", "lastRefTime":"18568637542900", "data":""} from: 192.168.3.2:57981, cost: 1 ms, unacked: 2, total push: 35
+
+2024-09-18 15:54:30,200 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,18568637542900
+
+2024-09-18 15:54:30,200 INFO send udp packet: 192.168.3.2,53233,18568637542900
+
+2024-09-18 15:54:30,200 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,18568637542900
+
+2024-09-18 15:54:30,200 INFO send udp packet: 192.168.3.2,53234,18568637542900
+
+2024-09-18 15:54:30,201 INFO received ack: {"type": "push-ack", "lastRefTime":"18568637542900", "data":""} from: 192.168.3.2:53235, cost: 1 ms, unacked: 3, total push: 37
+
+2024-09-18 15:54:30,201 INFO received ack: {"type": "push-ack", "lastRefTime":"18568637542900", "data":""} from: 192.168.3.2:53233, cost: 1 ms, unacked: 2, total push: 37
+
+2024-09-18 15:54:30,201 INFO received ack: {"type": "push-ack", "lastRefTime":"18568637542900", "data":""} from: 192.168.3.2:53234, cost: 1 ms, unacked: 1, total push: 37
+
+2024-09-18 15:54:30,201 INFO received ack: {"type": "push-ack", "lastRefTime":"18568637542900", "data":""} from: 192.168.3.2:49668, cost: 2 ms, unacked: 0, total push: 37
+
+2024-09-18 15:54:30,368 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-18 15:54:30,369 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,18568806696700
+
+2024-09-18 15:54:30,370 INFO send udp packet: 192.168.3.2,49667,18568806696700
+
+2024-09-18 15:54:30,371 INFO received ack: {"type": "push-ack", "lastRefTime":"18568806696700", "data":""} from: 192.168.3.2:49667, cost: 1 ms, unacked: 0, total push: 38
+
+2024-09-18 20:09:48,564 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-18 20:09:48,567 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-18 20:09:48,583 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-18 20:09:48,583 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-18 20:09:48,584 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-18 20:09:49,032 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-18 20:09:49,034 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,33895968320200
+
+2024-09-18 20:09:49,034 INFO send udp packet: 192.168.3.2,49668,33895968320200
+
+2024-09-18 20:09:49,034 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,33895968320200
+
+2024-09-18 20:09:49,034 INFO send udp packet: 192.168.3.2,53234,33895968320200
+
+2024-09-18 20:09:49,040 INFO received ack: {"type": "push-ack", "lastRefTime":"33895968320200", "data":""} from: 192.168.3.2:49668, cost: 6 ms, unacked: 1, total push: 40
+
+2024-09-18 20:09:49,040 INFO received ack: {"type": "push-ack", "lastRefTime":"33895968320200", "data":""} from: 192.168.3.2:53234, cost: 6 ms, unacked: 0, total push: 40
+
+2024-09-18 20:09:49,616 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-18 20:09:49,616 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-18 20:09:49,616 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,33896552346300
+
+2024-09-18 20:09:49,616 INFO send udp packet: 192.168.3.2,53234,33896552346300
+
+2024-09-18 20:09:49,616 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-18 20:09:49,616 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-18 20:09:49,616 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,33896552570100
+
+2024-09-18 20:09:49,616 INFO send udp packet: 192.168.3.2,49668,33896552570100
+
+2024-09-18 20:09:49,616 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,33896552570100
+
+2024-09-18 20:09:49,616 INFO send udp packet: 192.168.3.2,53234,33896552570100
+
+2024-09-18 20:09:49,617 INFO received ack: {"type": "push-ack", "lastRefTime":"33896552346300", "data":""} from: 192.168.3.2:53234, cost: 1 ms, unacked: 2, total push: 43
+
+2024-09-18 20:09:49,617 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-18 20:09:49,618 INFO received ack: {"type": "push-ack", "lastRefTime":"33896552570100", "data":""} from: 192.168.3.2:49668, cost: 2 ms, unacked: 1, total push: 43
+
+2024-09-18 20:09:49,619 INFO received ack: {"type": "push-ack", "lastRefTime":"33896552570100", "data":""} from: 192.168.3.2:53234, cost: 3 ms, unacked: 0, total push: 43
+
+2024-09-18 20:09:50,778 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-18 20:09:50,778 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,33897713587200
+
+2024-09-18 20:09:50,778 INFO send udp packet: 192.168.3.2,53234,33897713587200
+
+2024-09-18 20:09:51,055 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-18 20:09:52,576 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-18 20:09:52,576 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,33899512055400
+
+2024-09-18 20:09:52,577 INFO send udp packet: 192.168.3.2,49667,33899512055400
+
+2024-09-18 20:09:52,946 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-18 20:09:52,946 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,33899882135800
+
+2024-09-18 20:09:52,946 INFO send udp packet: 192.168.3.2,49667,33899882135800
+
+2024-09-18 20:09:52,946 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,33899882135800
+
+2024-09-18 20:09:52,946 INFO send udp packet: 192.168.3.2,57981,33899882135800
+
+2024-09-18 20:09:52,948 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,33899882135800
+
+2024-09-18 20:09:52,948 INFO send udp packet: 192.168.3.2,49668,33899882135800
+
+2024-09-18 20:09:52,948 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,33899882135800
+
+2024-09-18 20:09:52,948 INFO send udp packet: 192.168.3.2,53235,33899882135800
+
+2024-09-18 20:09:52,948 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,33899882135800
+
+2024-09-18 20:09:52,948 INFO send udp packet: 192.168.3.2,53233,33899882135800
+
+2024-09-18 20:09:52,948 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,33899882135800
+
+2024-09-18 20:09:52,948 INFO send udp packet: 192.168.3.2,53234,33899882135800
+
+2024-09-18 20:10:00,791 INFO retry to push data, key: 192.168.3.2,53234,33897713587200
+
+2024-09-18 20:10:00,792 INFO send udp packet: 192.168.3.2,53234,33897713587200
+
+2024-09-18 20:10:02,580 INFO retry to push data, key: 192.168.3.2,49667,33899512055400
+
+2024-09-18 20:10:02,580 INFO send udp packet: 192.168.3.2,49667,33899512055400
+
+2024-09-18 20:10:02,950 INFO retry to push data, key: 192.168.3.2,49667,33899882135800
+
+2024-09-18 20:10:02,950 INFO send udp packet: 192.168.3.2,49667,33899882135800
+
+2024-09-18 20:10:02,950 INFO retry to push data, key: 192.168.3.2,57981,33899882135800
+
+2024-09-18 20:10:02,950 INFO send udp packet: 192.168.3.2,57981,33899882135800
+
+2024-09-18 20:10:02,952 INFO retry to push data, key: 192.168.3.2,49668,33899882135800
+
+2024-09-18 20:10:02,952 INFO send udp packet: 192.168.3.2,49668,33899882135800
+
+2024-09-18 20:10:02,952 INFO retry to push data, key: 192.168.3.2,53235,33899882135800
+
+2024-09-18 20:10:02,952 INFO send udp packet: 192.168.3.2,53235,33899882135800
+
+2024-09-18 20:10:02,952 INFO retry to push data, key: 192.168.3.2,53233,33899882135800
+
+2024-09-18 20:10:02,952 INFO send udp packet: 192.168.3.2,53233,33899882135800
+
+2024-09-18 20:10:02,952 INFO retry to push data, key: 192.168.3.2,53234,33899882135800
+
+2024-09-18 20:10:02,952 INFO send udp packet: 192.168.3.2,53234,33899882135800
+
+2024-09-18 20:10:10,802 INFO retry to push data, key: 192.168.3.2,53234,33897713587200
+
+2024-09-18 20:10:10,802 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53234,33897713587200
+
+2024-09-18 20:10:12,594 INFO retry to push data, key: 192.168.3.2,49667,33899512055400
+
+2024-09-18 20:10:12,594 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,33899512055400
+
+2024-09-18 20:10:12,954 INFO retry to push data, key: 192.168.3.2,49667,33899882135800
+
+2024-09-18 20:10:12,954 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,33899882135800
+
+2024-09-18 20:10:12,954 INFO retry to push data, key: 192.168.3.2,57981,33899882135800
+
+2024-09-18 20:10:12,954 WARN max re-push times reached, retry times 2, key: 192.168.3.2,57981,33899882135800
+
+2024-09-18 20:10:12,955 INFO retry to push data, key: 192.168.3.2,49668,33899882135800
+
+2024-09-18 20:10:12,955 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49668,33899882135800
+
+2024-09-18 20:10:12,955 INFO retry to push data, key: 192.168.3.2,53235,33899882135800
+
+2024-09-18 20:10:12,955 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53235,33899882135800
+
+2024-09-18 20:10:12,955 INFO retry to push data, key: 192.168.3.2,53233,33899882135800
+
+2024-09-18 20:10:12,955 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53233,33899882135800
+
+2024-09-18 20:10:12,955 INFO retry to push data, key: 192.168.3.2,53234,33899882135800
+
+2024-09-18 20:10:12,955 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53234,33899882135800
+
+2024-09-18 22:20:07,041 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-18 22:20:07,041 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,41713976507600
+
+2024-09-18 22:20:07,041 INFO send udp packet: 192.168.3.2,49667,41713976507600
+
+2024-09-18 22:20:09,624 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-18 22:20:09,624 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,41716560296700
+
+2024-09-18 22:20:09,624 INFO send udp packet: 192.168.3.2,49667,41716560296700
+
+2024-09-18 22:20:09,624 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,41716560296700
+
+2024-09-18 22:20:09,624 INFO send udp packet: 192.168.3.2,57981,41716560296700
+
+2024-09-18 22:20:09,625 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,41716560296700
+
+2024-09-18 22:20:09,625 INFO send udp packet: 192.168.3.2,49668,41716560296700
+
+2024-09-18 22:20:09,625 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,41716560296700
+
+2024-09-18 22:20:09,625 INFO send udp packet: 192.168.3.2,53235,41716560296700
+
+2024-09-18 22:20:09,625 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,41716560296700
+
+2024-09-18 22:20:09,625 INFO send udp packet: 192.168.3.2,53233,41716560296700
+
+2024-09-18 22:20:09,625 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,41716560296700
+
+2024-09-18 22:20:09,625 INFO send udp packet: 192.168.3.2,53234,41716560296700
+
+2024-09-18 22:20:09,936 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-18 22:20:09,936 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,41716872394400
+
+2024-09-18 22:20:09,936 INFO send udp packet: 192.168.3.2,49667,41716872394400
+
+2024-09-18 22:20:09,937 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:57981, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,57981,41716872394400
+
+2024-09-18 22:20:09,937 INFO send udp packet: 192.168.3.2,57981,41716872394400
+
+2024-09-18 22:20:09,937 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:49668, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49668,41716872394400
+
+2024-09-18 22:20:09,937 INFO send udp packet: 192.168.3.2,49668,41716872394400
+
+2024-09-18 22:20:09,937 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,41716872394400
+
+2024-09-18 22:20:09,937 INFO send udp packet: 192.168.3.2,53235,41716872394400
+
+2024-09-18 22:20:09,937 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,41716872394400
+
+2024-09-18 22:20:09,937 INFO send udp packet: 192.168.3.2,53234,41716872394400
+
+2024-09-18 22:20:10,155 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-18 22:20:10,155 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,41717091059900
+
+2024-09-18 22:20:10,155 INFO send udp packet: 192.168.3.2,53235,41717091059900
+
+2024-09-18 22:20:10,155 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,41717091059900
+
+2024-09-18 22:20:10,155 INFO send udp packet: 192.168.3.2,49667,41717091059900
+
+2024-09-18 22:20:10,156 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-18 22:20:10,156 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,41717091875400
+
+2024-09-18 22:20:10,156 INFO send udp packet: 192.168.3.2,53233,41717091875400
+
+2024-09-18 22:20:10,156 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,41717091875400
+
+2024-09-18 22:20:10,156 INFO send udp packet: 192.168.3.2,49667,41717091875400
+
+2024-09-18 22:20:10,170 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-18 22:20:10,170 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53235, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53235,41717105927100
+
+2024-09-18 22:20:10,170 INFO send udp packet: 192.168.3.2,53235,41717105927100
+
+2024-09-18 22:20:10,170 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:49667, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49667,41717105927100
+
+2024-09-18 22:20:10,170 INFO send udp packet: 192.168.3.2,49667,41717105927100
+
+2024-09-18 22:20:10,170 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53234, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53234,41717105927100
+
+2024-09-18 22:20:10,170 INFO send udp packet: 192.168.3.2,53234,41717105927100
+
+2024-09-18 22:20:10,170 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:53233, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,53233,41717105927100
+
+2024-09-18 22:20:10,170 INFO send udp packet: 192.168.3.2,53233,41717105927100
+
+2024-09-18 22:20:17,044 INFO retry to push data, key: 192.168.3.2,49667,41713976507600
+
+2024-09-18 22:20:17,044 INFO send udp packet: 192.168.3.2,49667,41713976507600
+
+2024-09-18 22:20:19,631 INFO retry to push data, key: 192.168.3.2,49667,41716560296700
+
+2024-09-18 22:20:19,631 INFO send udp packet: 192.168.3.2,49667,41716560296700
+
+2024-09-18 22:20:19,631 INFO retry to push data, key: 192.168.3.2,57981,41716560296700
+
+2024-09-18 22:20:19,631 INFO send udp packet: 192.168.3.2,57981,41716560296700
+
+2024-09-18 22:20:19,632 INFO retry to push data, key: 192.168.3.2,49668,41716560296700
+
+2024-09-18 22:20:19,632 INFO send udp packet: 192.168.3.2,49668,41716560296700
+
+2024-09-18 22:20:19,632 INFO retry to push data, key: 192.168.3.2,53235,41716560296700
+
+2024-09-18 22:20:19,632 INFO send udp packet: 192.168.3.2,53235,41716560296700
+
+2024-09-18 22:20:19,632 INFO retry to push data, key: 192.168.3.2,53233,41716560296700
+
+2024-09-18 22:20:19,632 INFO send udp packet: 192.168.3.2,53233,41716560296700
+
+2024-09-18 22:20:19,633 INFO retry to push data, key: 192.168.3.2,53234,41716560296700
+
+2024-09-18 22:20:19,633 INFO send udp packet: 192.168.3.2,53234,41716560296700
+
+2024-09-18 22:20:19,941 INFO retry to push data, key: 192.168.3.2,49667,41716872394400
+
+2024-09-18 22:20:19,941 INFO send udp packet: 192.168.3.2,49667,41716872394400
+
+2024-09-18 22:20:19,941 INFO retry to push data, key: 192.168.3.2,57981,41716872394400
+
+2024-09-18 22:20:19,941 INFO send udp packet: 192.168.3.2,57981,41716872394400
+
+2024-09-18 22:20:19,942 INFO retry to push data, key: 192.168.3.2,49668,41716872394400
+
+2024-09-18 22:20:19,942 INFO send udp packet: 192.168.3.2,49668,41716872394400
+
+2024-09-18 22:20:19,942 INFO retry to push data, key: 192.168.3.2,53235,41716872394400
+
+2024-09-18 22:20:19,942 INFO send udp packet: 192.168.3.2,53235,41716872394400
+
+2024-09-18 22:20:19,943 INFO retry to push data, key: 192.168.3.2,53234,41716872394400
+
+2024-09-18 22:20:19,943 INFO send udp packet: 192.168.3.2,53234,41716872394400
+
+2024-09-18 22:20:20,159 INFO retry to push data, key: 192.168.3.2,53235,41717091059900
+
+2024-09-18 22:20:20,159 INFO send udp packet: 192.168.3.2,53235,41717091059900
+
+2024-09-18 22:20:20,159 INFO retry to push data, key: 192.168.3.2,49667,41717091059900
+
+2024-09-18 22:20:20,159 INFO send udp packet: 192.168.3.2,49667,41717091059900
+
+2024-09-18 22:20:20,159 INFO retry to push data, key: 192.168.3.2,53233,41717091875400
+
+2024-09-18 22:20:20,159 INFO send udp packet: 192.168.3.2,53233,41717091875400
+
+2024-09-18 22:20:20,159 INFO retry to push data, key: 192.168.3.2,49667,41717091875400
+
+2024-09-18 22:20:20,159 INFO send udp packet: 192.168.3.2,49667,41717091875400
+
+2024-09-18 22:20:20,175 INFO retry to push data, key: 192.168.3.2,53235,41717105927100
+
+2024-09-18 22:20:20,175 INFO send udp packet: 192.168.3.2,53235,41717105927100
+
+2024-09-18 22:20:20,175 INFO retry to push data, key: 192.168.3.2,49667,41717105927100
+
+2024-09-18 22:20:20,175 INFO send udp packet: 192.168.3.2,49667,41717105927100
+
+2024-09-18 22:20:20,175 INFO retry to push data, key: 192.168.3.2,53234,41717105927100
+
+2024-09-18 22:20:20,175 INFO send udp packet: 192.168.3.2,53234,41717105927100
+
+2024-09-18 22:20:20,175 INFO retry to push data, key: 192.168.3.2,53233,41717105927100
+
+2024-09-18 22:20:20,175 INFO send udp packet: 192.168.3.2,53233,41717105927100
+
+2024-09-18 22:20:27,053 INFO retry to push data, key: 192.168.3.2,49667,41713976507600
+
+2024-09-18 22:20:27,053 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,41713976507600
+
+2024-09-18 22:20:29,647 INFO retry to push data, key: 192.168.3.2,49667,41716560296700
+
+2024-09-18 22:20:29,647 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,41716560296700
+
+2024-09-18 22:20:29,647 INFO retry to push data, key: 192.168.3.2,57981,41716560296700
+
+2024-09-18 22:20:29,647 WARN max re-push times reached, retry times 2, key: 192.168.3.2,57981,41716560296700
+
+2024-09-18 22:20:29,647 INFO retry to push data, key: 192.168.3.2,49668,41716560296700
+
+2024-09-18 22:20:29,647 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49668,41716560296700
+
+2024-09-18 22:20:29,647 INFO retry to push data, key: 192.168.3.2,53235,41716560296700
+
+2024-09-18 22:20:29,647 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53235,41716560296700
+
+2024-09-18 22:20:29,648 INFO retry to push data, key: 192.168.3.2,53233,41716560296700
+
+2024-09-18 22:20:29,648 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53233,41716560296700
+
+2024-09-18 22:20:29,648 INFO retry to push data, key: 192.168.3.2,53234,41716560296700
+
+2024-09-18 22:20:29,648 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53234,41716560296700
+
+2024-09-18 22:20:29,943 INFO retry to push data, key: 192.168.3.2,49667,41716872394400
+
+2024-09-18 22:20:29,943 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,41716872394400
+
+2024-09-18 22:20:29,943 INFO retry to push data, key: 192.168.3.2,57981,41716872394400
+
+2024-09-18 22:20:29,943 WARN max re-push times reached, retry times 2, key: 192.168.3.2,57981,41716872394400
+
+2024-09-18 22:20:29,943 INFO retry to push data, key: 192.168.3.2,49668,41716872394400
+
+2024-09-18 22:20:29,943 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49668,41716872394400
+
+2024-09-18 22:20:29,958 INFO retry to push data, key: 192.168.3.2,53235,41716872394400
+
+2024-09-18 22:20:29,958 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53235,41716872394400
+
+2024-09-18 22:20:29,958 INFO retry to push data, key: 192.168.3.2,53234,41716872394400
+
+2024-09-18 22:20:29,958 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53234,41716872394400
+
+2024-09-18 22:20:30,174 INFO retry to push data, key: 192.168.3.2,53235,41717091059900
+
+2024-09-18 22:20:30,174 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53235,41717091059900
+
+2024-09-18 22:20:30,175 INFO retry to push data, key: 192.168.3.2,49667,41717091059900
+
+2024-09-18 22:20:30,175 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,41717091059900
+
+2024-09-18 22:20:30,175 INFO retry to push data, key: 192.168.3.2,53233,41717091875400
+
+2024-09-18 22:20:30,175 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53233,41717091875400
+
+2024-09-18 22:20:30,175 INFO retry to push data, key: 192.168.3.2,49667,41717091875400
+
+2024-09-18 22:20:30,175 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,41717091875400
+
+2024-09-18 22:20:30,189 INFO retry to push data, key: 192.168.3.2,53235,41717105927100
+
+2024-09-18 22:20:30,189 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53235,41717105927100
+
+2024-09-18 22:20:30,189 INFO retry to push data, key: 192.168.3.2,49667,41717105927100
+
+2024-09-18 22:20:30,189 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49667,41717105927100
+
+2024-09-18 22:20:30,189 INFO retry to push data, key: 192.168.3.2,53234,41717105927100
+
+2024-09-18 22:20:30,189 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53234,41717105927100
+
+2024-09-18 22:20:30,189 INFO retry to push data, key: 192.168.3.2,53233,41717105927100
+
+2024-09-18 22:20:30,189 WARN max re-push times reached, retry times 2, key: 192.168.3.2,53233,41717105927100
+

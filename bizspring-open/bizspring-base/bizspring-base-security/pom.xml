@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.bizspring</groupId>
+		<artifactId>bizspring-base</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<artifactId>bizspring-base-security</artifactId>
+	<packaging>jar</packaging>
+
+	<description>安全工具类</description>
+
+
+	<dependencies>
+		<!--工具类核心包-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-core</artifactId>
+		</dependency>
+		<!--安全模块-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security.oauth.boot</groupId>
+			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
+		</dependency>
+		<!--UPMS-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-upms</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-store</artifactId>
+			<version>1.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>

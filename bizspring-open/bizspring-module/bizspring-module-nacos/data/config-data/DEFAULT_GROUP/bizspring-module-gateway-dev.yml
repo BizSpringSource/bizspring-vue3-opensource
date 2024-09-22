@@ -1,0 +1,10 @@
+security:
+  encode:
+    # 前端密码密钥，必须16位，和bizspring-ui\src\config\env.js中的securityKey相对应
+    key: '1234567891234567'
+# 不校验验证码终端
+ignore:
+  clients:
+    - swagger
+  swagger-providers:
+    - bizspring-auth

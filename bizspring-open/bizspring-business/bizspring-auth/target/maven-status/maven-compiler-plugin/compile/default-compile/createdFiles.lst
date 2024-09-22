@@ -1,0 +1,7 @@
+cn\bizspring\cloud\auth\handler\BaseAuthenticationSuccessEventHandler.class
+cn\bizspring\cloud\auth\config\AuthorizationServerConfig.class
+cn\bizspring\cloud\auth\handler\BaseAuthenticationFailureEvenHandler.class
+cn\bizspring\cloud\auth\config\AuthorizationServerConfig$1.class
+cn\bizspring\cloud\auth\controller\TokenController.class
+cn\bizspring\cloud\auth\BizSpringAuthApplication.class
+cn\bizspring\cloud\auth\config\WebSecurityConfigurer.class

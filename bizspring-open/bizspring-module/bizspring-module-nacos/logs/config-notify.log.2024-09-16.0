@@ -1,0 +1,52 @@
+2024-09-16 23:51:15,630 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:51:17,147 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:51:19,669 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:51:25,192 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:51:35,698 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:51:53,214 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:52:19,721 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:52:57,248 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:53:47,762 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:54:38,278 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:55:28,802 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:56:19,316 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:56:22,501 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:56:24,030 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:56:26,548 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:56:32,066 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:56:42,589 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:57:00,098 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:57:09,847 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:57:26,627 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:58:00,359 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:58:04,140 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:58:50,891 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:58:54,665 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+
+2024-09-16 23:59:41,417 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454
+
+2024-09-16 23:59:45,194 ERROR [notify-retry] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228
+

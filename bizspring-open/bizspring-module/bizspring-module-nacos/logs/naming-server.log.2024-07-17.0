@@ -1,0 +1,24 @@
+2024-07-17 21:50:11,384 INFO GlobalConfig{taskDispatchPeriod=2000, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=false, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2024-07-17 21:50:11,905 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2024-07-17 21:50:11,906 INFO listen for service meta change
+
+2024-07-17 21:50:16,385 INFO [NACOS-DISTRO] healthy server list changed, old: [192.168.2.2:8878], new: [192.168.2.2:8878]
+
+2024-07-17 22:21:59,504 INFO GlobalConfig{taskDispatchPeriod=2000, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=false, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2024-07-17 22:21:59,929 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2024-07-17 22:21:59,929 INFO listen for service meta change
+
+2024-07-17 22:22:04,503 INFO [NACOS-DISTRO] healthy server list changed, old: [192.168.2.2:8878], new: [192.168.2.2:8878]
+
+2024-07-17 23:32:48,173 INFO GlobalConfig{taskDispatchPeriod=2000, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=false, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2024-07-17 23:32:48,660 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2024-07-17 23:32:48,661 INFO listen for service meta change
+
+2024-07-17 23:32:53,172 INFO [NACOS-DISTRO] healthy server list changed, old: [192.168.2.2:8878], new: [192.168.2.2:8878]
+

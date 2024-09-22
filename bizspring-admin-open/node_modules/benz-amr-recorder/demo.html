@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>AMR decode/encode tests</title>
+</head>
+
+<body>
+<h1>AMR 录音机 Demo</h1>
+<h2>解码、播放</h2>
+<div id="player-amr">
+    <p>
+        加载演示文件：<button id="amr-load">加载、解码</button>
+        <a href="res/mario.amr">下载演示文件：mario.amr</a>
+    </p>
+    <p>
+        加载本地文件：<input type="file" id="amr-file" accept=".amr">（不会上传到任何服务器）
+    </p>
+    <p>
+        <button id="amr-play" disabled>播放</button>
+        <button id="amr-stop" disabled>停止</button>
+        <input id="amr-progress" type="range" min="0" max="1" step="any" value="0" disabled>
+        <label for="amr-progress">
+            <span id="amr-cur">0'</span>
+            <span>/</span>
+            <span id="amr-duration">0'</span>
+        </label>
+    </p>
+</div>
+<h2>录音、编码</h2>
+<div id="recorder-amr">
+    <p>
+        <button id="amr-record">开始录音</button>（不会上传到任何服务器）
+    </p>
+    <p>
+        <button id="amr-play-record" disabled>播放录音</button>
+        <a href="#" id="amr-down-record"><!--下载录音amr文件--></a>
+        <span id="amr-record-duration">0'</span>
+    </p>
+</div>
+<script src="./BenzAMRRecorder.js"></script>
+<!--suppress ES6ModulesDependencies, ES6ConvertVarToLetConst -->
+<script>
+    (function () {
+        function E(selector) {
+            return document.querySelector(selector);
+        }
+
+        /**** 解码、播放 ****/
+
+        var amr;
+
+        var loadDemoBtn = E('#amr-load');
+        var loadAmrFile = E('#amr-file');
+        var playBtn = E('#amr-play');
+        var stopBtn = E('#amr-stop');
+        var progressCtrl = E('#amr-progress');
+        var isDragging = false;
+        var cur = E('#amr-cur');
+        var duration = E('#amr-duration');
+
+        setInterval(function () {
+            if (amr) {
+                cur.innerHTML = amr.getCurrentPosition().toFixed(2) + '\'';
+                if (!isDragging) {
+                    progressCtrl.value = amr.getCurrentPosition().toFixed(2);
+                }
+            } else {
+                cur.innerHTML = '0\'';
+            }
+        }, 10);
+
+        loadDemoBtn.onclick = function() {
+            amr = new BenzAMRRecorder();
+            loadDemoBtn.setAttribute('disabled', true);
+            loadAmrFile.setAttribute('disabled', true);
+            playBtn.setAttribute('disabled', true);
+            stopBtn.setAttribute('disabled', true);
+            progressCtrl.setAttribute('disabled', true);
+            amr.initWithUrl('./res/mario.amr').then(function () {
+                loadDemoBtn.removeAttribute('disabled');
+                loadAmrFile.removeAttribute('disabled');
+                playBtn.removeAttribute('disabled');
+                stopBtn.removeAttribute('disabled');
+                progressCtrl.removeAttribute('disabled');
+                progressCtrl.setAttribute('max', amr.getDuration());
+                duration.innerHTML = amr.getDuration().toFixed(2) + '\'';
+            });
+
+            // 绑定事件
+            amr.onPlay(function () {
+                console.log('Event: play');
+                playBtn.innerHTML = '暂停';
+            });
+            amr.onStop(function () {
+                console.log('Event: stop');
+                playBtn.innerHTML = '播放';
+            });
+            amr.onPause(function () {
+                console.log('Event: pause');
+                playBtn.innerHTML = '继续';
+            });
+            amr.onResume(function () {
+                console.log('Event: resume');
+                playBtn.innerHTML = '暂停';
+            });
+            amr.onEnded(function () {
+                console.log('Event: ended');
+                playBtn.innerHTML = '播放';
+            });
+            amr.onAutoEnded(function () {
+                console.log('Event: autoEnded');
+            });
+            amr.onStartRecord(function () {
+                console.log('Event: startRecord');
+            });
+            amr.onFinishRecord(function () {
+                console.log('Event: finishRecord');
+            });
+            amr.onCancelRecord(function () {
+                console.log('Event: cancelRecord');
+            });
+        };
+
+        playBtn.onclick = function () {
+            amr.playOrPauseOrResume();
+        };
+
+        stopBtn.onclick = function () {
+            amr.stop();
+        };
+
+        progressCtrl.onmousedown = function () {
+            isDragging = true;
+        };
+        progressCtrl.onmouseup = function () {
+            isDragging = false;
+        };
+        progressCtrl.onchange = function (e) {
+            amr.setPosition(e.target.value);
+        };
+
+        loadAmrFile.onchange = function() {
+            amr = new BenzAMRRecorder();
+            loadDemoBtn.setAttribute('disabled', true);
+            loadAmrFile.setAttribute('disabled', true);
+            playBtn.setAttribute('disabled', true);
+            amr.initWithBlob(this.files[0]).then(function () {
+                loadDemoBtn.removeAttribute('disabled');
+                loadAmrFile.removeAttribute('disabled');
+                playBtn.removeAttribute('disabled');
+                duration.innerHTML = amr.getDuration().toFixed(2) + '\'';
+            });
+
+            // 绑定事件
+            amr.onPlay(function () {
+                console.log('Event: play');
+                playBtn.innerHTML = '停止';
+            });
+            amr.onStop(function () {
+                console.log('Event: stop');
+                playBtn.innerHTML = '播放';
+            });
+            amr.onEnded(function () {
+                console.log('Event: ended');
+                playBtn.innerHTML = '播放';
+            });
+            amr.onAutoEnded(function () {
+                console.log('Event: autoEnded');
+            });
+            amr.onStartRecord(function () {
+                console.log('Event: startRecord');
+            });
+            amr.onFinishRecord(function () {
+                console.log('Event: finishRecord');
+            });
+            amr.onCancelRecord(function () {
+                console.log('Event: cancelRecord');
+            });
+        };
+
+        /***** 录音、编码 *****/
+
+        var amrForRecorder;
+
+        var recordBtn = E('#amr-record');
+        var playRecordBtn = E('#amr-play-record');
+        var downRecordLink = E('#amr-down-record');
+        var recordDuration = E('#amr-record-duration');
+
+        recordBtn.onclick = function () {
+            if (amrForRecorder && amrForRecorder.isRecording()) {
+                recordBtn.innerHTML = '开始录音';
+                playRecordBtn.removeAttribute('disabled');
+                amrForRecorder.finishRecord().then(() => {
+                    downRecordLink.href = window.URL.createObjectURL(amrForRecorder.getBlob());
+                    downRecordLink.innerHTML = '下载录音amr文件';
+                    recordDuration.innerHTML = amrForRecorder.getDuration().toFixed(2) + '\'';
+                });
+            } else {
+                recordBtn.innerHTML = '停止录音';
+                playRecordBtn.setAttribute('disabled', true);
+                amrForRecorder = new BenzAMRRecorder();
+                amrForRecorder.initWithRecord().then(() => {
+                    amrForRecorder.startRecord();
+                }).catch(function(e) {
+                    alert(e.message || e.name || JSON.stringify(e));
+                });
+
+                // 绑定事件
+                amrForRecorder.onPlay(function () {
+                    console.log('Recorder Event: play');
+                    playRecordBtn.innerHTML = '停止播放';
+                });
+                amrForRecorder.onStop(function () {
+                    console.log('Recorder Event: stop');
+                    playRecordBtn.innerHTML = '播放录音';
+                });
+                amrForRecorder.onEnded(function () {
+                    console.log('Recorder Event: ended');
+                    playRecordBtn.innerHTML = '播放录音';
+                });
+                amrForRecorder.onAutoEnded(function () {
+                    console.log('Recorder Event: autoEnded');
+                });
+                amrForRecorder.onStartRecord(function () {
+                    console.log('Recorder Event: startRecord');
+                    recordBtn.innerHTML = '停止录音';
+                });
+                amrForRecorder.onFinishRecord(function () {
+                    console.log('Recorder Event: finishRecord');
+                    recordBtn.innerHTML = '开始录音';
+                });
+                amrForRecorder.onCancelRecord(function () {
+                    console.log('Recorder Event: cancelRecord');
+                    recordBtn.innerHTML = '开始录音';
+                });
+            }
+        };
+
+        playRecordBtn.onclick = function () {
+            if (amrForRecorder.isPlaying()) {
+                amrForRecorder.stop();
+            } else {
+                amrForRecorder.play();
+            }
+        };
+    })();
+</script>
+</body>
+</html>

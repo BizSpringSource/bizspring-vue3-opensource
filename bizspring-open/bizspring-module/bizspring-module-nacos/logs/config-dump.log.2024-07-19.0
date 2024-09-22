@@ -1,0 +1,20 @@
+2024-07-19 10:35:13,038 INFO [dump-all-ok] dynamic_routes+DEFAULT_GROUP, 1717754462000, length=1660, md5=9dfc43d3643ad895ba068728376bc226
+
+2024-07-19 10:35:13,044 INFO [dump-all-ok] application-dev.yml+DEFAULT_GROUP, 1721225811000, length=5081, md5=c54542918485831faf04f51337f12103
+
+2024-07-19 10:35:13,046 INFO [dump-all-ok] bizspring-module-gateway-dev.yml+DEFAULT_GROUP, 1698122975000, length=201, md5=18531dfa8bea95edd20dc5262c812bca
+
+2024-07-19 10:35:13,048 INFO [dump-all-ok] bizspring-auth-dev.yml+DEFAULT_GROUP, 1721225849000, length=893, md5=f8ede214710924634c570b198cc69f03
+
+2024-07-19 10:35:13,049 INFO [dump-all-ok] bizspring-upms-dev.yml+DEFAULT_GROUP, 1721225900000, length=2129, md5=ad9d67e4a1df4f8a7f1891f1132ebe22
+
+2024-07-19 10:35:13,052 INFO [dump-all-ok] bizspring-order-dev.yml+DEFAULT_GROUP, 1721226078000, length=1306, md5=6d071ca333d183a943ff48ffcd65d351
+
+2024-07-19 10:35:13,053 INFO [dump-all-ok] bizspring-marketing-dev.yml+DEFAULT_GROUP, 1721226058000, length=1310, md5=2d371b3f660d1213cdd5bdb1ba07fb78
+
+2024-07-19 10:35:13,055 INFO [dump-all-ok] bizspring-store-dev.yml+DEFAULT_GROUP, 1721225998000, length=1286, md5=5a43f2783ed09609b18f58891e000f22
+
+2024-07-19 10:35:13,057 INFO [dump-all-ok] sentinal-bizspring+SENTINEL_GROUP, 1717828727000, length=1046, md5=b10254b903278c69b5a3726b3fb165e0
+
+2024-07-19 10:35:13,060 INFO [dump-all-ok] bizspring-goods-dev.yml+DEFAULT_GROUP, 1721225957000, length=1558, md5=6ced72438f1e899d51fe96a7df6f739f
+

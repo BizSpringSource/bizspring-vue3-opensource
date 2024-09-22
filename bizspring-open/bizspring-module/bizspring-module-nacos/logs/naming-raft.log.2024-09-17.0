@@ -1,0 +1,64 @@
+2024-09-17 00:01:45,564 INFO raft peers changed: [Member{ip='192.168.2.2', port=8878, state=UP, extendInfo={raftPort=7878}}]
+
+2024-09-17 00:01:45,602 INFO initializing Raft sub-system
+
+2024-09-17 00:01:45,603 INFO finish loading all datums, size: 0 cost 1 ms.
+
+2024-09-17 00:01:45,608 INFO cache loaded, datum count: 0, current term: 0
+
+2024-09-17 00:01:45,608 INFO finish to load data from disk, cost: 6 ms.
+
+2024-09-17 00:01:45,611 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2024-09-17 00:01:46,330 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2024-09-17 00:01:46,348 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2024-09-17 00:01:47,724 INFO leader timeout, start voting,leader: {"ip":"192.168.2.2:8878","term":0,"leaderDueMs":17500,"heartbeatDueMs":4500,"state":"FOLLOWER"}, term: 0
+
+2024-09-17 00:01:50,164 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-17 00:01:50,483 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-goods
+
+2024-09-17 00:01:50,552 WARN start to close old raft protocol!!!
+
+2024-09-17 00:01:50,552 WARN stop old raft protocol task for notifier
+
+2024-09-17 00:01:50,552 WARN stop old raft protocol task for master task
+
+2024-09-17 00:01:50,552 WARN stop old raft protocol task for heartbeat task
+
+2024-09-17 00:01:50,552 WARN clean old cache datum for old raft
+
+2024-09-17 00:01:50,552 WARN start to close old raft protocol!!!
+
+2024-09-17 00:01:50,552 WARN stop old raft protocol task for notifier
+
+2024-09-17 00:01:50,552 WARN stop old raft protocol task for master task
+
+2024-09-17 00:01:50,552 WARN stop old raft protocol task for heartbeat task
+
+2024-09-17 00:01:50,552 WARN clean old cache datum for old raft
+
+2024-09-17 00:01:50,552 WARN start to move old raft protocol metadata
+
+2024-09-17 00:01:50,554 WARN start to move old raft protocol metadata
+
+2024-09-17 00:01:50,555 INFO raft peers changed: [Member{ip='192.168.2.2', port=8878, state=UP, extendInfo={lastRefreshTime=1726502510554, raftPort=7878, version=1.4.1}}]
+
+2024-09-17 00:01:50,731 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-17 00:03:03,282 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-17 00:03:25,479 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-17 00:03:26,795 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-store
+
+2024-09-17 15:17:26,795 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-store
+
+2024-09-17 15:17:40,975 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-store
+
+2024-09-17 21:42:38,665 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-17 21:43:12,125 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-upms
+

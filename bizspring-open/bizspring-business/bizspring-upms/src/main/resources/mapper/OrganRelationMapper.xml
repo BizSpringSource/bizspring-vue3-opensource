@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.OrganRelationMapper">
+
+	<resultMap id="BaseResultMap" type="cn.bizspring.cloud.upms.common.entity.OrganRelation">
+		<id column="ancestor" property="ancestor"/>
+		<result column="descendant" property="descendant"/>
+		<result column="tenant_id" property="tenantId"/>
+	</resultMap>
+
+	<!-- 更新机构关系 -->
+	<select id="listOrganRelations" resultMap="BaseResultMap">
+        DELETE FROM biz_organ_relation
+			WHERE
+				descendant IN (
+					SELECT temp.descendant FROM(
+						SELECT descendant FROM biz_organ_relation WHERE ancestor = #{descendant}
+					) temp
+				)
+			AND ancestor IN (
+					SELECT temp.ancestor FROM (
+						SELECT ancestor FROM biz_organ_relation WHERE descendant = #{descendant} AND ancestor != descendant
+					) temp
+				);
+
+		SELECT a.ancestor, b.descendant
+			FROM biz_organ_relation a
+			CROSS JOIN biz_organ_relation b
+			WHERE a.descendant = #{ancestor}
+			AND b.ancestor = #{descendant};
+	</select>
+
+	<!--删除机构-->
+	<delete id="deleteOrganRelationsById">
+        DELETE
+        FROM
+			biz_organ_relation
+        WHERE
+            descendant IN (
+                SELECT
+                    temp.descendant
+                FROM
+                    (
+                        SELECT
+                            descendant
+                        FROM
+							biz_organ_relation
+                        WHERE
+                            ancestor = #{id}
+                    ) temp
+            )
+    </delete>
+</mapper>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.SnMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.common.core.entity.Sn">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="last_value" property="lastValue" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        `id`,
+        `version`,
+        `created_time`, `updated_time`, `last_value`
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			biz_sn
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			biz_sn
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByType" resultMap="BaseResultMap">
+		SELECT
+			`id`,
+			`version`,
+			`created_time`, `updated_time`, `last_value`
+		FROM
+			biz_sn
+		WHERE
+			type = #{type}
+	</select>
+
+
+	
+	<!-- 更新 -->
+	<update id="update" parameterType="cn.bizspring.cloud.common.core.entity.Sn">
+    	UPDATE biz_sn
+		SET `updated_time` = #{entity.updatedTime},
+			`version` = #{entity.version} + 1,
+			`last_value` = #{entity.lastValue}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version}
+  	</update>
+  	
+</mapper>

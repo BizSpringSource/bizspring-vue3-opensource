@@ -1,0 +1,62 @@
+routes:
+# bizspring-auth
+- id: bizspring-auth
+  predicates:
+  - name: Path
+    args: 
+      _genkey_0: /auth/**
+  filters:
+  - name: ValidateCodeGatewayFilter
+    args: {}
+  - name: PasswordDecoderFilter
+    args: {}
+  uri: lb://bizspring-auth
+  order: 0
+# bizspring-upms
+- id: bizspring-upms
+  predicates:
+  - name: Path
+    args: 
+      _genkey_0: /upms/**
+  filters:
+  - name: RequestRateLimiter
+    args: 
+      # 限流策略
+      key-resolver: '#{@remoteAddrKeyResolver}'
+      # 令牌桶每秒填充率
+      redis-rate-limiter.burstCapacity: 20
+      # 令牌桶容量
+      redis-rate-limiter.replenishRate: 20
+  uri: lb://bizspring-upms
+  order: 0
+
+# bizspring-goods
+- id: bizspring-goods
+  predicates:
+  - name: Path
+    args: 
+      _genkey_0: /goods/**
+  filters: []
+  uri: lb://bizspring-goods
+  order: 0
+  
+# bizspring-store
+- id: bizspring-store
+  predicates:
+  - name: Path
+    args: 
+      _genkey_0: /store/**
+  filters: []
+  uri: lb://bizspring-store
+  order: 0
+# bizspring-order
+- id: bizspring-order
+  predicates:
+  - name: Path
+    args: 
+      _genkey_0: /order/**
+  filters: []
+  uri: lb://bizspring-order
+  order: 0
+
+ 

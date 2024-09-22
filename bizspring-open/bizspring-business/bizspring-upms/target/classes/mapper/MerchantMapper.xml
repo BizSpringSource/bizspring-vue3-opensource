@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.MerchantMapper">
+	
+	<!-- User查询映射结果 -->
+    <resultMap id="UserResultMap" type="cn.bizspring.cloud.upms.common.entity.User">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+		<result column="is_enabled" property="isEnabled"/>
+        <result column="lock_flag" property="lockFlag" />
+        <result column="login_date" property="loginDate" />
+        <result column="login_ip" property="loginIp" />
+        <result column="lock_date" property="lockDate" />
+    </resultMap>
+    
+   <!-- 通用查询映射结果 -->
+   <resultMap id="BaseResultMap" type="cn.bizspring.cloud.upms.common.entity.Merchant" extends="UserResultMap">
+   		<result column="username" property="username" />
+	    <result column="password" property="password" />
+        <result column="email" property="email" />
+        <result column="mobile" property="mobile" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+   </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        dtype, created_time, updated_time,is_enabled,lock_flag, login_date, login_ip, lock_date, department, email,password, mobile, name, username , phone, safe_key_expire, safe_key_value, address,  birth, gender, point, zip_code, region_id,'merchant_id'
+    </sql>
+    
+    <!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = 'Merchant'
+		AND `id` = #{id}
+	</select>
+	
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = 'Merchant'
+	</select>
+	
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = 'Merchant'
+		AND ${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 查询商家数量 -->
+	<select id="count" resultType="long">
+		SELECT
+			count(*)
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = 'Merchant'
+		<if test="beginDate != null">
+			AND created_time <![CDATA[ >= ]]> #{beginDate}
+		</if>
+		<if test="endDate != null">
+			AND created_time <![CDATA[ <= ]]> #{endDate}
+		</if>
+	</select>
+
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = 'Merchant'
+		<if test="ew.nonEmptyOfWhere == true">
+			AND 
+		</if>
+		${ew.sqlSegment}
+	</select>
+	
+	<!-- 删除所有 -->
+  	<update id="delete" parameterType="java.lang.String">
+  		DELETE
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = 'Merchant'
+		AND `id` = #{id}
+  	</update>
+  	
+  	<!-- 判断是否存在 -->
+	<select id="exists" resultType="boolean">
+		SELECT
+			count(*)
+		FROM
+			`biz_users`
+		WHERE 1=1
+-- 			`dtype` = 'Merchant'
+		AND
+			${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 判断是否唯一 -->
+	<select id="unique" resultType="boolean">
+		SELECT
+			count(*)
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = 'Merchant'
+		AND
+			${propertyName } = #{propertyValue}
+		<if test="id != null">
+			AND id != #{id}
+		</if>
+	</select>
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.upms.common.entity.Merchant">
+   		INSERT INTO biz_users(
+			id ,
+			dtype, 
+			created_time ,
+			version ,
+			is_enabled,
+			lock_flag ,
+			login_date ,
+			login_ip ,
+			lock_date ,
+			email ,
+			password ,
+			mobile ,
+			`name` ,
+			username ,
+			phone ,
+			safe_key_expire ,
+			safe_key_value
+		) VALUES (
+			#{entity.id}, 
+			'Merchant',
+			#{entity.createdTime},
+			#{entity.version},
+			#{entity.isEnabled},
+			#{entity.lockFlag},
+			#{entity.loginDate},
+			#{entity.loginIp},
+			#{entity.lockDate}, 
+			#{entity.email},
+			#{entity.password},
+			#{entity.mobile}, 
+			#{entity.name}, 
+			#{entity.username}, 
+			#{entity.phone},
+			#{entity.safeKey.expire}, 
+			#{entity.safeKey.value}
+		)
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.upms.common.entity.Merchant">
+   		UPDATE biz_users
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version},
+			is_enabled = #{entity.isEnabled},
+			lock_flag = #{entity.lockFlag},
+			login_date = #{entity.loginDate},
+			login_ip = #{entity.loginIp},
+			lock_date = #{entity.lockDate},
+			email = #{entity.email},
+			password = #{entity.password},
+			mobile = #{entity.mobile},
+			`name` = #{entity.name},
+			phone = #{entity.phone},
+			safe_key_expire = #{entity.safeKey.expire},
+			safe_key_value = #{entity.safeKey.value}
+		WHERE
+			`dtype` = 'Merchant'
+		AND id = #{entity.id}
+		AND version = #{entity.version}
+  	</update>
+  
+</mapper>

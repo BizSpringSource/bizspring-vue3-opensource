@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.OrderShippingItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.OrderShippingItem">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="is_delivery" property="isDelivery" />
+        <result column="name" property="name" />
+        <result column="quantity" property="quantity" />
+        <result column="sn" property="sn" />
+		<result column="specifications" property="specifications" jdbcType="LONGVARCHAR"
+				javaType="java.util.ArrayList" typeHandler="cn.bizspring.cloud.common.core.handlers.SpecificationConverter" />
+		<result property="skuId"  column="sku_id" />
+       	<result property="orderShippingId" column="order_shipping_id" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, is_delivery, name, quantity, sn, specifications, order_shipping_id, sku_id
+    </sql>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_shipping_item`
+		WHERE 
+			${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 保存 -->
+	<insert id="saveBatch" parameterType="cn.bizspring.cloud.order.common.entity.OrderShippingItem">
+    	INSERT INTO biz_order_shipping_item(
+			id ,
+			created_time ,
+			version ,
+			is_delivery ,
+			`name` ,
+			quantity ,
+			sn ,
+			specifications ,
+			order_shipping_id ,
+			sku_id
+		) VALUES 
+		<foreach collection="entitys" item="entity" index="index" separator=",">
+			(
+				#{entity.id}, 
+				#{entity.createdTime},
+				#{entity.version}, 
+				#{entity.isDelivery}, 
+				#{entity.name}, 
+				#{entity.quantity}, 
+				#{entity.sn},
+				#{entity.specifications, typeHandler=cn.bizspring.cloud.common.core.handlers.SpecificationConverter},
+				#{entity.orderShippingId},
+				#{entity.skuId}
+			)
+		</foreach>
+  	</insert>
+  
+</mapper>

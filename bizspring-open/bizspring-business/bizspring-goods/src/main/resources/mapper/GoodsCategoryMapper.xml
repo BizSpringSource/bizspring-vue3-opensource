@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.goods.admin.mapper.GoodsCategoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.goods.common.entity.GoodsCategory">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="sort" property="sort" />
+        <result column="level" property="level" />
+        <result column="name" property="name" />
+        <result column="image" property="image" />
+        <result column="tree_path" property="treePath" />
+        <result column="parent_id" property="parentId"  />
+    </resultMap>
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		goodsCategory.id,
+        goodsCategory.version,
+        goodsCategory.created_time, goodsCategory.updated_time, goodsCategory.sort, goodsCategory.`level`, goodsCategory.name, goodsCategory.image, goodsCategory.tree_path, goodsCategory.parent_id, 'goods_category_id'
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_goods_category` goodsCategory
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<!-- 查找实体对象 -->
+	<select id="findGoodsCategoryBrands" parameterType="java.lang.String" resultType="java.lang.String">
+		SELECT
+		       goodsCategoryBrand.brands_id as brands_id
+		FROM
+			biz_goods_category_brand goodsCategoryBrand
+		WHERE
+			goodsCategoryBrand.goods_categories_id = #{id}
+	</select>
+
+	<!-- 查找商品分类 -->
+	<select id="findList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_goods_category` goodsCategory
+		<if test="null != goodsCategoryStores and goodsCategoryStores.size() > 0">
+			left join (
+			select a.item_id,a.stores_id from (
+			<foreach collection="goodsCategoryStores" item="item" index="index" separator="union all">
+				select #{item.goodsCategoriesId} as item_id,#{item.storesId} as stores_id
+				from dual
+			</foreach>
+			) as a
+			) as aa on aa.item_id = goodsCategory.id
+		</if>
+		<where>
+			<if test="store != null">
+				AND aa.stores_id = #{store.id}
+			</if>
+			${queryWrapper.sqlSegment}
+		</where>
+	</select>
+
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+	       id,
+		   name,
+		   `level`,
+		   parent_id,
+		   tree_path
+		FROM
+			`biz_goods_category` goodsCategory
+	</select>
+
+	<select id="findAllByEntity" resultMap="BaseResultMap">
+		SELECT
+			id,
+			name,
+			`level`,
+			parent_id,
+			tree_path
+		FROM
+			`biz_goods_category` goods_category
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.name ">
+				AND goods_category.name LIKE concat('%',#{entity.name},'%')
+			</if>
+			<if test=" null != entity.level ">
+				AND goods_category.`level` = #{entity.level}
+			</if>
+		</if>
+		ORDER BY
+		sort ASC
+	</select>
+
+	<!-- 查找顶级商品分类 -->
+	<select id="findRoots" parameterType="int" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		`biz_goods_category` goodsCategory
+		WHERE
+		parent_id IS NULL
+		ORDER BY
+		sort ASC
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+
+	<!-- 查找上级商品分类 -->
+	<select id="findParents" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		`biz_goods_category` goodsCategory
+		<if test="recursive == true">
+			WHERE id IN
+			<if test="goodsCategory.parentIds.length != 0">
+				<foreach collection="goodsCategory.parentIds" item="ids" open="(" separator="," close=")" >
+					#{ids}
+				</foreach>
+			</if>
+			<if test="goodsCategory.parentIds.length == 0">
+				('')
+			</if>
+			ORDER BY `level` ASC
+		</if>
+		<if test="recursive == false">
+			WHERE id = #{goodsCategory.parentId}
+		</if>
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+
+	<!-- 查找下级商品分类 -->
+	<select id="findChildren" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		`biz_goods_category` goodsCategory
+		<if test="recursive == true">
+			<if test="goodsCategory != null">
+				WHERE tree_path LIKE concat('%,',#{goodsCategory.id},',%') ORDER BY `level` ASC, sort ASC
+			</if>
+			<if test="goodsCategory == null">
+				ORDER BY `level` ASC, sort ASC
+			</if>
+		</if>
+		<if test="recursive == false">
+			WHERE parent_id = #{goodsCategory.id} ORDER BY sort ASC
+		</if>
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+
+	<!-- 查找经营分类 -->
+	<select id="findGoodsCategoryList" resultType="cn.bizspring.cloud.goods.common.entity.GoodsCategory">
+		SELECT
+		goodsCategory.*
+		FROM
+		biz_goods_category goodsCategory
+		INNER JOIN biz_management_classification managementClassification ON goodsCategory.id = managementClassification.goods_category_id
+		<where>
+			<if test="store != null">
+				AND managementClassification.`store_id` = #{store.id}
+			</if>
+			<if test="status != null">
+				AND managementClassification.`status` = #{status.ordinal}
+			</if>
+		</where>
+	</select>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.goods.common.entity.GoodsCategory">
+		INSERT INTO biz_goods_category(
+		id ,
+		created_time ,
+		version ,
+		sort ,
+		`level` ,
+		`name` ,
+		image ,
+		tree_path ,
+		parent_id
+		) VALUES (
+		#{entity.id},
+		#{entity.createdTime},
+		#{entity.version},
+		#{entity.sort},
+		#{entity.level},
+		#{entity.name},
+		#{entity.image},
+		#{entity.treePath},
+		#{entity.parentId}
+		);
+
+			<!-- 产品分类品牌关连表 -->
+		<if test="entity.brands != null and entity.brands.size > 0">
+			INSERT INTO `biz_goods_category_brand` (goods_categories_id , brands_id) VALUES
+			<foreach collection="entity.brands" item="brand" index="index" separator="," close=";">
+				(#{entity.id}, #{brand})
+			</foreach>
+		</if>
+
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="cn.bizspring.cloud.goods.common.entity.GoodsCategory">
+		UPDATE biz_goods_category
+		SET updated_time = #{entity.updatedTime},
+		version = #{entity.version} + 1,
+		sort = #{entity.sort},
+		`level` = #{entity.level},
+		`name` = #{entity.name},
+		image = #{entity.image},
+		tree_path = #{entity.treePath},
+		parent_id = #{entity.parentId}
+		WHERE
+		id = #{entity.id}
+		AND version = #{entity.version};
+
+		<!-- 产品分类品牌关连表 -->
+		DELETE FROM biz_goods_category_brand WHERE goods_categories_id = #{entity.id};
+
+		<!-- 产品分类品牌关连表 -->
+		<if test="entity.brands != null and entity.brands.size > 0">
+			INSERT INTO `biz_goods_category_brand` (goods_categories_id , brands_id) VALUES
+			<foreach collection="entity.brands" item="brand" index="index" separator="," close=";">
+				(#{entity.id}, #{brand})
+			</foreach>
+		</if>
+
+	</update>
+
+	<!-- 删除 -->
+	<delete id="deleteById" parameterType="java.lang.String">
+		<!-- 产品分类品牌关连表 -->
+		DELETE FROM biz_goods_category_brand WHERE goods_categories_id = #{id};
+		<!-- 产品分类 -->
+		DELETE FROM biz_goods_category WHERE id = #{id};
+	</delete>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	
+  	
+</mapper>

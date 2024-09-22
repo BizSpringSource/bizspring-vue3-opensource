@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.store.admin.mapper.PaymentPatternMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.store.common.entity.PaymentPattern">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="sort" property="sort" />
+        <result column="content" property="content" />
+        <result column="description" property="description" />
+        <result column="icon" property="icon" />
+        <result column="pattern" property="pattern" />
+        <result column="name" property="name" />
+        <result column="timeout" property="timeout" />
+        <result column="type" property="type" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, sort, content, description, icon, pattern, name, timeout, type, 'payment_pattern_id'
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_pattern`
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_pattern`
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_pattern`
+		<if test="propertyName == 'shipping_method_id'">
+			LEFT JOIN biz_shipping_method_payment_pattern shipping_method_payment_pattern ON id = shipping_method_payment_pattern.payment_patterns_id
+			WHERE
+			shipping_method_payment_pattern.shipping_methods_id = #{propertyValue}
+			ORDER BY
+				`sort` ASC
+		</if>
+	</select>
+	
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_pattern`
+		<if test="ew.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<select id="findPageByEntity" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_pattern` payment_pattern
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.name ">
+				AND payment_pattern.name LIKE concat('%',#{entity.name},'%')
+			</if>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.store.common.entity.PaymentPattern">
+   		INSERT INTO biz_payment_pattern(
+			id ,
+			created_time ,
+			version ,
+			sort ,
+			description ,
+			icon ,
+			`pattern` ,
+			`name` ,
+			timeout ,
+			`type` ,
+			content
+		) VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.sort},
+			#{entity.description}, 
+			#{entity.icon}, 
+			#{entity.pattern},
+			#{entity.name}, 
+			#{entity.timeout}, 
+			#{entity.type}, 
+			#{entity.content}
+		)
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.store.common.entity.PaymentPattern">
+   		UPDATE biz_payment_pattern
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			sort = #{entity.sort},
+			description = #{entity.description},
+			icon = #{entity.icon},
+			`pattern` = #{entity.pattern},
+			`name` = #{entity.name},
+			timeout = #{entity.timeout},
+			`type` = #{entity.type},
+			content = #{entity.content}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version}
+  	</update>
+  
+</mapper>

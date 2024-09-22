@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ant-contrib:ant-contrib:1.0b3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

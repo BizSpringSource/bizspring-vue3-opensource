@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "security.oauth2.client",
+      "type": "cn.bizspring.cloud.common.security.component.PermitAllUrlProperties",
+      "sourceType": "cn.bizspring.cloud.common.security.component.PermitAllUrlProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security.oauth2.client.release-urls",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.bizspring.cloud.common.security.component.PermitAllUrlProperties"
+    }
+  ],
+  "hints": []
+}

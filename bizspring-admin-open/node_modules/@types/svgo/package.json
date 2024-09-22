@@ -1,0 +1,62 @@
+{
+    "name": "@types/svgo",
+    "version": "2.6.4",
+    "description": "TypeScript definitions for svgo",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/svgo",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Bradley Ayers",
+            "url": "https://github.com/bradleyayers",
+            "githubUsername": "bradleyayers"
+        },
+        {
+            "name": "Gilad Gray",
+            "url": "https://github.com/giladgray",
+            "githubUsername": "giladgray"
+        },
+        {
+            "name": "Aankhen",
+            "url": "https://github.com/Aankhen",
+            "githubUsername": "Aankhen"
+        },
+        {
+            "name": "Jan Karres",
+            "url": "https://github.com/jankarres",
+            "githubUsername": "jankarres"
+        },
+        {
+            "name": "Gavin Gregory",
+            "url": "https://github.com/gavingregory",
+            "githubUsername": "gavingregory"
+        },
+        {
+            "name": "Piotr Błażejewicz",
+            "url": "https://github.com/peterblazejewicz",
+            "githubUsername": "peterblazejewicz"
+        },
+        {
+            "name": "Remco Haszing",
+            "url": "https://github.com/remcohaszing",
+            "githubUsername": "remcohaszing"
+        },
+        {
+            "name": "Petr Zahradník",
+            "url": "https://github.com/petrzjunior",
+            "githubUsername": "petrzjunior"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/svgo"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/node": "*"
+    },
+    "typesPublisherContentHash": "55fb26251b2398188e7540523cbb0d793942150bcc32da79955b654b60dbe21b",
+    "typeScriptVersion": "4.0"
+}

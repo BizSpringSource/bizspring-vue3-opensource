@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "ignore",
+      "type": "cn.bizspring.cloud.gateway.config.FilterIgnorePropertiesConfig",
+      "sourceType": "cn.bizspring.cloud.gateway.config.FilterIgnorePropertiesConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "ignore.clients",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.bizspring.cloud.gateway.config.FilterIgnorePropertiesConfig"
+    },
+    {
+      "name": "ignore.swagger-providers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.bizspring.cloud.gateway.config.FilterIgnorePropertiesConfig"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.uni-popup {
+  position: fixed;
+  z-index: 99;
+}
+.uni-popup.top, .uni-popup.left, .uni-popup.right {
+  top: 0;
+}
+.uni-popup .uni-popup__wrapper {
+  display: block;
+  position: relative;
+  /* iphonex 等安全区设置，底部安全区适配 */
+}
+.uni-popup .uni-popup__wrapper.left, .uni-popup .uni-popup__wrapper.right {
+  padding-top: 0;
+  flex: 1;
+}
+.fixforpc-z-index {
+  z-index: 999;
+}
+.fixforpc-top {
+  top: 0;
+}
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.bizspring</groupId>
+		<artifactId>bizspring-business</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<artifactId>bizspring-auth</artifactId>
+	<packaging>jar</packaging>
+
+	<description>认证授权中心</description>
+
+	<dependencies>
+		<!--注册中心客户端-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<!--配置中心客户端-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+		</dependency>
+		<!--upms api、model 模块-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-upms</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.dataformat</groupId>
+					<artifactId>jackson-dataformat-xml</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--security-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-security</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.dataformat</groupId>
+					<artifactId>jackson-dataformat-xml</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--mybatis-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+		</dependency>
+		<!--mysql 驱动-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!--缓存操作-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-data</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.dataformat</groupId>
+					<artifactId>jackson-dataformat-xml</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--JDBC相关-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!--druid-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		<!--web 模块-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--undertow容器-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+			</plugin>
+
+			<!--打包时复制jar包到指定文件目录-->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy</id><!--需要唯一-->
+						<phase>package</phase><!--当执行package操作时执行一下任务-->
+						<configuration>
+							<tasks><!--任务-->
+								<echo message="start.................................."/><!--打印-->
+								<echo message="load maven plugin ant-contrib-1.0b3"/>
+								<!--加载plugin ant-contrib的配置文件-->
+								<taskdef resource="net/sf/antcontrib/antlib.xml">
+									<classpath><!--加载jar包,${settings.localRepository}的值是你maven settings文件中配置的本地仓库位置-->
+										<pathelement location="${settings.localRepository}/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar"/>
+									</classpath>
+								</taskdef>
+								<!--复制jar包-->
+								<if>
+									<equals arg1="${copy}" arg2="true"/><!--是否复制jar包-->
+									<then>
+										<echo message="Copy jar to your desired path."/>
+										<copy todir="${localDir}" overwrite="true"><!--执行复制操作,todir的值是将要复制jar包到的地方,overwrite是否重写-->
+											<fileset dir="${project.build.directory}"><!--${project.build.directory}值是你的target目录-->
+												<include name="*.jar"/><!--target目录下的jar包-->
+											</fileset>
+										</copy>
+									</then>
+								</if>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

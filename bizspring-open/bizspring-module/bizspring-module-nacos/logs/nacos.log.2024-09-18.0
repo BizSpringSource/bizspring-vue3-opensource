@@ -1,0 +1,332 @@
+2024-09-18 14:35:35,175 INFO Starting Nacos v1.4.1 on LAPTOP-QF9E14EB with PID 10360 (C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-nacos\target\nacos-server.jar started by Administrator in C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-nacos\bin)
+
+2024-09-18 14:35:35,191 INFO The following profiles are active: standalone
+
+2024-09-18 14:35:38,517 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3c01cfa1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2024-09-18 14:35:38,522 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2024-09-18 14:35:39,071 INFO Tomcat initialized with port(s): 8878 (http)
+
+2024-09-18 14:35:39,093 INFO Starting service [Tomcat]
+
+2024-09-18 14:35:39,094 INFO Starting Servlet engine: [Apache Tomcat/9.0.38]
+
+2024-09-18 14:35:39,355 INFO At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+
+2024-09-18 14:35:39,387 INFO Initializing Spring embedded WebApplicationContext
+
+2024-09-18 14:35:39,387 INFO Root WebApplicationContext: initialization completed in 4136 ms
+
+2024-09-18 14:35:39,679 INFO HikariPool-1 - Starting...
+
+2024-09-18 14:35:40,161 INFO HikariPool-1 - Start completed.
+
+2024-09-18 14:35:40,406 INFO Nacos-related cluster resource initialization
+
+2024-09-18 14:35:40,415 INFO The cluster resource is initialized
+
+2024-09-18 14:35:40,809 INFO Reflections took 34 ms to scan 1 urls, producing 4 keys and 6 values 
+
+2024-09-18 14:35:40,832 INFO Reflections took 3 ms to scan 1 urls, producing 6 keys and 26 values 
+
+2024-09-18 14:35:40,842 INFO Reflections took 2 ms to scan 1 urls, producing 3 keys and 15 values 
+
+2024-09-18 14:35:40,850 INFO Reflections took 1 ms to scan 1 urls, producing 2 keys and 12 values 
+
+2024-09-18 14:35:41,478 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2024-09-18 14:35:41,593 INFO Adding welcome page: class path resource [static/index.html]
+
+2024-09-18 14:35:42,039 INFO Creating filter chain: Ant [pattern='/**'], []
+
+2024-09-18 14:35:42,071 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5707c1cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@3676ac27, org.springframework.security.web.header.HeaderWriterFilter@26b894bd, org.springframework.security.web.csrf.CsrfFilter@3a0807b7, org.springframework.security.web.authentication.logout.LogoutFilter@2ca65ce4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48f5bde6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7072bc39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b5cb9b2, org.springframework.security.web.session.SessionManagementFilter@30b34287, org.springframework.security.web.access.ExceptionTranslationFilter@5769e7ae]
+
+2024-09-18 14:35:42,346 INFO Initializing ExecutorService 'taskScheduler'
+
+2024-09-18 14:35:42,362 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2024-09-18 14:35:42,464 INFO Tomcat started on port(s): 8878 (http) with context path '/nacos'
+
+2024-09-18 14:35:42,467 INFO Started Nacos in 8.694 seconds (JVM running for 9.269)
+
+2024-09-18 14:35:42,468 INFO Nacos started successfully in stand alone mode. use external storage
+
+2024-09-18 14:36:33,816 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2024-09-18 14:36:33,817 INFO Initializing Servlet 'dispatcherServlet'
+
+2024-09-18 14:36:33,828 INFO Completed initialization in 11 ms
+
+2024-09-18 14:45:40,975 INFO [capacityManagement] start correct usage
+
+2024-09-18 14:45:40,992 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 14:45:41,084 WARN clearConfigHistory start
+
+2024-09-18 15:54:27,814 WARN clearConfigHistory start
+
+2024-09-18 15:54:37,258 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h4m5s365ms59µs400ns).
+
+2024-09-18 15:59:07,765 INFO [capacityManagement] start correct usage
+
+2024-09-18 15:59:07,769 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 16:04:27,830 WARN clearConfigHistory start
+
+2024-09-18 16:09:07,777 INFO [capacityManagement] start correct usage
+
+2024-09-18 16:09:07,778 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 16:14:27,841 WARN clearConfigHistory start
+
+2024-09-18 16:19:07,782 INFO [capacityManagement] start correct usage
+
+2024-09-18 16:19:07,784 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 16:24:27,857 WARN clearConfigHistory start
+
+2024-09-18 16:29:07,796 INFO [capacityManagement] start correct usage
+
+2024-09-18 16:29:07,798 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 16:34:27,870 WARN clearConfigHistory start
+
+2024-09-18 16:39:07,808 INFO [capacityManagement] start correct usage
+
+2024-09-18 16:39:07,812 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 16:44:27,882 WARN clearConfigHistory start
+
+2024-09-18 16:49:07,819 INFO [capacityManagement] start correct usage
+
+2024-09-18 16:49:07,820 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 16:54:27,892 WARN clearConfigHistory start
+
+2024-09-18 16:59:07,828 INFO [capacityManagement] start correct usage
+
+2024-09-18 16:59:07,829 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 17:04:27,895 WARN clearConfigHistory start
+
+2024-09-18 17:09:07,833 INFO [capacityManagement] start correct usage
+
+2024-09-18 17:09:07,835 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 17:14:27,907 WARN clearConfigHistory start
+
+2024-09-18 17:19:07,836 INFO [capacityManagement] start correct usage
+
+2024-09-18 17:19:07,837 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 17:24:27,922 WARN clearConfigHistory start
+
+2024-09-18 17:29:07,853 INFO [capacityManagement] start correct usage
+
+2024-09-18 17:29:07,854 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 17:34:27,937 WARN clearConfigHistory start
+
+2024-09-18 17:39:07,868 INFO [capacityManagement] start correct usage
+
+2024-09-18 17:39:07,869 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 17:44:27,939 WARN clearConfigHistory start
+
+2024-09-18 17:49:07,875 INFO [capacityManagement] start correct usage
+
+2024-09-18 17:49:07,878 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 17:54:27,958 WARN clearConfigHistory start
+
+2024-09-18 17:59:07,890 INFO [capacityManagement] start correct usage
+
+2024-09-18 17:59:07,892 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 18:04:27,964 WARN clearConfigHistory start
+
+2024-09-18 18:09:07,902 INFO [capacityManagement] start correct usage
+
+2024-09-18 18:09:07,905 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 18:14:27,973 WARN clearConfigHistory start
+
+2024-09-18 18:19:07,915 INFO [capacityManagement] start correct usage
+
+2024-09-18 18:19:07,916 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 18:24:27,977 WARN clearConfigHistory start
+
+2024-09-18 18:29:07,925 INFO [capacityManagement] start correct usage
+
+2024-09-18 18:29:07,928 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 18:34:27,980 WARN clearConfigHistory start
+
+2024-09-18 18:39:07,940 INFO [capacityManagement] start correct usage
+
+2024-09-18 18:39:07,940 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 18:44:27,991 WARN clearConfigHistory start
+
+2024-09-18 18:49:07,949 INFO [capacityManagement] start correct usage
+
+2024-09-18 18:49:07,950 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 18:54:27,996 WARN clearConfigHistory start
+
+2024-09-18 18:59:07,958 INFO [capacityManagement] start correct usage
+
+2024-09-18 18:59:07,959 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 19:04:28,000 WARN clearConfigHistory start
+
+2024-09-18 19:09:07,971 INFO [capacityManagement] start correct usage
+
+2024-09-18 19:09:07,972 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 19:14:28,013 WARN clearConfigHistory start
+
+2024-09-18 19:19:07,981 INFO [capacityManagement] start correct usage
+
+2024-09-18 19:19:07,983 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 19:24:28,018 WARN clearConfigHistory start
+
+2024-09-18 19:29:07,986 INFO [capacityManagement] start correct usage
+
+2024-09-18 19:29:07,988 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 20:09:50,824 WARN clearConfigHistory start
+
+2024-09-18 20:10:01,907 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m59s644ms572µs).
+
+2024-09-18 20:19:29,131 INFO [capacityManagement] start correct usage
+
+2024-09-18 20:19:29,143 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 20:19:50,828 WARN clearConfigHistory start
+
+2024-09-18 20:29:29,157 INFO [capacityManagement] start correct usage
+
+2024-09-18 20:29:29,159 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 20:29:50,832 WARN clearConfigHistory start
+
+2024-09-18 20:39:29,164 INFO [capacityManagement] start correct usage
+
+2024-09-18 20:39:29,166 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 20:39:50,837 WARN clearConfigHistory start
+
+2024-09-18 20:49:29,172 INFO [capacityManagement] start correct usage
+
+2024-09-18 20:49:29,175 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 20:49:50,844 WARN clearConfigHistory start
+
+2024-09-18 20:59:29,184 INFO [capacityManagement] start correct usage
+
+2024-09-18 20:59:29,186 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 20:59:50,862 WARN clearConfigHistory start
+
+2024-09-18 21:09:29,198 INFO [capacityManagement] start correct usage
+
+2024-09-18 21:09:29,199 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 21:09:50,878 WARN clearConfigHistory start
+
+2024-09-18 21:19:29,207 INFO [capacityManagement] start correct usage
+
+2024-09-18 21:19:29,208 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 21:19:50,893 WARN clearConfigHistory start
+
+2024-09-18 21:29:29,219 INFO [capacityManagement] start correct usage
+
+2024-09-18 21:29:29,222 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 21:29:50,905 WARN clearConfigHistory start
+
+2024-09-18 21:39:29,229 INFO [capacityManagement] start correct usage
+
+2024-09-18 21:39:29,230 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 21:39:50,908 WARN clearConfigHistory start
+
+2024-09-18 21:49:29,234 INFO [capacityManagement] start correct usage
+
+2024-09-18 21:49:29,235 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 21:49:50,915 WARN clearConfigHistory start
+
+2024-09-18 21:59:29,245 INFO [capacityManagement] start correct usage
+
+2024-09-18 21:59:29,260 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 21:59:50,920 WARN clearConfigHistory start
+
+2024-09-18 22:09:29,274 INFO [capacityManagement] start correct usage
+
+2024-09-18 22:09:29,275 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 22:09:50,927 WARN clearConfigHistory start
+
+2024-09-18 22:19:29,288 INFO [capacityManagement] start correct usage
+
+2024-09-18 22:19:29,291 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 22:19:50,962 WARN clearConfigHistory start
+
+2024-09-18 22:29:29,305 INFO [capacityManagement] start correct usage
+
+2024-09-18 22:29:29,315 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 22:29:50,970 WARN clearConfigHistory start
+
+2024-09-18 22:39:29,330 INFO [capacityManagement] start correct usage
+
+2024-09-18 22:39:29,332 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 22:39:50,984 WARN clearConfigHistory start
+
+2024-09-18 22:49:29,339 INFO [capacityManagement] start correct usage
+
+2024-09-18 22:49:29,342 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 22:49:51,001 WARN clearConfigHistory start
+
+2024-09-18 22:59:29,356 INFO [capacityManagement] start correct usage
+
+2024-09-18 22:59:29,358 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 22:59:51,014 WARN clearConfigHistory start
+
+2024-09-18 23:09:29,364 INFO [capacityManagement] start correct usage
+
+2024-09-18 23:09:29,366 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 23:09:51,024 WARN clearConfigHistory start
+
+2024-09-18 23:19:29,380 INFO [capacityManagement] start correct usage
+
+2024-09-18 23:19:29,382 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 23:19:51,038 WARN clearConfigHistory start
+
+2024-09-18 23:29:29,390 INFO [capacityManagement] start correct usage
+
+2024-09-18 23:29:29,393 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-18 23:29:51,052 WARN clearConfigHistory start
+
+2024-09-18 23:45:18,743 WARN clearConfigHistory start
+
+2024-09-18 23:45:22,637 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m55s190ms258µs300ns).
+
+2024-09-18 23:50:46,919 INFO [capacityManagement] start correct usage
+
+2024-09-18 23:50:46,921 INFO [capacityManagement] end correct usage, cost: 0s
+

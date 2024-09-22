@@ -1,0 +1,10 @@
+
+.test {
+	background-color: red;
+}
+.order_tt {
+	background: #ff0000;
+	font-size: 22rpx;
+	color: #ffffff;
+}
+

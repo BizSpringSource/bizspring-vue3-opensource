@@ -1,0 +1,34 @@
+server:
+  port: 9979
+
+spring:
+  application:
+    name: bizspring-module-gateway
+  # 配置中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8878
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+    sentinel:
+      # 取消控制台懒加载
+      eager: true
+      transport:
+        # 控制台地址
+        dashboard: 127.0.0.1:9070
+      # nacos配置持久化
+      datasource:
+        ds1:
+          nacos:
+            ### nacos连接地址
+            server-addr: 127.0.0.1:8878
+            dataId: sentinal-bizspring
+            groupId: SENTINEL_GROUP
+            data-type: json
+            rule-type: flow
+  profiles:
+    active: dev

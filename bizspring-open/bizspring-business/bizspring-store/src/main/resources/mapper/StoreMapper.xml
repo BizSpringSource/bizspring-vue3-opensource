@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.store.admin.mapper.StoreMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.store.common.entity.Store">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="address" property="address" />
+        <result column="email" property="email" />
+        <result column="end_date" property="endDate" />
+        <result column="introduction" property="introduction" />
+        <result column="is_enabled" property="isEnabled" />
+        <result column="keyword" property="keyword" />
+        <result column="logo" property="logo" />
+        <result column="mobile" property="mobile" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="status" property="status" />
+		<result column="type" property="type" />
+        <result column="zip_code" property="zipCode" />
+       	<result property="merchantId"  column="merchant_id" />
+        <result property="storeCategoryId"  column="store_category_id" />
+    </resultMap>
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMapToDto" type="cn.bizspring.cloud.store.common.dto.StoreDto">
+		<result column="id" property="id" />
+		<result column="version" property="version" />
+		<result column="created_time" property="createdTime" />
+		<result column="updated_time" property="updatedTime" />
+		<result column="address" property="address" />
+		<result column="email" property="email" />
+		<result column="end_date" property="endDate" />
+		<result column="introduction" property="introduction" />
+		<result column="is_enabled" property="isEnabled" />
+		<result column="keyword" property="keyword" />
+		<result column="logo" property="logo" />
+		<result column="mobile" property="mobile" />
+		<result column="name" property="name" />
+		<result column="phone" property="phone" />
+		<result column="status" property="status" />
+		<result column="type" property="type" />
+		<result column="zip_code" property="zipCode" />
+		<result property="merchantId"  column="merchant_id" />
+		<result property="merchantName"  column="merchant_name" />
+		<result property="storeCategoryId"  column="store_category_id" />
+		<result property="storeCategoryName"  column="store_category_name" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, address, email, end_date, introduction, is_enabled, keyword, logo, mobile, name, phone, status, type, zip_code, merchant_id, store_category_id, 'store_id'
+    </sql>
+
+	<!-- 通用查询结果列 dto-->
+	<sql id="Base_Column_List_Dto">
+		id,
+        version,
+		created_time, updated_time, address, email, end_date, introduction, is_enabled, keyword, logo, mobile, name, phone, status, type, zip_code, merchant_id,merchant_name, store_category_id,store_category_name
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store`
+		WHERE
+			`id` = #{id}
+	</select>
+
+	<!-- 查找实体对象 -->
+	<select id="findByMerchant" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store`
+		WHERE
+		`merchant_id` = #{id}
+	</select>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultType="cn.bizspring.cloud.store.common.entity.Store">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store`
+	</select>
+	
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store`
+		WHERE
+			${propertyName } = #{propertyValue}
+	</select>
+
+	<!-- 通过名称查找会员 -->
+	<select id="keywordSearch" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store`
+		WHERE
+		1=1
+		AND `name` LIKE concat('%', #{keyword}, '%')
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+	
+	<!-- 查找店铺 -->
+	<select id="findList" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store`
+		<where>
+			<if test="type != null">
+			  	AND type = #{type.ordinal}
+		  	</if>
+		  	<if test="status != null">
+		  		AND `status` = #{status.ordinal}
+		  	</if>
+		  	<if test="isEnabled != null">
+		  		AND is_enabled = #{isEnabled}
+		  	</if>
+		  	<if test="hasExpired != null">
+		  		<if test="hasExpired == true">
+		  			AND (end_date IS NOT NULL AND end_date <![CDATA[ <= ]]> NOW())
+		  		</if>
+		  		<if test="hasExpired == false">
+		  			AND (end_date IS NULL OR end_date <![CDATA[ > ]]> NOW())
+		  		</if>
+		  	</if>
+		  	<if test="first != null and count != null">
+				LIMIT ${first}, ${count}
+			</if>
+		</where>
+	</select>
+			
+	<!-- 判断是否存在 -->
+	<select id="exists" resultType="boolean">
+		SELECT
+			COUNT(1)
+		FROM
+			`biz_store`
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 判断是否唯一 -->
+	<select id="unique" resultType="boolean">
+		SELECT
+			count(1)
+		FROM
+			`biz_store`
+		WHERE
+			${propertyName } = #{propertyValue}
+		<if test="id != null">
+			AND id != #{id}
+		</if>
+	</select>
+	
+	<!-- 查找店铺数量 -->
+	<select id="count" resultType="long">
+		SELECT
+			count(1)
+		FROM
+			`biz_store`
+		<where>
+			<if test="type != null">
+			  	AND type = #{type.ordinal}
+		  	</if>
+		  	<if test="status != null">
+		  		AND `status` = #{status.ordinal}
+		  	</if>
+		  	<if test="isEnabled != null">
+		  		AND is_enabled = #{isEnabled}
+		  	</if>
+		  	<if test="hasExpired != null">
+		  		<if test="hasExpired == true">
+		  			AND (end_date IS NOT NULL AND end_date <![CDATA[ <= ]]> NOW())
+		  		</if>
+		  		<if test="hasExpired == false">
+		  			AND (end_date IS NULL OR end_date <![CDATA[ > ]]> NOW())
+		  		</if>
+		  	</if>
+		</where>
+	</select>
+
+	<!-- 查找店铺分页 -->
+	<select id="findAllByEntity" resultMap="BaseResultMap">
+		SELECT
+			id,address,is_enabled,name,status,type,merchant_id, store_category_id
+		FROM
+			`biz_store` store
+		<where>
+			<if test="null != entity ">
+				<if test=" null != entity.name ">
+					AND store.name LIKE concat('%',#{entity.name},'%')
+				</if>
+				<if test=" null != entity.type ">
+					AND store.type = #{entity.type.ordinal}
+				</if>
+				<if test=" null != entity.status ">
+					AND store.status = #{entity.status.ordinal}
+				</if>
+				<if test=" null != entity.isEnabled ">
+					AND store.is_enabled = #{entity.isEnabled}
+				</if>
+				<if test=" null != entity.storeCategoryId ">
+					AND store.store_category_id = #{entity.storeCategoryId}
+				</if>
+				<if test=" null != entity.hasExpired">
+					<if test="entity.hasExpired == true">
+						AND (end_date IS NOT NULL AND end_date <![CDATA[ <= ]]> NOW())
+					</if>
+					<if test="entity.hasExpired == false">
+						AND (end_date IS NULL OR end_date <![CDATA[ > ]]> NOW())
+					</if>
+				</if>
+			</if>
+		</where>
+	</select>
+	<!-- 查找店铺分页 -->
+	<select id="findPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store`
+		<where>
+			<if test="type != null">
+			  	AND type = #{type.ordinal}
+		  	</if>
+		  	<if test="status != null">
+		  		AND `status` = #{status.ordinal}
+		  	</if>
+		  	<if test="isEnabled != null">
+		  		AND is_enabled = #{isEnabled}
+		  	</if>
+		  	<if test="hasExpired != null">
+		  		<if test="hasExpired == true">
+		  			AND (end_date IS NOT NULL AND end_date <![CDATA[ <= ]]> NOW())
+		  		</if>
+		  		<if test="hasExpired == false">
+		  			AND (end_date IS NULL OR end_date <![CDATA[ > ]]> NOW())
+		  		</if>
+		  	</if>
+		  	${queryWrapper.sqlSegment}
+		</where>
+	</select>
+
+	<!-- 查找店铺分页 -->
+	<select id="findPageList" resultMap="BaseResultMapToDto">
+		SELECT
+		<include refid="Base_Column_List_Dto"></include>
+		FROM
+			`biz_store`
+			<if test="null != storeCategories and storeCategories.size() > 0">
+				left join (
+					select a.item_id,a.store_category_name from (
+					<foreach collection="storeCategories" item="item" index="index" separator="union all">
+						select #{item.id} as item_id,#{item.name} as store_category_name
+						from dual
+					</foreach>
+					) as a
+				) as aa on aa.item_id=store_category_id
+			</if>
+			<if test="null != merchantes and merchantes.size() > 0">
+				left join (
+					select b.item_id,b.merchant_name  from (
+					<foreach collection="merchantes" item="item" index="index" separator="union all">
+						select #{item.id} as item_id,#{item.username} as merchant_name
+						from dual
+					</foreach>
+					) as b
+				) as bb on bb.item_id=merchant_id
+			</if>
+
+		<where> 1=1
+
+			<if test="storeCategoryId != null">
+				AND store_category_id = #{storeCategoryId}
+			</if>
+			<if test="name != null and name.trim() != ''">
+				and name like concat('%', #{name}, '%')
+			</if>
+			<if test="type != null">
+				AND type = #{type.ordinal}
+			</if>
+			<if test="status != null">
+				AND `status` = #{status.ordinal}
+			</if>
+			<if test="isEnabled != null">
+				AND is_enabled = #{isEnabled}
+			</if>
+			<if test="hasExpired != null">
+				<if test="hasExpired == true">
+					AND (end_date IS NOT NULL AND end_date <![CDATA[ <= ]]> NOW())
+				</if>
+				<if test="hasExpired == false">
+					AND (end_date IS NULL OR end_date <![CDATA[ > ]]> NOW())
+				</if>
+			</if>
+			${queryWrapper.sqlSegment}
+		</where>
+	</select>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.store.common.entity.Store">
+    	INSERT INTO biz_store(
+			id ,
+			created_time ,
+			version ,
+			address ,
+			email ,
+			end_date ,
+			is_enabled ,
+			keyword ,
+			logo ,
+			mobile ,
+			`name` ,
+			phone ,
+			`status` ,
+			`type` ,
+			zip_code ,
+			merchant_id ,
+			store_category_id ,
+			introduction
+		) VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.address}, 
+			#{entity.email},
+			#{entity.endDate}, 
+			#{entity.isEnabled}, 
+			#{entity.keyword}, 
+			#{entity.logo}, 
+			#{entity.mobile}, 
+			#{entity.name}, 
+			#{entity.phone}, 
+			#{entity.status}, 
+			#{entity.type}, 
+			#{entity.zipCode}, 
+			#{entity.merchantId},
+			#{entity.storeCategoryId},
+			#{entity.introduction}
+		)
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.store.common.entity.Store">
+   		UPDATE biz_store
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			address = #{entity.address},
+			email = #{entity.email},
+			end_date = #{entity.endDate},
+			is_enabled = #{entity.isEnabled},
+			keyword = #{entity.keyword},
+			logo = #{entity.logo},
+			mobile = #{entity.mobile},
+			`name` = #{entity.name},
+			phone = #{entity.phone},
+			`status` = #{entity.status},
+			`type` = #{entity.type},
+			zip_code = #{entity.zipCode},
+			merchant_id = #{entity.merchantId},
+			store_category_id = #{entity.storeCategoryId},
+			introduction = #{entity.introduction}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version}
+  	</update>
+  
+</mapper>

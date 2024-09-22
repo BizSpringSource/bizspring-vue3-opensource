@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.bizspring.cloud.upms.common.util.EmailConfigProperties,\
+  cn.bizspring.cloud.upms.common.util.EmailConfiguration,\
+  cn.bizspring.cloud.upms.common.util.EmailUtils

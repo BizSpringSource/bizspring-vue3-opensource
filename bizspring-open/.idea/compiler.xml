@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bizspring-order" />
+        <module name="bizspring-base-data" />
+        <module name="bizspring-module-gateway" />
+        <module name="bizspring-base-swagger" />
+        <module name="bizspring-auth" />
+        <module name="bizspring-base-store" />
+        <module name="bizspring-base-marketing" />
+        <module name="bizspring-upms" />
+        <module name="bizspring-base-core" />
+        <module name="bizspring-base-goods" />
+        <module name="bizspring-base-io" />
+        <module name="bizspring-store" />
+        <module name="bizspring-base-datasource" />
+        <module name="bizspring-base-log" />
+        <module name="bizspring-base-upms" />
+        <module name="bizspring-marketing" />
+        <module name="bizspring-base-order" />
+        <module name="bizspring-base-security" />
+        <module name="bizspring-goods" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bizspring-auth" target="1.8" />
+      <module name="bizspring-base" target="1.8" />
+      <module name="bizspring-base-core" target="1.8" />
+      <module name="bizspring-base-data" target="1.8" />
+      <module name="bizspring-base-datasource" target="1.8" />
+      <module name="bizspring-base-goods" target="1.8" />
+      <module name="bizspring-base-io" target="1.8" />
+      <module name="bizspring-base-log" target="1.8" />
+      <module name="bizspring-base-marketing" target="1.8" />
+      <module name="bizspring-base-order" target="1.8" />
+      <module name="bizspring-base-seata" target="1.8" />
+      <module name="bizspring-base-security" target="1.8" />
+      <module name="bizspring-base-sms" target="1.8" />
+      <module name="bizspring-base-store" target="1.8" />
+      <module name="bizspring-base-swagger" target="1.8" />
+      <module name="bizspring-base-upms" target="1.8" />
+      <module name="bizspring-base-xxjob" target="1.8" />
+      <module name="bizspring-business" target="1.8" />
+      <module name="bizspring-goods" target="1.8" />
+      <module name="bizspring-marketing" target="1.8" />
+      <module name="bizspring-module" target="1.8" />
+      <module name="bizspring-module-gateway" target="1.8" />
+      <module name="bizspring-module-gen" target="1.8" />
+      <module name="bizspring-order" target="1.8" />
+      <module name="bizspring-store" target="1.8" />
+      <module name="bizspring-upms" target="1.8" />
+      <module name="bizspring_open" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

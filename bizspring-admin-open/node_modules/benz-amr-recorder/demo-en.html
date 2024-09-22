@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>AMR decode/encode tests</title>
+</head>
+
+<body>
+<h1>AMR Recorder Demo</h1>
+<h2>Decode & Play</h2>
+<div id="player-amr">
+    <p>
+        Load demo file: <button id="amr-load">Load & Decode</button>
+        Download demo file: <a href="res/mario.amr">mario.amr</a>
+    </p>
+    <p>
+        Load a local file: <input type="file" id="amr-file" accept=".amr"> (The file will NOT be uploaded anywhere.)
+    </p>
+    <p>
+        <button id="amr-play" disabled>Play</button>
+        <button id="amr-stop" disabled>Stop</button>
+        <input id="amr-progress" type="range" min="0" max="1" step="any" value="0" disabled>
+        <label for="amr-progress">
+            <span id="amr-cur">0'</span>
+            <span>/</span>
+            <span id="amr-duration">0'</span>
+        </label>
+    </p>
+</div>
+<h2>Record & Encode</h2>
+<div id="recorder-amr">
+    <p>
+        <button id="amr-record">Start Record</button> (The track will NOT be uploaded anywhere.)
+    </p>
+    <p>
+        <button id="amr-play-record" disabled>Play the record</button>
+        <a href="#" id="amr-down-record"><!--Download recorded AMR file--></a>
+        <span id="amr-record-duration">0'</span>
+    </p>
+</div>
+<script src="./BenzAMRRecorder.js"></script>
+<!--suppress ES6ModulesDependencies, ES6ConvertVarToLetConst -->
+<script>
+    (function () {
+        function E(selector) {
+            return document.querySelector(selector);
+        }
+
+        /**** Decode & Play ****/
+
+        var amr;
+
+        var loadDemoBtn = E('#amr-load');
+        var loadAmrFile = E('#amr-file');
+        var playBtn = E('#amr-play');
+        var stopBtn = E('#amr-stop');
+        var progressCtrl = E('#amr-progress');
+        var isDragging = false;
+        var cur = E('#amr-cur');
+        var duration = E('#amr-duration');
+
+        setInterval(function () {
+            if (amr) {
+                cur.innerHTML = amr.getCurrentPosition().toFixed(2) + '\'';
+                if (!isDragging) {
+                    progressCtrl.value = amr.getCurrentPosition().toFixed(2);
+                }
+            } else {
+                cur.innerHTML = '0\'';
+            }
+        }, 10);
+
+        loadDemoBtn.onclick = function() {
+            amr = new BenzAMRRecorder();
+            loadDemoBtn.setAttribute('disabled', true);
+            loadAmrFile.setAttribute('disabled', true);
+            playBtn.setAttribute('disabled', true);
+            stopBtn.setAttribute('disabled', true);
+            progressCtrl.setAttribute('disabled', true);
+            amr.initWithUrl('./res/mario.amr').then(function () {
+                loadDemoBtn.removeAttribute('disabled');
+                loadAmrFile.removeAttribute('disabled');
+                playBtn.removeAttribute('disabled');
+                stopBtn.removeAttribute('disabled');
+                progressCtrl.removeAttribute('disabled');
+                progressCtrl.setAttribute('max', amr.getDuration());
+                duration.innerHTML = amr.getDuration().toFixed(2) + '\'';
+            });
+
+            // Bind Events
+            amr.onPlay(function () {
+                console.log('Event: play');
+                playBtn.innerHTML = 'Pause';
+            });
+            amr.onStop(function () {
+                console.log('Event: stop');
+                playBtn.innerHTML = 'Play';
+            });
+            amr.onPause(function () {
+                console.log('Event: pause');
+                playBtn.innerHTML = 'Resume';
+            });
+            amr.onResume(function () {
+                console.log('Event: resume');
+                playBtn.innerHTML = 'Pause';
+            });
+            amr.onEnded(function () {
+                console.log('Event: ended');
+                playBtn.innerHTML = 'Play';
+            });
+            amr.onAutoEnded(function () {
+                console.log('Event: autoEnded');
+            });
+            amr.onStartRecord(function () {
+                console.log('Event: startRecord');
+            });
+            amr.onFinishRecord(function () {
+                console.log('Event: finishRecord');
+            });
+            amr.onCancelRecord(function () {
+                console.log('Event: cancelRecord');
+            });
+        };
+
+        playBtn.onclick = function () {
+            amr.playOrPauseOrResume();
+        };
+
+        stopBtn.onclick = function () {
+                amr.stop();
+        };
+
+        progressCtrl.onmousedown = function () {
+            isDragging = true;
+        };
+        progressCtrl.onmouseup = function () {
+            isDragging = false;
+        };
+        progressCtrl.onchange = function (e) {
+            amr.setPosition(e.target.value);
+        };
+
+        loadAmrFile.onchange = function() {
+            amr = new BenzAMRRecorder();
+            loadDemoBtn.setAttribute('disabled', true);
+            loadAmrFile.setAttribute('disabled', true);
+            playBtn.setAttribute('disabled', true);
+            amr.initWithBlob(this.files[0]).then(function () {
+                loadDemoBtn.removeAttribute('disabled');
+                loadAmrFile.removeAttribute('disabled');
+                playBtn.removeAttribute('disabled');
+                duration.innerHTML = amr.getDuration().toFixed(2) + '\'';
+            });
+
+            // Bind Events
+            amr.onPlay(function () {
+                console.log('Event: play');
+                playBtn.innerHTML = 'Stop';
+            });
+            amr.onStop(function () {
+                console.log('Event: stop');
+                playBtn.innerHTML = 'Play';
+            });
+            amr.onEnded(function () {
+                console.log('Event: ended');
+                playBtn.innerHTML = 'Play';
+            });
+            amr.onAutoEnded(function () {
+                console.log('Event: autoEnded');
+            });
+            amr.onStartRecord(function () {
+                console.log('Event: startRecord');
+            });
+            amr.onFinishRecord(function () {
+                console.log('Event: finishRecord');
+            });
+            amr.onCancelRecord(function () {
+                console.log('Event: cancelRecord');
+            });
+        };
+
+        /***** Record & Encode *****/
+
+        var amrForRecorder;
+
+        var recordBtn = E('#amr-record');
+        var playRecordBtn = E('#amr-play-record');
+        var downRecordLink = E('#amr-down-record');
+        var recordDuration = E('#amr-record-duration');
+
+        recordBtn.onclick = function () {
+            if (amrForRecorder && amrForRecorder.isRecording()) {
+                recordBtn.innerHTML = 'Start Record';
+                playRecordBtn.removeAttribute('disabled');
+                amrForRecorder.finishRecord().then(() => {
+                    downRecordLink.href = window.URL.createObjectURL(amrForRecorder.getBlob());
+                    downRecordLink.innerHTML = 'Download recorded AMR file';
+                    recordDuration.innerHTML = amrForRecorder.getDuration().toFixed(2) + '\'';
+                });
+            } else {
+                recordBtn.innerHTML = 'Stop Record';
+                playRecordBtn.setAttribute('disabled', true);
+                amrForRecorder = new BenzAMRRecorder();
+                amrForRecorder.initWithRecord().then(() => {
+                    amrForRecorder.startRecord();
+                }).catch(function(e) {
+                    alert(e.message || e.name || JSON.stringify(e));
+                });
+
+                // 绑定事件
+                amrForRecorder.onPlay(function () {
+                    console.log('Recorder Event: play');
+                    playRecordBtn.innerHTML = 'Stop Playing';
+                });
+                amrForRecorder.onStop(function () {
+                    console.log('Recorder Event: stop');
+                    playRecordBtn.innerHTML = 'Play Record';
+                });
+                amrForRecorder.onEnded(function () {
+                    console.log('Recorder Event: ended');
+                    playRecordBtn.innerHTML = 'Play Record';
+                });
+                amrForRecorder.onAutoEnded(function () {
+                    console.log('Recorder Event: autoEnded');
+                });
+                amrForRecorder.onStartRecord(function () {
+                    console.log('Recorder Event: startRecord');
+                    recordBtn.innerHTML = 'Stop Record';
+                });
+                amrForRecorder.onFinishRecord(function () {
+                    console.log('Recorder Event: finishRecord');
+                    recordBtn.innerHTML = 'Start Record';
+                });
+                amrForRecorder.onCancelRecord(function () {
+                    console.log('Recorder Event: cancelRecord');
+                    recordBtn.innerHTML = 'Start Record';
+                });
+            }
+        };
+
+        playRecordBtn.onclick = function () {
+            if (amrForRecorder.isPlaying()) {
+                amrForRecorder.stop();
+            } else {
+                amrForRecorder.play();
+            }
+        };
+    })();
+</script>
+</body>
+</html>

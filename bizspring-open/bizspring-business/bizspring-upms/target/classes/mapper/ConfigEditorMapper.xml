@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2023-2050
+  ~ All rights reserved, Designed By www.bizspring.cn
+  -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.ConfigEditorMapper">
+
+    <resultMap id="configEditorMap" type="cn.bizspring.cloud.upms.common.entity.ConfigEditor">
+        <id property="id" column="id"/>
+        <result property="tenantId" column="tenant_id"/>
+		<result property="isEnabled" column="is_enabled" />
+		<result property="delFlag" column="del_flag"/>
+        <result property="createdTime" column="created_time"/>
+        <result property="updatedTime" column="updated_time"/>
+        <result property="editorType" column="editor_type"/>
+    </resultMap>
+
+</mapper>

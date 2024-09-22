@@ -1,0 +1,206 @@
+2024-07-21 08:42:55,508 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-marketing, ip: {"instanceId":"192.168.3.2#5679#DEFAULT#DEFAULT_GROUP@@bizspring-marketing","ip":"192.168.3.2","port":5679,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-marketing","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721402956735,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 08:42:55,508 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-order, ip: {"instanceId":"192.168.3.2#5779#DEFAULT#DEFAULT_GROUP@@bizspring-order","ip":"192.168.3.2","port":5779,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721402955798,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 08:42:55,508 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-goods, ip: {"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","ip":"192.168.3.2","port":5879,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721402955389,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 08:42:55,509 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-upms, ip: {"instanceId":"192.168.3.2#5979#DEFAULT#DEFAULT_GROUP@@bizspring-upms","ip":"192.168.3.2","port":5979,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-upms","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721402954602,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 08:42:55,508 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-module-gateway, ip: {"instanceId":"192.168.3.2#9979#DEFAULT#DEFAULT_GROUP@@bizspring-module-gateway","ip":"192.168.3.2","port":9979,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-module-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721402954114,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 08:42:55,509 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-store, ip: {"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","ip":"192.168.3.2","port":5579,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721402955541,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 08:42:55,519 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-auth, ip: {"instanceId":"192.168.3.2#5070#DEFAULT#DEFAULT_GROUP@@bizspring-auth","ip":"192.168.3.2","port":5070,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721402956343,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 08:42:55,640 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-order, value: {"instanceList":[]}
+
+2024-07-21 08:42:55,641 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-auth, value: {"instanceList":[]}
+
+2024-07-21 08:42:55,647 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-upms, value: {"instanceList":[]}
+
+2024-07-21 08:42:55,648 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-store, value: {"instanceList":[]}
+
+2024-07-21 08:42:55,649 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-marketing, value: {"instanceList":[]}
+
+2024-07-21 08:42:55,657 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-goods, value: {"instanceList":[]}
+
+2024-07-21 08:42:55,657 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-module-gateway, value: {"instanceList":[]}
+
+2024-07-21 08:42:56,688 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-module-gateway, value: {"instanceList":[{"instanceId":"192.168.3.2#9979#DEFAULT#DEFAULT_GROUP@@bizspring-module-gateway","ip":"192.168.3.2","port":9979,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-module-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721522576687,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 08:43:01,173 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-store, value: {"instanceList":[{"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","ip":"192.168.3.2","port":5579,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721522581172,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 08:43:01,207 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-order, value: {"instanceList":[{"instanceId":"192.168.3.2#5779#DEFAULT#DEFAULT_GROUP@@bizspring-order","ip":"192.168.3.2","port":5779,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721522581205,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 08:43:01,210 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-marketing, value: {"instanceList":[{"instanceId":"192.168.3.2#5679#DEFAULT#DEFAULT_GROUP@@bizspring-marketing","ip":"192.168.3.2","port":5679,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-marketing","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721522581210,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 08:43:01,210 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-upms, value: {"instanceList":[{"instanceId":"192.168.3.2#5979#DEFAULT#DEFAULT_GROUP@@bizspring-upms","ip":"192.168.3.2","port":5979,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-upms","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721522581208,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 08:43:01,211 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-goods, value: {"instanceList":[{"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","ip":"192.168.3.2","port":5879,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721522581210,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 08:43:01,214 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-auth, value: {"instanceList":[{"instanceId":"192.168.3.2#5070#DEFAULT#DEFAULT_GROUP@@bizspring-auth","ip":"192.168.3.2","port":5070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721522581213,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 21:09:55,650 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-auth, ip: {"instanceId":"192.168.3.2#5070#DEFAULT#DEFAULT_GROUP@@bizspring-auth","ip":"192.168.3.2","port":5070,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721526339737,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 21:09:55,650 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-goods, ip: {"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","ip":"192.168.3.2","port":5879,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721526344180,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 21:09:55,650 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-upms, ip: {"instanceId":"192.168.3.2#5979#DEFAULT#DEFAULT_GROUP@@bizspring-upms","ip":"192.168.3.2","port":5979,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-upms","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721526339811,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 21:09:55,650 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-module-gateway, ip: {"instanceId":"192.168.3.2#9979#DEFAULT#DEFAULT_GROUP@@bizspring-module-gateway","ip":"192.168.3.2","port":9979,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-module-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721526340266,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 21:09:55,650 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-store, ip: {"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","ip":"192.168.3.2","port":5579,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721526339827,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 21:09:55,650 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-marketing, ip: {"instanceId":"192.168.3.2#5679#DEFAULT#DEFAULT_GROUP@@bizspring-marketing","ip":"192.168.3.2","port":5679,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-marketing","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721526339554,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 21:09:55,650 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-order, ip: {"instanceId":"192.168.3.2#5779#DEFAULT#DEFAULT_GROUP@@bizspring-order","ip":"192.168.3.2","port":5779,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721526339554,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 21:09:55,672 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-order, value: {"instanceList":[]}
+
+2024-07-21 21:09:55,672 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-goods, value: {"instanceList":[]}
+
+2024-07-21 21:09:55,672 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-auth, value: {"instanceList":[]}
+
+2024-07-21 21:09:55,672 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-marketing, value: {"instanceList":[]}
+
+2024-07-21 21:09:55,673 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-module-gateway, value: {"instanceList":[]}
+
+2024-07-21 21:09:55,673 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-upms, value: {"instanceList":[]}
+
+2024-07-21 21:09:55,675 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-store, value: {"instanceList":[]}
+
+2024-07-21 21:09:55,740 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-upms, value: {"instanceList":[{"instanceId":"192.168.3.2#5979#DEFAULT#DEFAULT_GROUP@@bizspring-upms","ip":"192.168.3.2","port":5979,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-upms","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567395734,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 21:09:55,875 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-store, value: {"instanceList":[{"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","ip":"192.168.3.2","port":5579,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567395874,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 21:09:56,174 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-module-gateway, value: {"instanceList":[{"instanceId":"192.168.3.2#9979#DEFAULT#DEFAULT_GROUP@@bizspring-module-gateway","ip":"192.168.3.2","port":9979,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-module-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567396173,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 21:09:56,229 WARN namespace : public, [DEFAULT_GROUP@@bizspring-auth] services are automatically cleaned
+
+2024-07-21 21:09:56,683 WARN namespace : public, [DEFAULT_GROUP@@bizspring-goods] services are automatically cleaned
+
+2024-07-21 21:09:56,684 WARN namespace : public, [DEFAULT_GROUP@@bizspring-marketing] services are automatically cleaned
+
+2024-07-21 21:09:56,684 WARN namespace : public, [DEFAULT_GROUP@@bizspring-order] services are automatically cleaned
+
+2024-07-21 21:09:56,685 WARN namespace : public, [DEFAULT_GROUP@@bizspring-auth] services are automatically cleaned
+
+2024-07-21 21:09:56,686 WARN namespace : public, [DEFAULT_GROUP@@bizspring-goods] services are automatically cleaned
+
+2024-07-21 21:09:56,686 WARN namespace : public, [DEFAULT_GROUP@@bizspring-marketing] services are automatically cleaned
+
+2024-07-21 21:09:56,687 WARN namespace : public, [DEFAULT_GROUP@@bizspring-order] services are automatically cleaned
+
+2024-07-21 21:09:56,687 WARN namespace : public, [DEFAULT_GROUP@@bizspring-auth] services are automatically cleaned
+
+2024-07-21 21:09:56,688 WARN namespace : public, [DEFAULT_GROUP@@bizspring-goods] services are automatically cleaned
+
+2024-07-21 21:09:56,688 WARN namespace : public, [DEFAULT_GROUP@@bizspring-marketing] services are automatically cleaned
+
+2024-07-21 21:09:56,688 WARN namespace : public, [DEFAULT_GROUP@@bizspring-order] services are automatically cleaned
+
+2024-07-21 21:09:56,689 WARN namespace : public, [DEFAULT_GROUP@@bizspring-auth] services are automatically cleaned
+
+2024-07-21 21:09:56,689 WARN namespace : public, [DEFAULT_GROUP@@bizspring-goods] services are automatically cleaned
+
+2024-07-21 21:09:56,690 WARN namespace : public, [DEFAULT_GROUP@@bizspring-marketing] services are automatically cleaned
+
+2024-07-21 21:09:56,692 WARN namespace : public, [DEFAULT_GROUP@@bizspring-order] services are automatically cleaned
+
+2024-07-21 21:09:56,693 WARN namespace : public, [DEFAULT_GROUP@@bizspring-auth] services are automatically cleaned
+
+2024-07-21 21:09:56,693 WARN namespace : public, [DEFAULT_GROUP@@bizspring-goods] services are automatically cleaned
+
+2024-07-21 21:09:56,694 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-auth","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":6,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567395672,"checksum":"10790daca8aed68976e21c296dffb44e","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@bizspring-auth","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
+
+2024-07-21 21:09:56,694 WARN namespace : public, [DEFAULT_GROUP@@bizspring-marketing] services are automatically cleaned
+
+2024-07-21 21:09:56,695 WARN namespace : public, [DEFAULT_GROUP@@bizspring-order] services are automatically cleaned
+
+2024-07-21 21:09:56,695 WARN namespace : public, [DEFAULT_GROUP@@bizspring-goods] services are automatically cleaned
+
+2024-07-21 21:09:56,696 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-goods","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":9,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567395672,"checksum":"c43753b3dea04e6a2eb5ee72174b2f5f","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@bizspring-goods","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
+
+2024-07-21 21:09:56,696 WARN namespace : public, [DEFAULT_GROUP@@bizspring-marketing] services are automatically cleaned
+
+2024-07-21 21:09:56,696 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-marketing","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":9,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567395673,"checksum":"f83a463e721c54a1a0effb6f63814210","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@bizspring-marketing","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
+
+2024-07-21 21:09:56,697 WARN namespace : public, [DEFAULT_GROUP@@bizspring-order] services are automatically cleaned
+
+2024-07-21 21:09:56,697 WARN namespace : public, [DEFAULT_GROUP@@bizspring-order] services are automatically cleaned
+
+2024-07-21 21:09:56,698 INFO [DEAD-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-order","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":10,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567395672,"checksum":"8a3136b7f536aee793f61ce3e0f41d07","clusterMap":{"DEFAULT":{"serviceName":"DEFAULT_GROUP@@bizspring-order","name":"DEFAULT","healthChecker":{"type":"TCP"},"defaultPort":80,"defaultCheckPort":80,"useIPPort4Check":true,"metadata":{},"sitegroup":"","defCkport":80,"empty":true,"defIPPort":80}},"empty":true}
+
+2024-07-21 21:10:00,660 INFO creating empty service public:DEFAULT_GROUP@@bizspring-auth
+
+2024-07-21 21:10:00,660 INFO creating empty service public:DEFAULT_GROUP@@bizspring-marketing
+
+2024-07-21 21:10:00,661 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-marketing","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567400660,"checksum":"e9a329b701bfddd36b89e05439660539","clusterMap":{},"empty":true}
+
+2024-07-21 21:10:00,661 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-auth","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567400660,"checksum":"a7b7766aec2539e914b5a4db84fd5685","clusterMap":{},"empty":true}
+
+2024-07-21 21:10:00,661 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.3.2#5070#DEFAULT#DEFAULT_GROUP@@bizspring-auth","ip":"192.168.3.2","port":5070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567400660,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+
+2024-07-21 21:10:00,661 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-auth, value: {"instanceList":[{"instanceId":"192.168.3.2#5070#DEFAULT#DEFAULT_GROUP@@bizspring-auth","ip":"192.168.3.2","port":5070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567400660,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 21:10:00,662 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.3.2#5679#DEFAULT#DEFAULT_GROUP@@bizspring-marketing","ip":"192.168.3.2","port":5679,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-marketing","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567400660,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+
+2024-07-21 21:10:00,662 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-marketing, value: {"instanceList":[{"instanceId":"192.168.3.2#5679#DEFAULT#DEFAULT_GROUP@@bizspring-marketing","ip":"192.168.3.2","port":5679,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-marketing","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567400660,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 21:10:00,690 INFO creating empty service public:DEFAULT_GROUP@@bizspring-order
+
+2024-07-21 21:10:00,690 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-order","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567400690,"checksum":"85ed35e9d12aa043add79ce8f2c79a83","clusterMap":{},"empty":true}
+
+2024-07-21 21:10:00,690 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.3.2#5779#DEFAULT#DEFAULT_GROUP@@bizspring-order","ip":"192.168.3.2","port":5779,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567400689,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+
+2024-07-21 21:10:00,690 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-order, value: {"instanceList":[{"instanceId":"192.168.3.2#5779#DEFAULT#DEFAULT_GROUP@@bizspring-order","ip":"192.168.3.2","port":5779,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567400689,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 21:10:01,667 INFO creating empty service public:DEFAULT_GROUP@@bizspring-goods
+
+2024-07-21 21:10:01,668 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@bizspring-goods","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1721567401667,"checksum":"67c609b61bc9327e816a482889ce328a","clusterMap":{},"empty":true}
+
+2024-07-21 21:10:01,668 WARN cluster: DEFAULT not found, ip: {"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","ip":"192.168.3.2","port":5879,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567401667,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}, will create new cluster with default configuration.
+
+2024-07-21 21:10:01,668 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-goods, value: {"instanceList":[{"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","ip":"192.168.3.2","port":5879,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567401667,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 22:26:28,644 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-marketing, ip: {"instanceId":"192.168.3.2#5679#DEFAULT#DEFAULT_GROUP@@bizspring-marketing","ip":"192.168.3.2","port":5679,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-marketing","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567922291,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 22:26:28,644 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-auth, ip: {"instanceId":"192.168.3.2#5070#DEFAULT#DEFAULT_GROUP@@bizspring-auth","ip":"192.168.3.2","port":5070,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567922245,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 22:26:28,644 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-module-gateway, ip: {"instanceId":"192.168.3.2#9979#DEFAULT#DEFAULT_GROUP@@bizspring-module-gateway","ip":"192.168.3.2","port":9979,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-module-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567922804,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 22:26:28,644 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-store, ip: {"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","ip":"192.168.3.2","port":5579,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567922443,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 22:26:28,644 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-goods, ip: {"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","ip":"192.168.3.2","port":5879,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567923247,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 22:26:28,645 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-order, ip: {"instanceId":"192.168.3.2#5779#DEFAULT#DEFAULT_GROUP@@bizspring-order","ip":"192.168.3.2","port":5779,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567922231,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 22:26:28,647 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@bizspring-upms, ip: {"instanceId":"192.168.3.2#5979#DEFAULT#DEFAULT_GROUP@@bizspring-upms","ip":"192.168.3.2","port":5979,"weight":1.0,"healthy":false,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-upms","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721567922443,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}
+
+2024-07-21 22:26:28,656 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-module-gateway, value: {"instanceList":[]}
+
+2024-07-21 22:26:28,657 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-goods, value: {"instanceList":[]}
+
+2024-07-21 22:26:28,657 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-order, value: {"instanceList":[]}
+
+2024-07-21 22:26:28,657 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-marketing, value: {"instanceList":[]}
+
+2024-07-21 22:26:28,657 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-store, value: {"instanceList":[]}
+
+2024-07-21 22:26:28,657 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-auth, value: {"instanceList":[]}
+
+2024-07-21 22:26:28,669 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-upms, value: {"instanceList":[]}
+
+2024-07-21 22:26:29,173 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-order, value: {"instanceList":[{"instanceId":"192.168.3.2#5779#DEFAULT#DEFAULT_GROUP@@bizspring-order","ip":"192.168.3.2","port":5779,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721571989172,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 22:26:29,174 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-auth, value: {"instanceList":[{"instanceId":"192.168.3.2#5070#DEFAULT#DEFAULT_GROUP@@bizspring-auth","ip":"192.168.3.2","port":5070,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-auth","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721571989172,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 22:26:29,175 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-marketing, value: {"instanceList":[{"instanceId":"192.168.3.2#5679#DEFAULT#DEFAULT_GROUP@@bizspring-marketing","ip":"192.168.3.2","port":5679,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-marketing","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721571989173,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 22:26:29,527 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-module-gateway, value: {"instanceList":[{"instanceId":"192.168.3.2#9979#DEFAULT#DEFAULT_GROUP@@bizspring-module-gateway","ip":"192.168.3.2","port":9979,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-module-gateway","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721571989526,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 22:26:29,577 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-store, value: {"instanceList":[{"instanceId":"192.168.3.2#5579#DEFAULT#DEFAULT_GROUP@@bizspring-store","ip":"192.168.3.2","port":5579,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-store","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721571989576,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 22:26:30,007 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-upms, value: {"instanceList":[{"instanceId":"192.168.3.2#5979#DEFAULT#DEFAULT_GROUP@@bizspring-upms","ip":"192.168.3.2","port":5979,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-upms","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721571990006,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+
+2024-07-21 22:26:31,372 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@bizspring-goods, value: {"instanceList":[{"instanceId":"192.168.3.2#5879#DEFAULT#DEFAULT_GROUP@@bizspring-goods","ip":"192.168.3.2","port":5879,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@bizspring-goods","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1721571991372,"marked":false,"app":"unknown","ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]}
+

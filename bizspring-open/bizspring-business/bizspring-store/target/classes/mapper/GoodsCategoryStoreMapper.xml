@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.store.admin.mapper.GoodsCategoryStoreMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.store.common.entity.GoodsCategoryStore">
+		<result column="id" property="id" />
+        <result column="goods_categories_id" property="goodsCategoriesId" />
+        <result column="stores_id" property="storesId" />
+		<result column="version" property="version" />
+		<result column="created_time" property="createdTime" />
+		<result column="updated_time" property="updatedTime" />
+    </resultMap>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+			goods_categories_id,stores_id
+		FROM
+			biz_goods_category_store
+	</select>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAllByEntity" resultMap="BaseResultMap">
+		SELECT
+			*
+		FROM
+			`biz_goods_category_store` goodsCategoryStore
+		<where>
+			<if test="null != entity ">
+				<if test="null != entity.storesId ">
+					AND goodsCategoryStore.stores_id = #{entity.storesId}
+				</if>
+			</if>
+		</where>
+	</select>
+
+</mapper>

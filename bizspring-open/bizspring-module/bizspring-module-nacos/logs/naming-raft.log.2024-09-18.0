@@ -1,0 +1,106 @@
+2024-09-18 14:35:40,448 INFO raft peers changed: [Member{ip='192.168.3.2', port=8878, state=UP, extendInfo={raftPort=7878}}]
+
+2024-09-18 14:35:40,469 INFO initializing Raft sub-system
+
+2024-09-18 14:35:40,469 INFO finish loading all datums, size: 0 cost 0 ms.
+
+2024-09-18 14:35:40,472 INFO cache loaded, datum count: 0, current term: 0
+
+2024-09-18 14:35:40,472 INFO finish to load data from disk, cost: 3 ms.
+
+2024-09-18 14:35:40,474 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2024-09-18 14:35:40,932 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2024-09-18 14:35:40,942 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2024-09-18 14:35:45,446 WARN start to close old raft protocol!!!
+
+2024-09-18 14:35:45,446 WARN stop old raft protocol task for notifier
+
+2024-09-18 14:35:45,446 WARN stop old raft protocol task for master task
+
+2024-09-18 14:35:45,446 WARN stop old raft protocol task for heartbeat task
+
+2024-09-18 14:35:45,446 WARN clean old cache datum for old raft
+
+2024-09-18 14:35:45,446 WARN start to close old raft protocol!!!
+
+2024-09-18 14:35:45,446 WARN stop old raft protocol task for notifier
+
+2024-09-18 14:35:45,446 WARN stop old raft protocol task for master task
+
+2024-09-18 14:35:45,446 WARN stop old raft protocol task for heartbeat task
+
+2024-09-18 14:35:45,446 WARN clean old cache datum for old raft
+
+2024-09-18 14:35:45,446 WARN start to move old raft protocol metadata
+
+2024-09-18 14:35:45,447 WARN start to move old raft protocol metadata
+
+2024-09-18 14:35:45,448 INFO raft peers changed: [Member{ip='192.168.3.2', port=8878, state=UP, extendInfo={lastRefreshTime=1726641345447, raftPort=7878, version=1.4.1}}]
+
+2024-09-18 14:37:01,914 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-18 14:37:06,599 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-18 14:37:25,769 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-18 14:37:26,801 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-goods
+
+2024-09-18 14:37:29,322 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-store
+
+2024-09-18 14:37:30,201 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-18 15:54:27,713 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-18 15:54:27,716 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-18 15:54:27,716 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-18 15:54:27,717 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-18 15:54:27,718 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-18 15:54:27,719 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-18 15:54:27,719 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-18 15:54:27,720 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-18 15:54:28,058 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-18 15:54:28,279 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-upms
+
+2024-09-18 15:54:29,190 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-18 15:54:29,363 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-18 22:22:13,851 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-auth
+
+2024-09-18 22:22:13,853 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-goods
+
+2024-09-18 22:22:13,854 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-module-gateway
+
+2024-09-18 22:22:13,864 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-order
+
+2024-09-18 22:22:13,865 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-store
+
+2024-09-18 22:22:13,866 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@bizspring-upms
+

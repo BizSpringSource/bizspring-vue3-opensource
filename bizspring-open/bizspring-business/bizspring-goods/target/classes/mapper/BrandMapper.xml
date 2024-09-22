@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.goods.admin.mapper.BrandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.goods.common.entity.Brand">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="sort" property="sort" />
+        <result column="introduction" property="introduction" />
+        <result column="logo" property="logo" />
+        <result column="name" property="name" />
+        <result column="type" property="type" />
+        <result column="url" property="url" />
+    </resultMap>
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		brand.id,
+        brand.version,
+        brand.created_time, brand.updated_time, brand.sort, brand.introduction, brand.logo, brand.name, brand.type, brand.url, 'brand_id'
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_brand` brand
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_brand` brand
+		LEFT JOIN `biz_goods_category_brand` goods_category_brand ON brand.id = goods_category_brand.brands_id
+		WHERE
+		goods_categories_id = #{propertyValue}
+		ORDER BY sort ASC
+	</select>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_brand` brand
+	</select>
+
+	<!-- 查找品牌 -->
+	<select id="findList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_brand` brand
+		INNER JOIN biz_goods_category_brand goodsCategoryBrand ON brand.id = goodsCategoryBrand.brands_id
+		INNER JOIN biz_goods_category goodsCategory ON goodsCategoryBrand.goods_categories_id = goodsCategory.id
+		<where>
+			<if test="null!=goodsCategory ">
+				goodsCategory.id = #{goodsCategory.id}
+			</if>
+			<if test="queryWrapper.nonEmptyOfWhere == true">
+				AND
+			</if>
+			${queryWrapper.sqlSegment}
+		</where>
+	</select>
+
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_brand` brand
+		<if test="ew.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<select id="findPageByEntity" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_brand` brand
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.name ">
+				AND brand.name LIKE concat('%',#{entity.name},'%')
+			</if>
+			<if test=" null != entity.url ">
+				AND brand.url LIKE concat('%',#{entity.url},'%')
+			</if>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.goods.common.entity.Brand">
+		INSERT INTO biz_brand(
+			id ,
+			created_time ,
+			version ,
+			sort ,
+			logo ,
+			`name` ,
+			`type` ,
+			url ,
+			introduction
+		) VALUES (
+					 #{entity.id},
+					 #{entity.createdTime},
+					 #{entity.version},
+					 #{entity.sort},
+					 #{entity.logo},
+					 #{entity.name},
+					 #{entity.type},
+					 #{entity.url},
+					 #{entity.introduction}
+				 )
+	</insert>
+
+	<!-- 保存 -->
+	<update id="update" parameterType="cn.bizspring.cloud.goods.common.entity.Brand">
+		UPDATE biz_brand
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			sort = #{entity.sort},
+			logo = #{entity.logo},
+			`name` = #{entity.name},
+			`type` = #{entity.type},
+			url = #{entity.url},
+			introduction = #{entity.introduction}
+		WHERE
+			id = #{entity.id}
+		  AND  version = #{entity.version}
+	</update>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</mapper>

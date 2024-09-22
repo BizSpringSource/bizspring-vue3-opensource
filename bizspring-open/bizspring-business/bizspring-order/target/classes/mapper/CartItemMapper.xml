@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.CartItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.CartItem">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="quantity" property="quantity" />
+		<result column="checked" property="checked" />
+        <result column="cart_id" property="cartId" />
+        <result column="sku_id" property="skuId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, quantity,checked, cart_id, sku_id
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_cart_item`
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_cart_item`
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 移除 -->
+	<update id="remove">
+		DELETE FROM biz_cart_item WHERE id = #{entity.id}
+	</update>
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.order.common.entity.CartItem">
+    	INSERT INTO biz_cart_item(
+			id ,
+			created_time ,
+			version ,
+			quantity ,
+    	    checked,
+			cart_id ,
+			sku_id
+		) VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.quantity},
+			#{entity.checked},
+			#{entity.cartId},
+			#{entity.skuId})
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.order.common.entity.CartItem">
+    	UPDATE biz_cart_item
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			quantity = #{entity.quantity},
+			checked = #{entity.checked}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version}
+  	</update>
+
+	<!-- 选择 -->
+	<update id="select" parameterType="cn.bizspring.cloud.order.common.entity.CartItem">
+		UPDATE biz_cart_item
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			checked = #{entity.checked}
+		WHERE
+			id = #{entity.id}
+		  AND version = #{entity.version}
+	</update>
+  	
+</mapper>

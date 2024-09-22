@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.UserMapper">
+	<resultMap id="userMap" type="cn.bizspring.cloud.upms.common.entity.User">
+		<id column="id" property="id"/>
+		<result column="username" property="username"/>
+		<result column="email" property="email"/>
+		<result column="password" property="password"/>
+		<result column="salt" property="salt"/>
+		<result column="mobile" property="mobile"/>
+		<result column="avatar" property="avatar"/>
+		<result column="wx_openid" property="wxOpenid"/>
+		<result column="qq_openid" property="qqOpenid"/>
+		<result column="is_enabled" property="isEnabled"/>
+		<result column="lock_flag" property="lockFlag"/>
+		<result column="udel_flag" property="delFlag"/>
+		<result column="organ_id" property="organId"/>
+		<result column="tenant_id" property="tenantId"/>
+		<result column="dtype" property="type"/>
+		<result column="version" property="version" />
+		<result column="created_time" property="createdTime" />
+		<result column="updated_time" property="updatedTime" />
+		<result column="login_date" property="loginDate" />
+		<result column="login_ip" property="loginIp" />
+		<result column="lock_date" property="lockDate" />
+	</resultMap>
+
+	<resultMap id="baseResultMap" type="cn.bizspring.cloud.upms.common.vo.UserVO">
+		<id column="id" property="id"/>
+		<result column="username" property="username"/>
+		<result column="email" property="email"/>
+		<result column="password" property="password"/>
+		<result column="salt" property="salt"/>
+		<result column="mobile" property="mobile"/>
+		<result column="avatar" property="avatar"/>
+		<result column="wx_openid" property="wxOpenid"/>
+		<result column="qq_openid" property="qqOpenid"/>
+		<result column="is_enabled" property="isEnabled"/>
+		<result column="lock_flag" property="lockFlag"/>
+		<result column="udel_flag" property="delFlag"/>
+		<result column="organ_id" property="organId"/>
+		<result column="tenant_id" property="tenantId"/>
+		<result column="organName" property="organName"/>
+		<result column="dtype" property="type"/>
+
+		<result column="version" property="version" />
+		<result column="created_time" property="createdTime" />
+		<result column="updated_time" property="updatedTime" />
+		<result column="login_date" property="loginDate" />
+		<result column="login_ip" property="loginIp" />
+		<result column="lock_date" property="lockDate" />
+		<collection property="roleIds" ofType="java.lang.String"
+					select="cn.bizspring.cloud.upms.admin.mapper.RoleMapper.listRoleIdsByUserId" column="id">
+		</collection>
+	</resultMap>
+
+	<!-- userVo结果集 -->
+	<resultMap id="userVoResultMap" type="cn.bizspring.cloud.upms.common.vo.UserVO">
+		<id column="id" property="id"/>
+		<result column="username" property="username"/>
+		<result column="email" property="email"/>
+		<result column="password" property="password"/>
+		<result column="salt" property="salt"/>
+		<result column="mobile" property="mobile"/>
+		<result column="avatar" property="avatar"/>
+		<result column="wx_openid" property="wxOpenid"/>
+		<result column="qq_openid" property="qqOpenid"/>
+		<result column="is_enabled" property="isEnabled"/>
+		<result column="lock_flag" property="lockFlag"/>
+		<result column="udel_flag" property="delFlag"/>
+		<result column="organ_id" property="organId"/>
+		<result column="tenant_id" property="tenantId"/>
+		<result column="organName" property="organName"/>
+		<result column="dtype" property="type"/>
+		<result column="version" property="version" />
+		<result column="created_time" property="createdTime" />
+		<result column="updated_time" property="updatedTime" />
+		<result column="login_date" property="loginDate" />
+		<result column="login_ip" property="loginIp" />
+		<result column="lock_date" property="lockDate" />
+		<collection property="roleList" ofType="cn.bizspring.cloud.upms.common.entity.Role">
+			<id column="id" property="id"/>
+			<result column="role_name" property="roleName"/>
+			<result column="role_code" property="roleCode"/>
+			<result column="role_desc" property="roleDesc"/>
+			<result column="created_time" property="createdTime"/>
+			<result column="updated_time" property="updatedTime"/>
+		</collection>
+	</resultMap>
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultCaseMap" type="cn.bizspring.cloud.upms.common.entity.User">
+		<result column="id" property="id" />
+		<result column="version" property="version" />
+		<result column="created_time" property="createdTime" />
+		<result column="updated_time" property="updatedTime" />
+		<result column="is_enabled" property="isEnabled" />
+		<result column="lock_flag" property="lockFlag" />
+		<result column="login_date" property="loginDate" />
+		<result column="login_ip" property="loginIp" />
+		<result column="lock_date" property="lockDate" />
+		<discriminator javaType="string" column="dtype">
+			<case value="Merchant" resultType="cn.bizspring.cloud.upms.common.entity.Merchant">
+				<result column="username" property="username" />
+				<result column="password" property="password" />
+				<result column="email" property="email" />
+				<result column="mobile" property="mobile" />
+				<result column="name" property="name" />
+				<result column="phone" property="phone" />
+			</case>
+			<case value="Member" resultType="cn.bizspring.cloud.upms.common.entity.Member">
+				<result column="username" property="username" />
+				<result column="password" property="password" />
+				<result column="email" property="email" />
+				<result column="mobile" property="mobile" />
+				<result column="point" property="point" />
+				<result column="name" property="name" />
+				<result column="gender" property="gender" />
+				<result column="birth" property="birth" />
+				<result column="address" property="address" />
+				<result column="zip_code" property="zipCode" />
+				<result column="phone" property="phone" />
+				<result column="avatar" property="avatar" />
+				<result column="region_id"  property="regionId" />
+				<result column="cart_id" property="cartId"   />
+			</case>
+			<case value="Admin" resultType="cn.bizspring.cloud.upms.common.entity.Admin">
+				<result column="username" property="username" />
+				<result column="password" property="password" />
+				<result column="email" property="email" />
+				<result column="mobile" property="mobile" />
+				<result column="name" property="name" />
+				<result column="department" property="department" />
+			</case>
+		</discriminator>
+	</resultMap>
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id,
+        version,
+        dtype, created_time, updated_time,  lock_flag,is_enabled, login_date, login_ip, lock_date, department, email, password,
+        mobile, name, username, avatar,
+        phone, safe_key_expire, safe_key_value, address, birth, gender, point,
+        zip_code, region_id, 'user_id', 'merchant_id', 'member_id', 'from_user_id', 'to_user_id', 'user1_id', 'user2_id'
+	</sql>
+
+	<sql id="userSql">
+		u.dtype,
+		u.id,
+		u.username,
+		u.email,
+		u.`password`,
+		u.salt,
+		u.mobile,
+		u.avatar,
+		u.wx_openid,
+		u.qq_openid,
+		u.organ_id,
+		u.created_time,
+		u.updated_time,
+		u.is_enabled,
+		u.del_flag AS udel_flag,
+		u.lock_flag AS lock_flag,
+		u.organ_id,
+		u.tenant_id
+	</sql>
+	<sql id="userRoleSql">
+		u.dtype,
+		u.id,
+		u.username,
+		u.email,
+		u.`password`,
+		u.salt,
+		u.mobile,
+		u.avatar,
+		u.wx_openid,
+		u.qq_openid,
+		u.organ_id,
+		u.version,
+		u.created_time,
+		u.updated_time,
+		u.login_date,
+		u.login_ip,
+		u.lock_date,
+		u.is_enabled,
+		u.del_flag AS udel_flag,
+		u.lock_flag AS lock_flag,
+		u.organ_id,
+		u.tenant_id,
+		r.id,
+		r.role_name,
+		r.role_code,
+		r.role_desc,
+		r.created_time,
+		r.updated_time,
+	</sql>
+
+	<sql id="userRoleOrganSql">
+		u.dtype,
+		u.id,
+		u.username,
+		u.email,
+		u.`password`,
+		u.salt,
+		u.mobile,
+		u.avatar,
+		u.wx_openid,
+		u.qq_openid,
+		u.is_enabled,
+		u.del_flag AS udel_flag,
+		u.lock_flag AS lock_flag,
+		u.tenant_id,
+		r.id,
+		r.role_name,
+		r.role_code,
+		r.role_desc,
+		r.created_time,
+		r.updated_time,
+		d.name AS organName,
+		d.id AS organId,
+		u.version,
+		u.created_time,
+		u.updated_time,
+		u.login_date,
+		u.login_ip,
+		u.lock_date
+    </sql>
+
+	<select id="getByNoTenant" resultMap="userMap">
+		SELECT
+			u.dtype,
+			u.id,
+			u.username,
+			u.email,
+			u.`password`,
+			u.salt,
+			u.mobile,
+			u.avatar,
+			u.wx_openid,
+			u.qq_openid,
+			u.organ_id,
+			u.created_time,
+			u.updated_time,
+			u.is_enabled,
+			u.del_flag AS udel_flag,
+			u.lock_flag AS lock_flag,
+			u.organ_id,
+			u.tenant_id
+		FROM
+			biz_users u
+		<where>
+			<if test="null != username and username != ''">
+				and u.username = #{username}
+			</if>
+			<if test="null != email  and email != ''">
+				and u.email = #{email}
+			</if>
+			<if test="null != mobile and mobile != ''">
+				and u.mobile = #{mobile}
+			</if>
+		</where>
+	</select>
+
+	<select id="getUserVoById" resultMap="userVoResultMap">
+		SELECT
+		<include refid="userRoleOrganSql"/>
+		FROM
+			biz_users u
+		LEFT JOIN biz_user_role AS ur ON ur.user_id = u.id
+		LEFT JOIN biz_roles AS r ON r.id = ur.role_id
+		LEFT JOIN biz_organ AS d ON d.id = u.organ_id
+		WHERE
+		u.id = #{id}
+	</select>
+
+	<select id="getUserVosPage" resultMap="baseResultMap">
+		SELECT
+		u.id,
+		u.username,
+		u.email,
+		u.`password`,
+		u.salt,
+		u.mobile,
+		u.avatar,
+		u.wx_openid,
+		u.qq_openid,
+		u.organ_id,
+		u.is_enabled,
+		u.del_flag AS udel_flag,
+		u.lock_flag AS lock_flag,
+		u.tenant_id,
+		d.name AS organName,
+
+		u.version,
+		u.created_time,
+		u.updated_time,
+		u.login_date,
+		u.login_ip,
+		u.lock_date
+		FROM
+			biz_users u
+		LEFT JOIN biz_organ AS d ON d.id = u.organ_id
+		<where>
+		        and `dtype` = 'Admin'
+			<if test="query.username != null and query.username != ''">
+				and u.username LIKE CONCAT('%',#{query.username},'%')
+			</if>
+			<if test="query.organId != null and query.organId != ''">
+				and u.organ_id IN (SELECT `descendant` FROM `biz_organ_relation` WHERE `ancestor` =
+				#{query.organId})
+			</if>
+		</where>
+		ORDER BY u.created_time DESC
+	</select>
+
+	<!-- 根据用户类型 merchant，member 查找实体对象 -->
+	<select id="findPage" parameterType="java.lang.String" resultMap="BaseResultCaseMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		<if test="type != null">
+			<choose>
+				<when test="type.name == 'MERCHANT'">
+					where `dtype` = "Merchant"
+				</when>
+				<when test="type.name == 'MEMBER'">
+					where `dtype` = "Member"
+				</when>
+			</choose>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+	<select id="findPageUser" parameterType="java.lang.String" resultMap="BaseResultCaseMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users` users
+		<if test="null!= type ">
+			<choose>
+				<when test="type.name == 'MERCHANT'">
+					where `dtype` = "Merchant"
+				</when>
+				<when test="type.name == 'MEMBER'">
+					where `dtype` = "Member"
+				</when>
+			</choose>
+		</if>
+		<if test="null != user ">
+			<if test=" null != user.username ">
+				AND users.username LIKE concat('%',#{user.username},'%')
+			</if>
+			<if test=" null != user.lockFlag ">
+				AND users.lock_flag != #{user.lockFlag}
+			</if>
+			<if test=" null != user.isEnabled ">
+				AND users.is_enabled = #{user.isEnabled}
+			</if>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+	<select id="findAllBydType" parameterType="java.lang.String" resultMap="BaseResultCaseMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		<if test="type != null">
+			<choose>
+				<when test="type.name == 'MERCHANT'">
+					where `dtype` = "Merchant"
+				</when>
+				<when test="type.name == 'MEMBER'">
+					where `dtype` = "Member"
+				</when>
+			</choose>
+		</if>
+	</select>
+
+	<select id="findAllByEntity" parameterType="java.lang.String" resultMap="BaseResultCaseMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users` users
+		where 1=1
+		<if test="null != entity ">
+			<if test="null != entity.type">
+				AND users.dtype = #{entity.type}
+			</if>
+			<if test=" null != entity.username ">
+				AND users.username LIKE concat('%',#{entity.username},'%')
+			</if>
+		</if>
+	</select>
+
+	<!-- 通过名称查找会员 -->
+	<select id="keywordSearchBydType" resultMap="BaseResultCaseMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE
+         1=1
+		<if test="type != null">
+			<choose>
+				<when test="type.name == 'MERCHANT'">
+					AND `dtype` = "Merchant"
+				</when>
+				<when test="type.name == 'MEMBER'">
+					AND `dtype` = "Member"
+				</when>
+			</choose>
+		</if>
+		AND username LIKE concat('%', #{keyword}, '%')
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultCaseMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE 1=1
+		<if test=" null != dtype ">
+		AND	`dtype` = #{dtype}
+		</if>
+		AND `id` = #{id}
+	</select>
+
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="userMap">
+		SELECT
+		id,username,dtype
+		FROM
+			`biz_users` user
+	</select>
+
+	<!-- 通过名称查找会员 -->
+	<select id="search" resultMap="BaseResultCaseMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE
+		`dtype` = #{dtype}
+		AND username LIKE concat('%', #{keyword}, '%')
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultCaseMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE 1=1
+		<if test=" null != dtype ">
+		AND	`dtype` = #{dtype}
+		</if>
+		AND ${propertyName} = #{propertyValue}
+	</select>
+
+	<select id="selectOne"  resultMap="userMap">
+		SELECT
+			dtype,
+			id,
+			username,
+			email,
+			`password`,
+			salt,
+			mobile,
+			avatar,
+			wx_openid,
+			qq_openid,
+			organ_id,
+			is_enabled,
+			del_flag AS udel_flag,
+			lock_flag AS lock_flag,
+			tenant_id,
+			version,
+			created_time,
+			updated_time,
+			login_date,
+			login_ip,
+			lock_date
+		FROM
+			`biz_users`
+		WHERE 1=1
+		<if test="ew.nonEmptyOfWhere == true">
+			AND
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<!-- 查询商家数量 -->
+	<select id="count" resultType="long">
+		SELECT
+		count(*)
+		FROM
+			`biz_users`
+		WHERE
+		`dtype` = #{dtype}
+		<if test="beginDate != null">
+			AND created_time <![CDATA[ >= ]]> #{beginDate}
+		</if>
+		<if test="endDate != null">
+			AND created_time <![CDATA[ <= ]]> #{endDate}
+		</if>
+	</select>
+
+	<!-- 查询商家数量 -->
+	<select id="total" resultType="long">
+		SELECT
+			count(*)
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = #{dtype}
+	</select>
+
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultCaseMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_users`
+		WHERE
+		`dtype` = #{dtype}
+		<if test="ew.nonEmptyOfWhere == true">
+			AND
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<!-- 删除所有 -->
+	<update id="delete" parameterType="java.lang.String">
+		DELETE
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = #{dtype}
+		  AND `id` = #{id}
+	</update>
+
+	<!-- 判断是否存在 -->
+	<select id="exists" resultType="boolean">
+		SELECT
+			count(*)
+		FROM
+			`biz_users`
+		WHERE
+			`dtype` = #{dtype}
+		  AND
+			${propertyName} = #{propertyValue}
+	</select>
+
+	<!-- 判断是否唯一 -->
+	<select id="unique" resultType="boolean">
+		SELECT
+		count(*)
+		FROM
+			`biz_users`
+		WHERE
+		`dtype` = #{dtype}
+		AND
+		${propertyName } = #{propertyValue}
+		<if test="id != null">
+			AND id != #{id}
+		</if>
+	</select>
+
+	<insert id="saveAdmin" parameterType="cn.bizspring.cloud.upms.common.entity.User">
+		INSERT INTO biz_users
+		    (
+		       id,
+			   dtype,
+			   username,
+			   email,
+			   password,
+			   mobile,
+			   organ_id,
+			   created_time,
+			   is_enabled,
+			   del_flag,
+			   lock_flag,
+			   version
+			)
+		VALUES (
+			#{entity.id},
+			'Admin',
+			#{entity.username},
+			#{entity.email},
+			#{entity.password},
+			#{entity.mobile},
+			#{entity.organId},
+			#{entity.createdTime},
+			#{entity.isEnabled},
+			#{entity.delFlag},
+			#{entity.lockFlag},
+			#{entity.version}
+			);
+	</insert>
+
+
+	<!-- 保存 -->
+	<insert id="autoRegisterUser" parameterType="cn.bizspring.cloud.upms.common.entity.User">
+
+		INSERT INTO biz_users
+		(	 id,
+			 username,
+			 password,
+		 	 dtype,
+			 mobile,
+			 created_time,
+			 version
+		)VALUES (
+			#{entity.id},
+			#{entity.username},
+			#{entity.password},
+			#{entity.type},
+			#{entity.mobile},
+			#{entity.createdTime},
+			#{entity.version}
+		);
+	</insert>
+
+
+
+</mapper>

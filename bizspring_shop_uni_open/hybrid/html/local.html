@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal支付页面</title>
+    <style>
+        #returnButton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #returnButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<!-- <button id="postMessage">发送消息</button> -->
+<button id="returnButton">返回</button>
+    <div id="total"> </div>
+    <div id="paypal-button-container"></div>
+    <!-- 引入 UniApp 的 WebView 脚本 -->
+    <script type="text/javascript" src="https://unpkg.com/@dcloudio/uni-webview-js@0.0.1/index.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=Abe3jghHSASJ8YivUJmYswPGV8eApmkm8DUD2U1M8xL7wHI5XDRIaIji1GvRJde561QC6i0ztQRenBfc"></script>
+    <script>
+		// 在页面加载时存储 如下 到全局变量
+		var total;
+		var out_trade_no;
+		var return_url;
+  //       document.addEventListener('DOMContentLoaded', function() {
+  //           console.log('Document fully loaded');
+  //           console.log(window.location.search);
+		// 	var url = window.location.search;
+		// 	// 使用 URLSearchParams 构造一个 URLSearchParams 对象，将 URL 解析为其组成部分
+		// 	const params = new URLSearchParams(url);
+		// 	// 获取特定参数的值
+		// 	total = params.get('total');
+		// 	out_trade_no = params.get('out_trade_no');
+		// 	console.log(params.get('return_url'));
+		// 	return_url = decodeURIComponent(params.get('return_url'));
+			
+		// 	var protocol = window.location.protocol;
+		// 	var hostname = window.location.hostname;
+		// 	var fullUrlWithProtocol = protocol + '//' + hostname;
+		// 	return_url = fullUrlWithProtocol+'/h5/#'+return_url;
+			
+		// 	console.log(total);
+		// 	console.log(out_trade_no);
+		// 	console.log(return_url);
+		// 	var totalElement = document.getElementById('total'); // 获取元素
+		// 	if (totalElement) {
+		// 		 totalElement.innerHTML = '支付金额：$'+total; // 设置元素内容
+		// 	}
+		
+		//  // 获取按钮元素
+		//  var returnButton = document.getElementById('returnButton');
+		//  returnButton.style.display = 'none';
+		//  // returnButton.addEventListener('click', function() {
+		//  //  window.open(return_url, '_blank');
+		//  // });
+		
+		// });
+
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            // 定义一下要付多少钱 
+            // 使用 URLSearchParams 构造一个 URLSearchParams 对象，将 URL 解析为其组成部分
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: total,
+                        items: [{
+                            name: 'recharge', // 修改为对象形式
+                            description: '支付',
+                            currency_code: 'USD'
+                        }]
+                    },
+                    reference_id: out_trade_no
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                console.log('onApprove details', details)
+                console.log(data)
+            var detail = {
+              id: details.id,
+              status: details.status,
+              purchase_units: details.purchase_units,
+              payer: details.payer
+            }
+			alert(JSON.stringify(detail));
+				console.log('--- detail', detail)
+                // 使用POST方法给我们的服务器发送请求，保存和更新相关数据库
+                return fetch('https://生产线上的域名/api/paypal/callback', {
+                    method: 'POST',
+					body: JSON.stringify(details),
+                    headers: {
+                        'content-type': 'application/json'
+                    }
+                }).then(function(res) {
+                    console.log(res);
+                }).then(function(response) {
+                    var totalElement = document.getElementById('total');
+                    if (totalElement) {
+                        totalElement.innerHTML = '支付成功：$'+total; 
+                    }
+					// 获取按钮元素
+					var returnButton = document.getElementById('returnButton');
+					returnButton.style.display = 'block';
+					
+                    var paypalElement = document.getElementById('paypal-button-container');
+                    paypalElement.style.display = 'none';
+                }).catch(function(error) {
+                    console.error('Error:', error);
+                });
+            });
+        }
+    }).render("#paypal-button-container");
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>cn.bizspring</groupId>
+		<artifactId>bizspring-base</artifactId>
+		<version>1.0.1</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.bizspring</groupId>
+	<artifactId>bizspring-base-datasource</artifactId>
+
+	<packaging>jar</packaging>
+
+	<description>动态切换数据源</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<!--数据操作-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-data</artifactId>
+		</dependency>
+		<!--mybatis plus-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+		</dependency>
+		<!--mybatis plus多数据源-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- druid 连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+		</dependency>
+		<!--bizspring-base-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-core</artifactId>
+		</dependency>
+		<!--swagger-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-swagger</artifactId>
+		</dependency>
+		<!--安全模块-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-log</artifactId>
+		</dependency>
+		<!--代码生成模板引擎-->
+		<dependency>
+			<artifactId>velocity</artifactId>
+			<groupId>org.apache.velocity</groupId>
+		</dependency>
+		<!--web 模块-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--undertow容器-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+	</dependencies>
+</project>

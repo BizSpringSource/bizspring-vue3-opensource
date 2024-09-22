@@ -1,0 +1,50 @@
+{
+  "groups": [
+    {
+      "name": "base.datascope",
+      "type": "cn.bizspring.cloud.common.data.datascope.DataScopeProperties",
+      "sourceType": "cn.bizspring.cloud.common.data.datascope.DataScopeProperties"
+    },
+    {
+      "name": "base.tenant",
+      "type": "cn.bizspring.cloud.common.data.tenant.TenantConfigProperties",
+      "sourceType": "cn.bizspring.cloud.common.data.tenant.TenantConfigProperties"
+    },
+    {
+      "name": "spring.redis.cluster",
+      "type": "cn.bizspring.cloud.common.data.cache.ClusterConfigurationProperties",
+      "sourceType": "cn.bizspring.cloud.common.data.cache.ClusterConfigurationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "base.datascope.mapper-ids",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.bizspring.cloud.common.data.datascope.DataScopeProperties"
+    },
+    {
+      "name": "base.tenant.column",
+      "type": "java.lang.String",
+      "description": "维护租户列名称",
+      "sourceType": "cn.bizspring.cloud.common.data.tenant.TenantConfigProperties",
+      "defaultValue": "tenant_id"
+    },
+    {
+      "name": "base.tenant.tables",
+      "type": "java.util.List<java.lang.String>",
+      "description": "多租户的数据表集合",
+      "sourceType": "cn.bizspring.cloud.common.data.tenant.TenantConfigProperties"
+    },
+    {
+      "name": "spring.redis.cluster.max-redirects",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.bizspring.cloud.common.data.cache.ClusterConfigurationProperties"
+    },
+    {
+      "name": "spring.redis.cluster.nodes",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.bizspring.cloud.common.data.cache.ClusterConfigurationProperties"
+    }
+  ],
+  "hints": []
+}

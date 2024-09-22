@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.store.admin.mapper.ShippingMethodMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.store.common.entity.ShippingMethod">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="sort" property="sort" />
+        <result column="description" property="description" />
+        <result column="icon" property="icon" />
+        <result column="name" property="name" />
+        <result property="defaultExpressCompanyId"  column="default_express_company_id" />
+		<collection property="paymentPatterns" select="cn.bizspring.cloud.store.admin.mapper.PaymentPatternMapper.findSet" column="{propertyName=shipping_method_id, propertyValue=id}" ofType="cn.bizspring.cloud.store.common.entity.PaymentPattern" fetchType="lazy"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, sort, description, icon, name, default_express_company_id, 'shipping_method_id'
+    </sql>
+	
+	 <!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_shipping_method`
+		WHERE 
+			id = #{id}
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			biz_shipping_method
+		<choose>
+			<when test="propertyName == 'payment_pattern_id'">
+				LEFT JOIN biz_shipping_method_payment_pattern shipping_method_payment_pattern ON id = shipping_method_payment_pattern.shipping_methods_id
+				WHERE
+				shipping_method_payment_pattern.payment_patterns_id = #{propertyValue}
+			</when>
+			<otherwise>
+				WHERE
+					${propertyName} = #{propertyValue}
+			</otherwise>
+		</choose>
+	</select>
+	
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_shipping_method`
+	</select>
+	
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_shipping_method`
+		<if test="ew.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${ew.sqlSegment}
+	</select>
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.store.common.entity.ShippingMethod">
+    	INSERT INTO biz_shipping_method(
+			id ,
+			created_time ,
+			version ,
+			sort ,
+			description ,
+			icon ,
+			`name` ,
+			default_express_company_id
+		) VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.sort},
+			#{entity.description}, 
+			#{entity.icon}, 
+			#{entity.name}, 
+			#{entity.defaultExpressCompanyId}
+		);
+		
+		<!-- 配送方式与支付方式关连 -->
+		<if test="entity.paymentPatterns != null and entity.paymentPatterns.size > 0">
+			 INSERT INTO `biz_shipping_method_payment_pattern` (shipping_methods_id , payment_patterns_id) VALUES
+			<foreach collection="entity.paymentPatterns" item="paymentPattern" index="index" separator="," close=";">
+				(#{entity.id}, #{paymentPattern.id})
+			</foreach>
+		</if>
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.store.common.entity.ShippingMethod">
+    	UPDATE biz_shipping_method
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			sort = #{entity.sort},
+			description = #{entity.description},
+			icon = #{entity.icon},
+			`name` = #{entity.name},
+			default_express_company_id = #{entity.defaultExpressCompanyId}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version};
+		
+		<!-- 删除旧数据 -->
+		DELETE FROM `biz_shipping_method_payment_pattern` WHERE shipping_methods_id = #{entity.id};
+		
+		<!-- 配送方式与支付方式关连 -->
+		<if test="entity.paymentPatterns != null and entity.paymentPatterns.size > 0">
+			 INSERT INTO `biz_shipping_method_payment_pattern` (shipping_methods_id , payment_patterns_id) VALUES
+			<foreach collection="entity.paymentPatterns" item="paymentPattern" index="index" separator="," close=";">
+				(#{entity.id}, #{paymentPattern.id})
+			</foreach>
+		</if>
+  	</update>
+  	
+  	<!-- 移除 -->
+	<delete id="delete" parameterType="java.util.List">
+		DELETE FROM `biz_shipping_method_payment_pattern` WHERE shipping_methods_id IN
+		<foreach collection="ids" item="id" open="(" separator="," close=");">
+			#{id}
+		</foreach>
+		
+		DELETE FROM `biz_shipping_method` WHERE id IN
+		<foreach collection="ids" item="id" open="(" separator="," close=");">
+			#{id}
+		</foreach>
+	</delete>
+	
+</mapper>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true">
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-datasource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-goods/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-goods/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-io/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-io/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-store/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-store/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-upms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-base/bizspring-base-upms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-goods/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-goods/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-store/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-store/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-upms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-business/bizspring-upms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-module/bizspring-module-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bizspring-module/bizspring-module-gateway/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,510 @@
+2024-09-16 00:02:27,744 WARN clearConfigHistory start
+
+2024-09-16 00:09:20,695 INFO [capacityManagement] start correct usage
+
+2024-09-16 00:09:20,700 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 00:12:27,766 WARN clearConfigHistory start
+
+2024-09-16 01:35:12,822 WARN clearConfigHistory start
+
+2024-09-16 01:35:34,729 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h17m8s576ms461µs700ns).
+
+2024-09-16 01:35:50,304 INFO [capacityManagement] start correct usage
+
+2024-09-16 01:35:50,311 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 01:45:12,833 WARN clearConfigHistory start
+
+2024-09-16 01:45:50,325 INFO [capacityManagement] start correct usage
+
+2024-09-16 01:45:50,330 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 01:55:12,848 WARN clearConfigHistory start
+
+2024-09-16 01:55:50,344 INFO [capacityManagement] start correct usage
+
+2024-09-16 01:55:50,347 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 02:05:12,857 WARN clearConfigHistory start
+
+2024-09-16 02:05:50,358 INFO [capacityManagement] start correct usage
+
+2024-09-16 02:05:50,370 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 02:15:12,867 WARN clearConfigHistory start
+
+2024-09-16 02:15:50,371 INFO [capacityManagement] start correct usage
+
+2024-09-16 02:15:50,375 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 02:25:12,881 WARN clearConfigHistory start
+
+2024-09-16 02:25:50,380 INFO [capacityManagement] start correct usage
+
+2024-09-16 02:25:50,384 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 02:35:12,890 WARN clearConfigHistory start
+
+2024-09-16 02:35:50,390 INFO [capacityManagement] start correct usage
+
+2024-09-16 02:35:50,403 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 02:45:12,904 WARN clearConfigHistory start
+
+2024-09-16 02:45:50,405 INFO [capacityManagement] start correct usage
+
+2024-09-16 02:45:50,410 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 10:56:27,700 WARN clearConfigHistory start
+
+2024-09-16 10:56:36,714 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h4m39s956ms455µs200ns).
+
+2024-09-16 10:59:51,142 INFO [capacityManagement] start correct usage
+
+2024-09-16 10:59:51,149 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 11:06:27,713 WARN clearConfigHistory start
+
+2024-09-16 11:09:51,157 INFO [capacityManagement] start correct usage
+
+2024-09-16 11:09:51,158 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 11:16:27,720 WARN clearConfigHistory start
+
+2024-09-16 13:18:55,991 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h27s894ms161µs800ns).
+
+2024-09-16 13:18:57,754 WARN clearConfigHistory start
+
+2024-09-16 13:19:40,087 INFO [capacityManagement] start correct usage
+
+2024-09-16 13:19:40,095 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 13:28:57,765 WARN clearConfigHistory start
+
+2024-09-16 13:29:40,109 INFO [capacityManagement] start correct usage
+
+2024-09-16 13:29:40,111 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 13:38:57,782 WARN clearConfigHistory start
+
+2024-09-16 13:39:40,115 INFO [capacityManagement] start correct usage
+
+2024-09-16 13:39:40,116 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 13:53:08,151 WARN clearConfigHistory start
+
+2024-09-16 13:53:15,540 WARN HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m26s472ms226µs).
+
+2024-09-16 14:01:29,329 INFO [capacityManagement] start correct usage
+
+2024-09-16 14:01:29,336 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 14:03:08,166 WARN clearConfigHistory start
+
+2024-09-16 14:11:29,345 INFO [capacityManagement] start correct usage
+
+2024-09-16 14:11:29,348 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 14:13:08,172 WARN clearConfigHistory start
+
+2024-09-16 14:21:29,353 INFO [capacityManagement] start correct usage
+
+2024-09-16 14:21:29,354 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 14:23:08,194 WARN clearConfigHistory start
+
+2024-09-16 14:31:29,363 INFO [capacityManagement] start correct usage
+
+2024-09-16 14:31:29,373 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 14:33:08,208 WARN clearConfigHistory start
+
+2024-09-16 14:41:29,380 INFO [capacityManagement] start correct usage
+
+2024-09-16 14:41:29,382 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 14:43:08,214 WARN clearConfigHistory start
+
+2024-09-16 14:51:29,388 INFO [capacityManagement] start correct usage
+
+2024-09-16 14:51:29,391 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 14:53:08,227 WARN clearConfigHistory start
+
+2024-09-16 15:01:29,405 INFO [capacityManagement] start correct usage
+
+2024-09-16 15:01:29,406 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 15:03:08,252 WARN clearConfigHistory start
+
+2024-09-16 15:11:29,416 INFO [capacityManagement] start correct usage
+
+2024-09-16 15:11:29,417 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 15:13:08,259 WARN clearConfigHistory start
+
+2024-09-16 15:21:29,422 INFO [capacityManagement] start correct usage
+
+2024-09-16 15:21:29,423 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 15:23:08,267 WARN clearConfigHistory start
+
+2024-09-16 15:31:29,434 INFO [capacityManagement] start correct usage
+
+2024-09-16 15:31:29,442 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 15:33:08,274 WARN clearConfigHistory start
+
+2024-09-16 15:41:29,446 INFO [capacityManagement] start correct usage
+
+2024-09-16 15:41:29,447 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 15:43:08,289 WARN clearConfigHistory start
+
+2024-09-16 15:51:29,463 INFO [capacityManagement] start correct usage
+
+2024-09-16 15:51:29,464 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 15:53:08,307 WARN clearConfigHistory start
+
+2024-09-16 16:01:29,474 INFO [capacityManagement] start correct usage
+
+2024-09-16 16:01:29,484 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 16:03:08,310 WARN clearConfigHistory start
+
+2024-09-16 16:11:29,487 INFO [capacityManagement] start correct usage
+
+2024-09-16 16:11:29,488 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 16:13:08,322 WARN clearConfigHistory start
+
+2024-09-16 16:21:29,500 INFO [capacityManagement] start correct usage
+
+2024-09-16 16:21:29,501 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 16:23:08,329 WARN clearConfigHistory start
+
+2024-09-16 16:31:29,516 INFO [capacityManagement] start correct usage
+
+2024-09-16 16:31:29,517 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 16:33:08,331 WARN clearConfigHistory start
+
+2024-09-16 16:41:29,518 INFO [capacityManagement] start correct usage
+
+2024-09-16 16:41:29,519 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 16:43:08,338 WARN clearConfigHistory start
+
+2024-09-16 16:51:29,524 INFO [capacityManagement] start correct usage
+
+2024-09-16 16:51:29,526 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 16:53:08,354 WARN clearConfigHistory start
+
+2024-09-16 17:01:29,528 INFO [capacityManagement] start correct usage
+
+2024-09-16 17:01:29,530 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 17:03:08,377 WARN clearConfigHistory start
+
+2024-09-16 17:11:29,536 INFO [capacityManagement] start correct usage
+
+2024-09-16 17:11:29,539 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 17:13:08,390 WARN clearConfigHistory start
+
+2024-09-16 17:21:29,549 INFO [capacityManagement] start correct usage
+
+2024-09-16 17:21:29,551 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 17:23:08,401 WARN clearConfigHistory start
+
+2024-09-16 17:31:29,553 INFO [capacityManagement] start correct usage
+
+2024-09-16 17:31:29,554 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 17:33:08,422 WARN clearConfigHistory start
+
+2024-09-16 17:41:29,561 INFO [capacityManagement] start correct usage
+
+2024-09-16 17:41:29,561 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 17:43:08,429 WARN clearConfigHistory start
+
+2024-09-16 17:51:29,573 INFO [capacityManagement] start correct usage
+
+2024-09-16 17:51:29,575 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 17:53:08,445 WARN clearConfigHistory start
+
+2024-09-16 18:01:29,588 INFO [capacityManagement] start correct usage
+
+2024-09-16 18:01:29,590 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 18:03:08,455 WARN clearConfigHistory start
+
+2024-09-16 18:11:29,598 INFO [capacityManagement] start correct usage
+
+2024-09-16 18:11:29,599 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 18:13:08,466 WARN clearConfigHistory start
+
+2024-09-16 18:21:29,615 INFO [capacityManagement] start correct usage
+
+2024-09-16 18:21:29,624 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 18:23:08,479 WARN clearConfigHistory start
+
+2024-09-16 18:31:29,640 INFO [capacityManagement] start correct usage
+
+2024-09-16 18:31:29,641 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 18:33:08,489 WARN clearConfigHistory start
+
+2024-09-16 18:41:29,647 INFO [capacityManagement] start correct usage
+
+2024-09-16 18:41:29,650 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 18:43:08,500 WARN clearConfigHistory start
+
+2024-09-16 18:51:29,651 INFO [capacityManagement] start correct usage
+
+2024-09-16 18:51:29,664 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 18:53:08,513 WARN clearConfigHistory start
+
+2024-09-16 19:01:29,671 INFO [capacityManagement] start correct usage
+
+2024-09-16 19:01:29,674 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 19:03:08,529 WARN clearConfigHistory start
+
+2024-09-16 19:11:29,688 INFO [capacityManagement] start correct usage
+
+2024-09-16 19:11:29,689 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 19:13:08,545 WARN clearConfigHistory start
+
+2024-09-16 19:21:29,694 INFO [capacityManagement] start correct usage
+
+2024-09-16 19:21:29,695 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 19:23:08,562 WARN clearConfigHistory start
+
+2024-09-16 19:31:29,699 INFO [capacityManagement] start correct usage
+
+2024-09-16 19:31:29,700 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 19:33:08,567 WARN clearConfigHistory start
+
+2024-09-16 19:41:29,702 INFO [capacityManagement] start correct usage
+
+2024-09-16 19:41:29,704 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 19:43:08,569 WARN clearConfigHistory start
+
+2024-09-16 19:51:29,716 INFO [capacityManagement] start correct usage
+
+2024-09-16 19:51:29,730 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 19:53:08,580 WARN clearConfigHistory start
+
+2024-09-16 20:01:29,741 INFO [capacityManagement] start correct usage
+
+2024-09-16 20:01:29,742 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 20:03:08,584 WARN clearConfigHistory start
+
+2024-09-16 20:11:29,750 INFO [capacityManagement] start correct usage
+
+2024-09-16 20:11:29,751 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 20:13:08,588 WARN clearConfigHistory start
+
+2024-09-16 20:21:29,760 INFO [capacityManagement] start correct usage
+
+2024-09-16 20:21:29,772 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 20:23:08,591 WARN clearConfigHistory start
+
+2024-09-16 20:31:29,780 INFO [capacityManagement] start correct usage
+
+2024-09-16 20:31:29,791 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 20:33:08,598 WARN clearConfigHistory start
+
+2024-09-16 20:41:29,797 INFO [capacityManagement] start correct usage
+
+2024-09-16 20:41:29,798 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 20:43:08,611 WARN clearConfigHistory start
+
+2024-09-16 20:51:29,802 INFO [capacityManagement] start correct usage
+
+2024-09-16 20:51:29,808 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 20:53:08,626 WARN clearConfigHistory start
+
+2024-09-16 21:01:29,812 INFO [capacityManagement] start correct usage
+
+2024-09-16 21:01:29,817 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 21:03:08,638 WARN clearConfigHistory start
+
+2024-09-16 21:11:29,833 INFO [capacityManagement] start correct usage
+
+2024-09-16 21:11:29,834 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 21:13:08,653 WARN clearConfigHistory start
+
+2024-09-16 21:21:29,849 INFO [capacityManagement] start correct usage
+
+2024-09-16 21:21:29,859 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 21:23:08,666 WARN clearConfigHistory start
+
+2024-09-16 21:31:29,873 INFO [capacityManagement] start correct usage
+
+2024-09-16 21:31:29,880 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 21:33:08,684 WARN clearConfigHistory start
+
+2024-09-16 21:41:29,894 INFO [capacityManagement] start correct usage
+
+2024-09-16 21:41:29,895 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 21:43:08,693 WARN clearConfigHistory start
+
+2024-09-16 21:51:29,905 INFO [capacityManagement] start correct usage
+
+2024-09-16 21:51:29,907 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 21:53:08,711 WARN clearConfigHistory start
+
+2024-09-16 22:01:29,910 INFO [capacityManagement] start correct usage
+
+2024-09-16 22:01:29,911 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 22:03:08,735 WARN clearConfigHistory start
+
+2024-09-16 22:11:29,917 INFO [capacityManagement] start correct usage
+
+2024-09-16 22:11:29,926 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 22:13:08,739 WARN clearConfigHistory start
+
+2024-09-16 22:21:29,929 INFO [capacityManagement] start correct usage
+
+2024-09-16 22:21:29,941 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 22:23:08,756 WARN clearConfigHistory start
+
+2024-09-16 22:31:29,957 INFO [capacityManagement] start correct usage
+
+2024-09-16 22:31:29,958 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 22:33:08,759 WARN clearConfigHistory start
+
+2024-09-16 22:41:29,964 INFO [capacityManagement] start correct usage
+
+2024-09-16 22:41:29,965 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 22:43:08,777 WARN clearConfigHistory start
+
+2024-09-16 22:51:29,976 INFO [capacityManagement] start correct usage
+
+2024-09-16 22:51:29,986 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 22:53:08,787 WARN clearConfigHistory start
+
+2024-09-16 23:01:29,993 INFO [capacityManagement] start correct usage
+
+2024-09-16 23:01:29,994 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 23:03:08,803 WARN clearConfigHistory start
+
+2024-09-16 23:11:29,998 INFO [capacityManagement] start correct usage
+
+2024-09-16 23:11:29,999 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 23:13:08,821 WARN clearConfigHistory start
+
+2024-09-16 23:21:30,006 INFO [capacityManagement] start correct usage
+
+2024-09-16 23:21:30,008 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 23:23:08,842 WARN clearConfigHistory start
+
+2024-09-16 23:31:30,021 INFO [capacityManagement] start correct usage
+
+2024-09-16 23:31:30,021 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 23:33:08,861 WARN clearConfigHistory start
+
+2024-09-16 23:41:30,032 INFO [capacityManagement] start correct usage
+
+2024-09-16 23:41:30,035 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 23:43:08,864 WARN clearConfigHistory start
+
+2024-09-16 23:51:15,612 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:51:17,146 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:51:19,669 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:51:25,182 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:51:30,046 INFO [capacityManagement] start correct usage
+
+2024-09-16 23:51:30,053 INFO [capacityManagement] end correct usage, cost: 0s
+
+2024-09-16 23:51:35,698 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:51:53,213 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:52:19,721 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:52:57,248 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:53:08,880 WARN clearConfigHistory start
+
+2024-09-16 23:53:47,761 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:54:38,277 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:55:28,802 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:56:19,316 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:56:22,500 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:56:24,025 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:56:26,548 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:56:32,065 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:56:42,586 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:57:00,098 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:57:09,841 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:57:26,618 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:58:00,359 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:58:04,140 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:58:50,885 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:58:54,663 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:59:41,412 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-marketing-dev.yml group:DEFAULT_GROUP ts:1726501874454 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+
+2024-09-16 23:59:45,188 ERROR [notify-exception] target:192.168.3.2:8878 dataId:bizspring-upms-dev.yml group:DEFAULT_GROUP ts:1726502181228 ex:java.net.ConnectException: Timeout connecting to [/192.168.3.2:8878]
+

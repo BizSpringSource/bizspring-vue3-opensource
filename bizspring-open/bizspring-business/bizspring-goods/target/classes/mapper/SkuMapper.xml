@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.goods.admin.mapper.SkuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.goods.common.entity.Sku">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="allocated_stock" property="allocatedStock" />
+        <result column="cost" property="cost" />
+        <result column="is_default" property="isDefault" />
+        <result column="market_price" property="marketPrice" />
+        <result column="price" property="price" />
+        <result column="sn" property="sn" />
+        <result column="specification_values" property="specificationValues" jdbcType="LONGVARCHAR"
+				javaType="java.util.ArrayList" typeHandler="cn.bizspring.cloud.goods.admin.handler.SpecificationValueConverter" />
+        <result column="stock" property="stock" />
+        <result column="goods_id" property="goodsId"  />
+    </resultMap>
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		sku.id,
+        sku.version,
+        sku.created_time, sku.updated_time, sku.allocated_stock, sku.cost, sku.is_default, sku.market_price, sku.price, sku.sn, sku.specification_values, sku.stock, sku.goods_id, 'sku_id'
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_sku` sku
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<select id="selectOne"  resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_sku` sku
+		WHERE 1=1
+		<if test="ew.nonEmptyOfWhere == true">
+			AND
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_sku` sku
+		WHERE
+		${propertyName} = #{propertyValue}
+	</select>
+
+
+	<select id="findAllByEntity" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_sku` sku
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.goodsId ">
+				AND sku.goods_id = #{entity.goodsId}
+			</if>
+		</if>
+	</select>
+
+	<!-- 查找商品 -->
+	<select id="findList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_sku` sku
+		<where>
+			<if test="store != null">
+				AND sku.store_id = #{store.id}
+			</if>
+			<if test="type != null">
+				AND sku.type = #{type.ordinal}
+			</if>
+			<if test="matchs != null and matchs.size > 0 ">
+				AND sku.id NOT IN
+				<foreach collection="matchs" item="match" open="(" separator="," close=")" >
+					#{match.id}
+				</foreach>
+			</if>
+			<if test="count != null">
+				LIMIT 0, ${count}
+			</if>
+		</where>
+	</select>
+
+	<!-- 通过编号、名称查找SKU -->
+	<select id="search" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_sku` sku
+		LEFT JOIN biz_goods goods ON sku.goods_id = goods.id
+		WHERE
+		(sku.sn LIKE concat('%', #{keyword}, '%') OR goods.name LIKE concat('%', #{keyword}, '%'))
+		<if test="store != null">
+			AND goods.store_id = #{store.id}
+		</if>
+		<if test="type != null">
+			AND goods.type = #{type.ordinal}
+		</if>
+		<if test="excludes != null and excludes.size > 0 ">
+			AND sku.id NOT IN
+			<foreach collection="excludes" item="exclude" open="(" separator="," close=")" >
+				#{exclude.id}
+			</foreach>
+		</if>
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+
+	<!-- 判断是否存在 -->
+	<select id="exists" resultType="boolean">
+		SELECT
+			COUNT(1)
+		FROM
+			`biz_sku`
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+
+	<!-- 删除 -->
+	<update id="remove" parameterType="cn.bizspring.cloud.goods.common.entity.Sku">
+		DELETE FROM `biz_stock` WHERE `sku_id` = #{entity.id};
+		DELETE FROM `biz_sku` WHERE `id` = #{entity.id};
+	</update>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.goods.common.entity.Sku">
+		INSERT INTO biz_sku(
+			id ,
+			created_time ,
+			version ,
+			allocated_stock ,
+			cost ,
+			is_default ,
+			market_price ,
+			price ,
+			sn ,
+			specification_values ,
+			stock ,
+			goods_id
+		) VALUES (
+					 #{entity.id},
+					 #{entity.createdTime},
+					 #{entity.version},
+					 #{entity.allocatedStock},
+					 #{entity.cost},
+					 #{entity.isDefault},
+					 #{entity.marketPrice},
+					 #{entity.price},
+					 #{entity.sn},
+					 #{entity.specificationValues, typeHandler=cn.bizspring.cloud.goods.admin.handler.SpecificationValueConverter},
+					 #{entity.stock},
+					 #{entity.goodsId}
+				 )
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="cn.bizspring.cloud.goods.common.entity.Sku">
+		UPDATE biz_sku
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			allocated_stock = #{entity.allocatedStock},
+			cost = #{entity.cost},
+			is_default = #{entity.isDefault},
+			market_price = #{entity.marketPrice},
+			price = #{entity.price},
+			stock = #{entity.stock}
+		WHERE
+			id = #{entity.id}
+		  AND version = #{entity.version}
+	</update>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.bizspring.cloud.common.core.config.JacksonConfig,\
+  cn.bizspring.cloud.common.core.config.MessageSourceConfig,\
+  cn.bizspring.cloud.common.core.config.RestTemplateConfig,\
+  cn.bizspring.cloud.common.core.util.SpringContextHolder,\
+  cn.bizspring.cloud.common.core.util.SpringUtils,\
+  cn.bizspring.cloud.common.core.config.HomeDirConfigProperties

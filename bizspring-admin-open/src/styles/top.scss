@@ -1,0 +1,153 @@
+.avue-top {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, .65);
+    font-size: 28px;
+    height: $top_height;
+    line-height: $top_height;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    .el-menu-item {
+
+        i,
+        span {
+            font-size: 13px;
+        }
+    }
+}
+
+.avue-breadcrumb {
+    height: 100%;
+
+    i {
+        font-size: 30px !important;
+    }
+
+    &--active {
+        transform: rotate(90deg);
+    }
+    &_collapse {
+        line-height: 55px;
+        font-size: 30px !important;
+        &--right {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.top-user {
+    display: flex;
+    align-items: center;
+
+    i {
+        margin-left: 5px;
+    }
+}
+
+.top-menu {
+    box-sizing: border-box;
+
+    .el-menu-item {
+        padding: 0 10px;
+        border: none;
+    }
+}
+
+.top-search {
+    line-height: $top_height;
+    position: absolute !important;
+    right: 200px;
+    top: 0;
+    width: 300px;
+
+    .el-input__inner {
+        font-size: 13px;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.top-bar__img {
+    margin: 0 5px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.top-bar__left,
+.top-bar__right {
+    height: $top_height;
+    position: absolute;
+    margin-top: 2px;
+    top: 0;
+
+    i {
+        line-height: $top_height;
+    }
+}
+
+.top-bar__left {
+    left: 10px;
+}
+
+.top-bar__right {
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar__item {
+    position: relative;
+    display: inline-block;
+    height: $top_height;
+    margin: 0 7px;
+    font-size: 16px;
+
+    .el-badge__content.is-fixed {
+        top: 12px;
+        right: 5px;
+    }
+}
+
+.top-bar__title {
+    height: 100%;
+    padding-left: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.avue-logo {
+    height: $top_height;
+    line-height: $top_height;
+    background-color: #031527;
+    font-size: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    color: #fff;
+
+    &_title {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    &_subtitle {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+    }
+}

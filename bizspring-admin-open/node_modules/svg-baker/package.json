@@ -1,0 +1,34 @@
+{
+  "name": "svg-baker",
+  "version": "1.7.0",
+  "description": "",
+  "author": "JetBrains",
+  "homepage": "https://github.com/JetBrains/svg-mixer/tree/v1",
+  "license": "MIT",
+  "repository": "https://github.com/JetBrains/svg-mixer/tree/v1",
+  "main": "lib/compiler.js",
+  "files": [
+    "lib/",
+    "namespaces.js",
+    "README.md"
+  ],
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "clone": "^2.1.1",
+    "he": "^1.1.1",
+    "image-size": "^0.5.1",
+    "loader-utils": "^1.1.0",
+    "merge-options": "1.0.1",
+    "micromatch": "3.1.0",
+    "postcss": "^5.2.17",
+    "postcss-prefix-selector": "^1.6.0",
+    "posthtml-rename-id": "^1.0",
+    "posthtml-svg-mode": "^1.0.3",
+    "query-string": "^4.3.2",
+    "traverse": "^0.6.6"
+  },
+  "scripts": {
+    "lint": "eslint lib test",
+    "test": "nyc --reporter=lcov mocha --recursive -r ../../test/mocha-setup.js"
+  }
+}

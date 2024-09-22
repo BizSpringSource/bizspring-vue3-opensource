@@ -1,0 +1,200 @@
+# 加解密根密码
+jasypt:
+  encryptor:
+    #根密码，改完密码要把bizspring_upms.sys_datasource数据库表清空，否则代码生成器无法启动
+    password: bizspring
+spring:
+  # main:
+    #允许存在多个Feign调用相同Service的接口
+  #  allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      location: /home
+      maxFileSize: 30MB
+      maxRequestSize: 30MB
+  # redis 相关
+  redis:
+    # 单机 --->
+    host: bizspring-redis
+    port: 6379
+    # 单机 --->
+  
+  # 集群
+    # cluster:
+    #   # 各 Redis 节点信息
+    #   nodes: bizspring-redis:6379,bizspring-redis:6380,bizspring-redis:6381,bizspring-redis:6382,bizspring-redis:6383,bizspring-redis:6384
+    #   maxRedirects: 3
+  # 集群
+    # database: 0
+    # lettuce:
+    #   pool:
+    #     # 连接池最大连接数 默认8 ，负数表示没有限制
+    #     max-active: 8
+    #     # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认-1
+    #     max-wait: -1
+    #     # 连接池中的最大空闲连接 默认8
+    #     max-idle: 8
+    #     # 连接池中的最小空闲连接 默认0
+    #     min-idle: 0
+
+    # 集群
+# ====================================================================================
+# spring-redis-redisson
+# ====================================================================================
+    # redisson:
+    #   pool:
+    #     # 连接池最大连接数 默认8 ，负数表示没有限制
+    #     max-active: 8
+    #     # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认-1
+    #     max-wait: -1
+    #     # 连接池中的最大空闲连接 默认8
+    #     max-idle: 8
+    #     # 连接池中的最小空闲连接 默认0
+    #     min-idle: 0
+    #     connTimeout: 10000
+    #     timeout: 3000
+    #     soTimeout: 3000
+    #     size: 32
+
+    #   config: | 
+    #     clusterServersConfig:
+    #       idleConnectionTimeout: 10000
+    #       connectTimeout: 10000
+    #       timeout: 3000
+    #       retryAttempts: 3
+    #       retryInterval: 1500
+    #       failedSlaveReconnectionInterval: 3000
+    #       failedSlaveCheckInterval: 60000
+    #       password: null
+    #       subscriptionsPerConnection: 5
+    #       clientName: null
+    #       loadBalancer: !<org.redisson.connection.balancer.RoundRobinLoadBalancer> {}
+    #       subscriptionConnectionMinimumIdleSize: 1
+    #       subscriptionConnectionPoolSize: 50
+    #       slaveConnectionMinimumIdleSize: 24
+    #       slaveConnectionPoolSize: 64
+    #       masterConnectionMinimumIdleSize: 24
+    #       masterConnectionPoolSize: 64
+    #       readMode: "SLAVE"
+    #       subscriptionMode: "SLAVE"
+    #       nodeAddresses:
+    #       - "redis://bizspring-redis:6379"
+    #       - "redis://bizspring-redis:6380"
+    #       - "redis://bizspring-redis:6381"
+    #       - "redis://bizspring-redis:6382"
+    #       - "redis://bizspring-redis:6383"
+    #       - "redis://bizspring-redis:6384"
+    #       scanInterval: 1000
+    #       pingConnectionInterval: 0
+    #       keepAlive: false
+    #       tcpNoDelay: false
+    #     threads: 16
+    #     nettyThreads: 32
+    #     codec: !<org.redisson.codec.MarshallingCodec> {}
+    #     transportMode: "NIO"
+
+    # 单机
+    singleServerConfig:
+        password:
+        timeout: 10000
+        address: redis://127.0.0.1:6379
+  
+  elasticsearch:
+    # es相关配置 Connecting to Elasticsearch using REST clients
+    rest:
+      uris: http://localhost:9200
+      connection-timeout: 100s
+      read-timeout: 100s
+      # username: elastic
+      # password: 123456
+    # es相关配置 Connecting to Elasticsearch using Jest clients
+    # jest:
+    #   uris: http://192.168.8.202:9200
+    #   connection-timeout: 10s
+    #   read-timeout: 10s
+    #   username: elastic
+    #   password: 123456
+   
+            
+# logging日志
+logging:
+  level:
+    com.alibaba.nacos.client.naming: error
+    com.lucifer.springboot.cache.mapper: debug
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+# 关闭es健康检查
+  health:
+    elasticsearch:
+      enabled: false
+# feign 配置
+feign:
+  sentinel:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 100000
+        readTimeout: 100000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+#请求处理的超时时间
+ribbon:
+  ReadTimeout: 10000000
+  ConnectTimeout: 10000000
+# mybaits-plus配置
+mybatis-plus:
+  # MyBatis Mapper所对应的XML文件位置
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-enums-package: cn.bizspring.cloud.*.common.entity
+  # 自定义TypeHandler
+  type-handlers-package: cn.bizspring.cloud.common.data.mybatis.typehandler
+  global-config:
+    sql-parser-cache: true
+    # 关闭MP3.0自带的banner
+    banner: false
+    db-config:
+      # 主键类型
+      id-type: auto
+#swagger公共信息
+swagger:
+  title:  API
+  description: bizspring
+  license: Powered By bizspring
+  licenseUrl: http://www.bizspring.cn/
+  terms-of-service-url: http://www.bizspring.cn/
+  authorization:
+    name: OAuth
+    auth-regex: ^.*$
+    authorization-scope-list:
+      - scope: server
+        description: server all
+    token-url-list:
+      - http://localhost:9979/auth/oauth/token
+
+## spring security 配置
+security:
+  oauth2:
+    client:
+      # 无需token访问的url,如果子模块重写这里的配置就会被覆盖
+      release-urls:
+        - /actuator/**
+        - /v2/api-docs
+    resource:
+      loadBalanced: true
+      token-info-uri: http://bizspring-auth/oauth/check_token
+## 文件存放目录配置（用来存放微信支付证书）
+rootpath:
+  windows: C:/bizspring-file/
+  linux: /mnt/install/bizspring-file/

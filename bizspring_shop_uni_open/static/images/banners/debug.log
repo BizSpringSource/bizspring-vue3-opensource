@@ -1,0 +1,17 @@
+[0305/163133.641:INFO:CONSOLE(1)] "Hiding message due to error: Could not find the screen of the target", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202021%20(Prerelease)/Required/www-butler/build/spaces.js (1)
+[0305/222338.936:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
+[0306/130423.256:INFO:CONSOLE(1)] "Hiding message due to error: Could not find the screen of the target", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202021%20(Prerelease)/Required/www-butler/build/spaces.js (1)
+[0307/101409.440:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0307/101411.187:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0307/101424.631:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0307/190437.886:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0308/104727.520:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0308/104729.628:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0308/104732.212:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0309/110632.434:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0309/110637.066:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0309/110638.061:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0309/110647.973:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0309/110653.779:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0310/094842.542:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0310/120847.769:ERROR:media_internals.cc(112)] Cannot get RenderProcessHost

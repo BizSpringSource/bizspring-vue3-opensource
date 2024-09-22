@@ -1,0 +1,9 @@
+2024-07-17 22:16:51,002|159|true|127.0.0.1|publish|application-dev.yml|DEFAULT_GROUP||c54542918485831faf04f51337f12103|null
+2024-07-17 22:17:29,187|135|true|127.0.0.1|publish|bizspring-auth-dev.yml|DEFAULT_GROUP||f8ede214710924634c570b198cc69f03|null
+2024-07-17 22:18:19,870|71|true|127.0.0.1|publish|bizspring-upms-dev.yml|DEFAULT_GROUP||ad9d67e4a1df4f8a7f1891f1132ebe22|null
+2024-07-17 22:18:30,905|83|true|127.0.0.1|remove|bizspring-product-dev.yml|DEFAULT_GROUP||null|null
+2024-07-17 22:18:49,876|45|true|127.0.0.1|remove|bizspring-module-gen-dev.yml|DEFAULT_GROUP||null|null
+2024-07-17 22:19:17,181|127|true|127.0.0.1|publish|bizspring-goods-dev.yml|DEFAULT_GROUP||6ced72438f1e899d51fe96a7df6f739f|null
+2024-07-17 22:19:57,924|77|true|127.0.0.1|publish|bizspring-store-dev.yml|DEFAULT_GROUP||5a43f2783ed09609b18f58891e000f22|null
+2024-07-17 22:20:57,824|58|true|127.0.0.1|publish|bizspring-marketing-dev.yml|DEFAULT_GROUP||2d371b3f660d1213cdd5bdb1ba07fb78|null
+2024-07-17 22:21:18,495|60|true|127.0.0.1|publish|bizspring-order-dev.yml|DEFAULT_GROUP||6d071ca333d183a943ff48ffcd65d351|null

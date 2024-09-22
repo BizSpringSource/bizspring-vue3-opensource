@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.PaymentLogMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.PaymentLog">
+		<result column="id" property="id"/>
+		<result column="version" property="version"/>
+		<result column="created_time" property="createdTime"/>
+		<result column="updated_time" property="updatedTime"/>
+		<result column="amount" property="amount"/>
+		<result column="expire" property="expire"/>
+		<result column="is_success" property="isSuccess"/>
+		<result column="payment_id" property="paymentId"/>
+		<result column="payment_name" property="paymentName"/>
+		<result column="re_pay_url" property="rePayUrl"/>
+		<result column="sn" property="sn"/>
+		<result column="order_id" property="orderId"/>
+		<result property="parentId" column="parent_id"/>
+		<result property="storeId" column="store_id"/>
+		<result property="userId" column="user_id"/>
+	</resultMap>
+
+
+	<resultMap id="RequestResultMap" type="cn.bizspring.cloud.common.core.dto.ReportDto">
+		<result column="x" property="x"/>
+		<result column="y" property="y"/>
+		<result column="column1" property="column1"/>
+		<result column="column2" property="column2"/>
+		<result column="column3" property="column3"/>
+		<result column="column4" property="column4"/>
+		<result column="column5" property="column5"/>
+	</resultMap>
+
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id,
+        version,
+        created_time, updated_time, amount, expire,  is_success, payment_id, payment_name, re_pay_url, sn,order_id, parent_id, store_id, user_id, 'parentId'
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_log`
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_log`
+		WHERE
+		${propertyName} = #{propertyValue}
+	</select>
+
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_log`
+		<choose>
+			<when test="propertyName == 'parentId'">
+				WHERE
+				parent_id = #{propertyValue}
+			</when>
+			<otherwise>
+				WHERE
+				${propertyName} = #{propertyValue}
+			</otherwise>
+		</choose>
+		ORDER BY
+		created_time ASC
+	</select>
+
+	<!-- 查询订单金额 -->
+	<select id="countAmount" resultType="long">
+		SELECT
+		count(amount)
+		FROM
+			`biz_payment_log`
+		<where>
+			<if test="store != null">
+				AND store_id = #{store.id}
+			</if>
+			<if test="isSuccess != null">
+				AND is_success = #{isSuccess}
+			</if>
+			<if test="paymentId != null">
+				AND payment_id = #{paymentId}
+			</if>
+			<if test="hasExpired != null">
+				<if test="hasExpired == true">
+					AND expire IS NOT NULL AND expire <![CDATA[ <= ]]> NOW()
+				</if>
+				<if test="hasExpired == false">
+					AND (expire IS NULL OR expire <![CDATA[ > ]]> NOW())
+				</if>
+			</if>
+		</where>
+	</select>
+
+	<!-- 查询订单金额 -->
+	<select id="count" resultType="long">
+		SELECT
+		<if test="countType != null">
+			<if test="countType == 'amount'">
+				sum(payment_log.amount)
+			</if>
+			<if test="countType == 'order'">
+				count(orders.id)
+			</if>
+		</if>
+		FROM
+			`biz_payment_log` payment_log
+		  LEFT JOIN
+			biz_orders orders
+		  ON orders.id = payment_log.order_id
+		<where>
+			<if test="store != null">
+				AND orders.store_id = #{store.id}
+			</if>
+			<if test="isSuccess != null">
+				AND payment_log.is_success = #{isSuccess}
+			</if>
+			<if test="paymentId != null">
+				AND payment_log.payment_id = #{paymentId}
+			</if>
+			<if test="beginDate != null">
+				AND payment_log.created_time <![CDATA[ >= ]]> #{beginDate}
+			</if>
+			<if test="endDate != null">
+				AND payment_log.created_time <![CDATA[ <= ]]> #{endDate}
+			</if>
+		</where>
+	</select>
+
+	<select id="countCurveReport" resultMap="RequestResultMap">
+		SELECT
+			SUM(payment_log.amount) as y ,
+			MIN(payment_log.created_time)  as column1
+			<if test="groupBy != null and groupBy=='HOUR' ">
+				,HOUR(payment_log.created_time) as x
+			</if>
+			<if test="groupBy != null and groupBy=='WEEK' ">
+				,WEEK(payment_log.created_time) as x
+			</if>
+			<if test="groupBy != null and groupBy=='MONTH' ">
+				,MONTH(payment_log.created_time) as x
+			</if>
+		FROM
+			`biz_payment_log` payment_log
+		LEFT JOIN biz_orders orders
+		on orders.id =payment_log.order_id
+		<where>
+			<if test="store != null">
+				AND orders.store_id = #{store.id}
+			</if>
+			<if test="isSuccess != null">
+				AND payment_log.is_success = #{isSuccess}
+			</if>
+			<if test="paymentId != null">
+				AND payment_log.payment_id = #{paymentId}
+			</if>
+			<if test="beginDate != null">
+				AND payment_log.created_time <![CDATA[ >= ]]> #{beginDate}
+			</if>
+			<if test="endDate != null">
+				AND payment_log.created_time <![CDATA[ <= ]]> #{endDate}
+			</if>
+		</where>
+		<if test="groupBy != null and groupBy=='HOUR' ">
+			GROUP BY HOUR(payment_log.created_time)
+		</if>
+		<if test="groupBy != null and groupBy=='WEEK' ">
+			GROUP BY WEEK(payment_log.created_time)
+		</if>
+		<if test="groupBy != null and groupBy=='MONTH' ">
+			GROUP BY MONTH(payment_log.created_time)
+		</if>
+
+	</select>
+
+	<!-- 查找可用支付记录 -->
+	<select id="findAvailable" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_log`
+		WHERE
+			amount = #{amount}
+			AND is_success = FALSE
+			AND payment_id = #{payment.id}
+			AND parent_id IS NULL
+			AND (expire IS NULL OR expire > NOW())
+		LIMIT 0, 1
+	</select>
+
+	<!-- 查找可用父支付记录 -->
+	<select id="findAvailableParent" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_payment_log`
+		WHERE
+		(expire IS NULL OR expire > NOW())
+		AND is_success = FALSE
+		AND payment_id = #{payment.id}
+	</select>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.order.common.entity.PaymentLog">
+		INSERT INTO biz_payment_log(id,
+										created_time,
+										version,
+										amount,
+										expire,
+										is_success,
+										payment_id,
+										payment_name,
+										re_pay_url,
+										sn,
+										order_id,
+										parent_id,
+										store_id,
+										user_id)
+		VALUES (#{entity.id},
+				#{entity.createdTime},
+				#{entity.version},
+				#{entity.amount},
+				#{entity.expire},
+				#{entity.isSuccess},
+				#{entity.paymentId},
+				#{entity.paymentName},
+				#{entity.rePayUrl},
+				#{entity.sn},
+				#{entity.orderId},
+				#{entity.parentId},
+				#{entity.storeId},
+				#{entity.userId})
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="cn.bizspring.cloud.order.common.entity.PaymentLog">
+		UPDATE biz_payment_log
+		SET updated_time = NOW(),
+			is_success         = #{entity.isSuccess}
+		WHERE id = #{entity.id}
+	</update>
+
+</mapper>

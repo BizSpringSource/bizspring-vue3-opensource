@@ -1,0 +1,698 @@
+2024-09-15 10:22:25,326 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-15 10:22:25,677 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62762, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62762,1097911996987300
+
+2024-09-15 10:22:25,678 INFO send udp packet: 192.168.2.2,62762,1097911996987300
+
+2024-09-15 10:22:25,678 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097911996987300
+
+2024-09-15 10:22:25,679 INFO send udp packet: 192.168.2.2,62761,1097911996987300
+
+2024-09-15 10:22:25,679 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1097911996987300
+
+2024-09-15 10:22:25,679 INFO send udp packet: 192.168.2.2,50317,1097911996987300
+
+2024-09-15 10:22:25,679 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-15 10:22:25,680 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097912000622600
+
+2024-09-15 10:22:25,680 INFO send udp packet: 192.168.2.2,62761,1097912000622600
+
+2024-09-15 10:22:25,680 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-15 10:22:25,680 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097912000812799
+
+2024-09-15 10:22:25,680 INFO send udp packet: 192.168.2.2,62761,1097912000812799
+
+2024-09-15 10:22:25,680 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-15 10:22:25,680 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097912001252900
+
+2024-09-15 10:22:25,680 INFO send udp packet: 192.168.2.2,62761,1097912001252900
+
+2024-09-15 10:22:25,680 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-15 10:22:25,680 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097912001407099
+
+2024-09-15 10:22:25,680 INFO send udp packet: 192.168.2.2,62761,1097912001407099
+
+2024-09-15 10:22:25,680 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 10:22:25,682 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097912003006400
+
+2024-09-15 10:22:25,682 INFO send udp packet: 192.168.2.2,62761,1097912003006400
+
+2024-09-15 10:22:25,682 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-15 10:22:25,682 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1097912003224600
+
+2024-09-15 10:22:25,682 INFO send udp packet: 192.168.2.2,50317,1097912003224600
+
+2024-09-15 10:22:25,682 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62762, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62762,1097912003224600
+
+2024-09-15 10:22:25,682 INFO send udp packet: 192.168.2.2,62762,1097912003224600
+
+2024-09-15 10:22:25,682 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1097912003224600
+
+2024-09-15 10:22:25,682 INFO send udp packet: 192.168.2.2,50317,1097912003224600
+
+2024-09-15 10:22:25,683 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097912003224600
+
+2024-09-15 10:22:25,683 INFO send udp packet: 192.168.2.2,62761,1097912003224600
+
+2024-09-15 10:22:25,683 INFO received ack: {"type": "push-ack", "lastRefTime":"1097911996987300", "data":""} from: 192.168.2.2:62761, cost: 4 ms, unacked: 10, total push: 79
+
+2024-09-15 10:22:25,684 INFO received ack: {"type": "push-ack", "lastRefTime":"1097911996987300", "data":""} from: 192.168.2.2:62762, cost: 6 ms, unacked: 9, total push: 79
+
+2024-09-15 10:22:25,684 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912003224600", "data":""} from: 192.168.2.2:62762, cost: 2 ms, unacked: 8, total push: 79
+
+2024-09-15 10:22:25,685 INFO received ack: {"type": "push-ack", "lastRefTime":"1097911996987300", "data":""} from: 192.168.2.2:50317, cost: 6 ms, unacked: 7, total push: 79
+
+2024-09-15 10:22:25,685 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912003224600", "data":""} from: 192.168.2.2:50317, cost: 3 ms, unacked: 6, total push: 79
+
+2024-09-15 10:22:25,686 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.2.2,50317,1097912003224600, ack json: {"type": "push-ack", "lastRefTime":"1097912003224600", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:680)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-15 10:22:25,686 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912000622600", "data":""} from: 192.168.2.2:62761, cost: 6 ms, unacked: 5, total push: 79
+
+2024-09-15 10:22:25,688 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912000812799", "data":""} from: 192.168.2.2:62761, cost: 8 ms, unacked: 4, total push: 79
+
+2024-09-15 10:22:25,690 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912001252900", "data":""} from: 192.168.2.2:62761, cost: 10 ms, unacked: 3, total push: 79
+
+2024-09-15 10:22:25,693 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912001407099", "data":""} from: 192.168.2.2:62761, cost: 13 ms, unacked: 2, total push: 79
+
+2024-09-15 10:22:25,699 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912003006400", "data":""} from: 192.168.2.2:62761, cost: 17 ms, unacked: 1, total push: 79
+
+2024-09-15 10:22:25,705 INFO received ack: {"type": "push-ack", "lastRefTime":"1097912003224600", "data":""} from: 192.168.2.2:62761, cost: 22 ms, unacked: 0, total push: 79
+
+2024-09-15 10:22:28,481 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-15 10:22:28,486 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1097914805272399
+
+2024-09-15 10:22:28,486 INFO send udp packet: 192.168.2.2,65161,1097914805272399
+
+2024-09-15 10:22:28,487 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097914805272399
+
+2024-09-15 10:22:28,487 INFO send udp packet: 192.168.2.2,62761,1097914805272399
+
+2024-09-15 10:22:28,491 INFO received ack: {"type": "push-ack", "lastRefTime":"1097914805272399", "data":""} from: 192.168.2.2:62761, cost: 4 ms, unacked: 1, total push: 2
+
+2024-09-15 10:22:28,491 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-15 10:22:28,492 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1097914812397700
+
+2024-09-15 10:22:28,585 INFO received ack: {"type": "push-ack", "lastRefTime":"1097914805272399", "data":""} from: 192.168.2.2:65161, cost: 99 ms, unacked: 1, total push: 3
+
+2024-09-15 10:22:28,492 INFO send udp packet: 192.168.2.2,56224,1097914812397700
+
+2024-09-15 10:22:28,643 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097914812397700
+
+2024-09-15 10:22:28,643 INFO send udp packet: 192.168.2.2,62761,1097914812397700
+
+2024-09-15 10:22:28,644 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-15 10:22:28,644 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097914964720800
+
+2024-09-15 10:22:28,644 INFO send udp packet: 192.168.2.2,62761,1097914964720800
+
+2024-09-15 10:22:28,644 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1097914964720800
+
+2024-09-15 10:22:28,644 INFO send udp packet: 192.168.2.2,56224,1097914964720800
+
+2024-09-15 10:22:28,644 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1097914964720800
+
+2024-09-15 10:22:28,644 INFO send udp packet: 192.168.2.2,65161,1097914964720800
+
+2024-09-15 10:22:28,646 INFO received ack: {"type": "push-ack", "lastRefTime":"1097914812397700", "data":""} from: 192.168.2.2:62761, cost: 3 ms, unacked: 4, total push: 7
+
+2024-09-15 10:22:28,648 INFO received ack: {"type": "push-ack", "lastRefTime":"1097914964720800", "data":""} from: 192.168.2.2:65161, cost: 3 ms, unacked: 3, total push: 7
+
+2024-09-15 10:22:28,648 INFO received ack: {"type": "push-ack", "lastRefTime":"1097914964720800", "data":""} from: 192.168.2.2:62761, cost: 4 ms, unacked: 2, total push: 7
+
+2024-09-15 10:22:28,649 INFO received ack: {"type": "push-ack", "lastRefTime":"1097914812397700", "data":""} from: 192.168.2.2:56224, cost: 157 ms, unacked: 1, total push: 7
+
+2024-09-15 10:22:28,651 INFO received ack: {"type": "push-ack", "lastRefTime":"1097914964720800", "data":""} from: 192.168.2.2:56224, cost: 7 ms, unacked: 0, total push: 7
+
+2024-09-15 10:22:29,077 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-15 10:22:29,080 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097915401303200
+
+2024-09-15 10:22:29,080 INFO send udp packet: 192.168.2.2,62761,1097915401303200
+
+2024-09-15 10:22:29,084 INFO received ack: {"type": "push-ack", "lastRefTime":"1097915401303200", "data":""} from: 192.168.2.2:62761, cost: 4 ms, unacked: 0, total push: 8
+
+2024-09-15 10:22:30,871 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 10:22:30,873 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097917193414600
+
+2024-09-15 10:22:30,873 INFO send udp packet: 192.168.2.2,62761,1097917193414600
+
+2024-09-15 10:22:30,873 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1097917193414600
+
+2024-09-15 10:22:30,873 INFO send udp packet: 192.168.2.2,62532,1097917193414600
+
+2024-09-15 10:22:30,874 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-15 10:22:30,874 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1097917195180499
+
+2024-09-15 10:22:30,874 INFO send udp packet: 192.168.2.2,50317,1097917195180499
+
+2024-09-15 10:22:30,875 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62762, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62762,1097917195180499
+
+2024-09-15 10:22:30,875 INFO send udp packet: 192.168.2.2,62762,1097917195180499
+
+2024-09-15 10:22:30,875 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1097917195180499
+
+2024-09-15 10:22:30,875 INFO send udp packet: 192.168.2.2,65161,1097917195180499
+
+2024-09-15 10:22:30,875 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917193414600", "data":""} from: 192.168.2.2:62761, cost: 2 ms, unacked: 4, total push: 13
+
+2024-09-15 10:22:30,876 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1097917195180499
+
+2024-09-15 10:22:30,876 INFO send udp packet: 192.168.2.2,50317,1097917195180499
+
+2024-09-15 10:22:30,876 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1097917195180499
+
+2024-09-15 10:22:30,876 INFO send udp packet: 192.168.2.2,62761,1097917195180499
+
+2024-09-15 10:22:30,877 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1097917195180499
+
+2024-09-15 10:22:30,877 INFO send udp packet: 192.168.2.2,56224,1097917195180499
+
+2024-09-15 10:22:30,877 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1097917195180499
+
+2024-09-15 10:22:30,877 INFO send udp packet: 192.168.2.2,62532,1097917195180499
+
+2024-09-15 10:22:30,878 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917195180499", "data":""} from: 192.168.2.2:62762, cost: 3 ms, unacked: 6, total push: 16
+
+2024-09-15 10:22:30,878 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917195180499", "data":""} from: 192.168.2.2:65161, cost: 3 ms, unacked: 5, total push: 16
+
+2024-09-15 10:22:30,879 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917195180499", "data":""} from: 192.168.2.2:50317, cost: 3 ms, unacked: 4, total push: 16
+
+2024-09-15 10:22:30,879 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917195180499", "data":""} from: 192.168.2.2:62761, cost: 3 ms, unacked: 3, total push: 16
+
+2024-09-15 10:22:30,880 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917195180499", "data":""} from: 192.168.2.2:56224, cost: 3 ms, unacked: 2, total push: 16
+
+2024-09-15 10:22:30,881 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.2.2,50317,1097917195180499, ack json: {"type": "push-ack", "lastRefTime":"1097917195180499", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:680)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-15 10:22:30,887 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917193414600", "data":""} from: 192.168.2.2:62532, cost: 14 ms, unacked: 1, total push: 16
+
+2024-09-15 10:22:30,887 INFO received ack: {"type": "push-ack", "lastRefTime":"1097917195180499", "data":""} from: 192.168.2.2:62532, cost: 10 ms, unacked: 0, total push: 16
+
+2024-09-15 16:36:32,382 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 16:36:32,765 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120359084128200
+
+2024-09-15 16:36:32,765 INFO send udp packet: 192.168.2.2,62761,1120359084128200
+
+2024-09-15 16:36:32,766 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1120359084128200
+
+2024-09-15 16:36:32,766 INFO send udp packet: 192.168.2.2,62532,1120359084128200
+
+2024-09-15 16:36:36,998 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-15 16:36:36,998 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62762, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62762,1120363319320000
+
+2024-09-15 16:36:36,998 INFO send udp packet: 192.168.2.2,62762,1120363319320000
+
+2024-09-15 16:36:36,999 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1120363319320000
+
+2024-09-15 16:36:36,999 INFO send udp packet: 192.168.2.2,65161,1120363319320000
+
+2024-09-15 16:36:36,999 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120363319320000
+
+2024-09-15 16:36:36,999 INFO send udp packet: 192.168.2.2,62761,1120363319320000
+
+2024-09-15 16:36:36,999 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1120363319320000
+
+2024-09-15 16:36:36,999 INFO send udp packet: 192.168.2.2,62532,1120363319320000
+
+2024-09-15 16:36:41,232 INFO received ack: {"type": "push-ack", "lastRefTime":"1120359084128200", "data":""} from: 192.168.2.2:62761, cost: 8467 ms, unacked: 5, total push: 22
+
+2024-09-15 16:36:41,232 INFO received ack: {"type": "push-ack", "lastRefTime":"1120359084128200", "data":""} from: 192.168.2.2:62532, cost: 8466 ms, unacked: 4, total push: 22
+
+2024-09-15 16:36:41,232 INFO received ack: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""} from: 192.168.2.2:62761, cost: 4233 ms, unacked: 3, total push: 22
+
+2024-09-15 16:36:41,232 INFO received ack: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""} from: 192.168.2.2:62532, cost: 4233 ms, unacked: 2, total push: 22
+
+2024-09-15 16:36:42,238 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-15 16:36:42,238 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120368559203899
+
+2024-09-15 16:36:42,238 INFO send udp packet: 192.168.2.2,62761,1120368559203899
+
+2024-09-15 16:36:42,239 INFO received ack: {"type": "push-ack", "lastRefTime":"1120368559203899", "data":""} from: 192.168.2.2:62761, cost: 1 ms, unacked: 2, total push: 23
+
+2024-09-15 16:36:47,000 INFO retry to push data, key: 192.168.2.2,62762,1120363319320000
+
+2024-09-15 16:36:47,016 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-15 16:36:49,346 INFO send udp packet: 192.168.2.2,62762,1120363319320000
+
+2024-09-15 16:36:49,346 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120375667784699
+
+2024-09-15 16:36:54,788 INFO retry to push data, key: 192.168.2.2,65161,1120363319320000
+
+2024-09-15 16:36:54,790 INFO send udp packet: 192.168.2.2,62761,1120375667784699
+
+2024-09-15 16:36:54,791 INFO send udp packet: 192.168.2.2,65161,1120363319320000
+
+2024-09-15 16:36:54,799 INFO received ack: {"type": "push-ack", "lastRefTime":"1120375667784699", "data":""} from: 192.168.2.2:62761, cost: 9 ms, unacked: 2, total push: 24
+
+2024-09-15 16:36:54,800 WARN ack takes too long from /192.168.2.2:65161 ack json: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""}
+
+2024-09-15 16:36:54,800 INFO received ack: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""} from: 192.168.2.2:65161, cost: 9 ms, unacked: 1, total push: 24
+
+2024-09-15 16:36:54,800 WARN ack takes too long from /192.168.2.2:65161 ack json: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""}
+
+2024-09-15 16:36:54,800 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1120375667784699
+
+2024-09-15 16:36:54,800 INFO send udp packet: 192.168.2.2,62532,1120375667784699
+
+2024-09-15 16:36:54,800 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.2.2,65161,1120363319320000, ack json: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:680)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-15 16:36:54,801 INFO received ack: {"type": "push-ack", "lastRefTime":"1120375667784699", "data":""} from: 192.168.2.2:62532, cost: 1 ms, unacked: 1, total push: 25
+
+2024-09-15 16:36:54,808 WARN ack takes too long from /192.168.2.2:62762 ack json: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""}
+
+2024-09-15 16:36:54,808 INFO received ack: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""} from: 192.168.2.2:62762, cost: 5462 ms, unacked: 0, total push: 25
+
+2024-09-15 16:36:54,808 WARN ack takes too long from /192.168.2.2:62762 ack json: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""}
+
+2024-09-15 16:36:54,808 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.2.2,62762,1120363319320000, ack json: {"type": "push-ack", "lastRefTime":"1120363319320000", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:680)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-15 16:36:55,790 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-15 16:36:55,790 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1120382111403900
+
+2024-09-15 16:36:55,790 INFO send udp packet: 192.168.2.2,62532,1120382111403900
+
+2024-09-15 16:36:55,791 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120382111403900
+
+2024-09-15 16:36:55,791 INFO send udp packet: 192.168.2.2,62761,1120382111403900
+
+2024-09-15 16:36:55,791 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1120382111403900
+
+2024-09-15 16:36:55,791 INFO send udp packet: 192.168.2.2,65161,1120382111403900
+
+2024-09-15 16:36:55,791 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1120382111403900
+
+2024-09-15 16:36:55,791 INFO send udp packet: 192.168.2.2,56224,1120382111403900
+
+2024-09-15 16:36:55,791 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1120382111403900
+
+2024-09-15 16:36:55,791 INFO send udp packet: 192.168.2.2,50317,1120382111403900
+
+2024-09-15 16:36:55,791 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382111403900", "data":""} from: 192.168.2.2:62532, cost: 1 ms, unacked: 4, total push: 30
+
+2024-09-15 16:36:55,791 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382111403900", "data":""} from: 192.168.2.2:62761, cost: 0 ms, unacked: 3, total push: 30
+
+2024-09-15 16:36:55,799 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382111403900", "data":""} from: 192.168.2.2:65161, cost: 8 ms, unacked: 2, total push: 30
+
+2024-09-15 16:36:55,809 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382111403900", "data":""} from: 192.168.2.2:50317, cost: 18 ms, unacked: 1, total push: 30
+
+2024-09-15 16:36:55,821 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-15 16:36:55,821 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1120382141782700
+
+2024-09-15 16:36:55,821 INFO send udp packet: 192.168.2.2,56224,1120382141782700
+
+2024-09-15 16:36:55,821 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120382141782700
+
+2024-09-15 16:36:55,821 INFO send udp packet: 192.168.2.2,62761,1120382141782700
+
+2024-09-15 16:36:55,821 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-15 16:36:55,821 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1120382142046900
+
+2024-09-15 16:36:55,821 INFO send udp packet: 192.168.2.2,50317,1120382142046900
+
+2024-09-15 16:36:55,821 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62762, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62762,1120382142046900
+
+2024-09-15 16:36:55,821 INFO send udp packet: 192.168.2.2,62762,1120382142046900
+
+2024-09-15 16:36:55,821 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1120382142046900
+
+2024-09-15 16:36:55,821 INFO send udp packet: 192.168.2.2,65161,1120382142046900
+
+2024-09-15 16:36:55,821 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1120382142046900
+
+2024-09-15 16:36:55,821 INFO send udp packet: 192.168.2.2,50317,1120382142046900
+
+2024-09-15 16:36:55,822 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120382142046900
+
+2024-09-15 16:36:55,822 INFO send udp packet: 192.168.2.2,62761,1120382142046900
+
+2024-09-15 16:36:55,822 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382141782700", "data":""} from: 192.168.2.2:62761, cost: 1 ms, unacked: 6, total push: 36
+
+2024-09-15 16:36:55,822 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1120382142046900
+
+2024-09-15 16:36:55,822 INFO send udp packet: 192.168.2.2,56224,1120382142046900
+
+2024-09-15 16:36:55,822 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1120382142046900
+
+2024-09-15 16:36:55,822 INFO send udp packet: 192.168.2.2,62532,1120382142046900
+
+2024-09-15 16:36:55,822 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 16:36:55,822 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382142046900", "data":""} from: 192.168.2.2:62761, cost: 0 ms, unacked: 7, total push: 38
+
+2024-09-15 16:36:55,822 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120382143006900
+
+2024-09-15 16:36:55,822 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382142046900", "data":""} from: 192.168.2.2:65161, cost: 1 ms, unacked: 6, total push: 38
+
+2024-09-15 16:36:55,822 INFO send udp packet: 192.168.2.2,62761,1120382143006900
+
+2024-09-15 16:36:55,822 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382142046900", "data":""} from: 192.168.2.2:62762, cost: 1 ms, unacked: 6, total push: 39
+
+2024-09-15 16:36:55,822 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1120382143006900
+
+2024-09-15 16:36:55,822 INFO send udp packet: 192.168.2.2,62532,1120382143006900
+
+2024-09-15 16:36:55,822 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:56212, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56212,1120382143006900
+
+2024-09-15 16:36:55,822 INFO send udp packet: 192.168.2.2,56212,1120382143006900
+
+2024-09-15 16:36:55,823 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382142046900", "data":""} from: 192.168.2.2:62532, cost: 1 ms, unacked: 7, total push: 41
+
+2024-09-15 16:36:55,823 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382143006900", "data":""} from: 192.168.2.2:62761, cost: 1 ms, unacked: 6, total push: 41
+
+2024-09-15 16:36:55,832 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382142046900", "data":""} from: 192.168.2.2:50317, cost: 11 ms, unacked: 5, total push: 41
+
+2024-09-15 16:36:55,833 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.2.2,50317,1120382142046900, ack json: {"type": "push-ack", "lastRefTime":"1120382142046900", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:680)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-15 16:36:55,833 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382143006900", "data":""} from: 192.168.2.2:56212, cost: 11 ms, unacked: 4, total push: 41
+
+2024-09-15 16:36:55,840 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382143006900", "data":""} from: 192.168.2.2:62532, cost: 18 ms, unacked: 3, total push: 41
+
+2024-09-15 16:36:55,851 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382111403900", "data":""} from: 192.168.2.2:56224, cost: 60 ms, unacked: 2, total push: 41
+
+2024-09-15 16:36:55,857 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382141782700", "data":""} from: 192.168.2.2:56224, cost: 36 ms, unacked: 1, total push: 41
+
+2024-09-15 16:36:55,858 INFO received ack: {"type": "push-ack", "lastRefTime":"1120382142046900", "data":""} from: 192.168.2.2:56224, cost: 36 ms, unacked: 0, total push: 41
+
+2024-09-15 16:37:00,877 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 16:37:00,877 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1120387198044900
+
+2024-09-15 16:37:00,877 INFO send udp packet: 192.168.2.2,62761,1120387198044900
+
+2024-09-15 16:37:00,877 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1120387198044900
+
+2024-09-15 16:37:00,877 INFO send udp packet: 192.168.2.2,62532,1120387198044900
+
+2024-09-15 16:37:00,877 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:56212, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56212,1120387198044900
+
+2024-09-15 16:37:00,877 INFO send udp packet: 192.168.2.2,56212,1120387198044900
+
+2024-09-15 16:37:00,888 INFO received ack: {"type": "push-ack", "lastRefTime":"1120387198044900", "data":""} from: 192.168.2.2:62761, cost: 11 ms, unacked: 2, total push: 44
+
+2024-09-15 16:37:00,888 INFO received ack: {"type": "push-ack", "lastRefTime":"1120387198044900", "data":""} from: 192.168.2.2:56212, cost: 11 ms, unacked: 1, total push: 44
+
+2024-09-15 16:37:00,888 INFO received ack: {"type": "push-ack", "lastRefTime":"1120387198044900", "data":""} from: 192.168.2.2:62532, cost: 11 ms, unacked: 0, total push: 44
+
+2024-09-15 17:48:11,496 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-15 17:48:11,496 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-15 17:48:11,496 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-15 17:48:11,496 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-15 17:48:11,496 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-15 17:48:11,496 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-15 17:48:11,496 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 17:48:15,618 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-15 17:48:15,618 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1124661939508900
+
+2024-09-15 17:48:15,618 INFO send udp packet: 192.168.2.2,62761,1124661939508900
+
+2024-09-15 17:48:15,620 INFO received ack: {"type": "push-ack", "lastRefTime":"1124661939508900", "data":""} from: 192.168.2.2:62761, cost: 2 ms, unacked: 0, total push: 45
+
+2024-09-15 17:48:15,650 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-15 17:48:15,650 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1124661971158200
+
+2024-09-15 17:48:15,650 INFO send udp packet: 192.168.2.2,56224,1124661971158200
+
+2024-09-15 17:48:15,651 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1124661971158200
+
+2024-09-15 17:48:15,651 INFO send udp packet: 192.168.2.2,62761,1124661971158200
+
+2024-09-15 17:48:15,652 INFO received ack: {"type": "push-ack", "lastRefTime":"1124661971158200", "data":""} from: 192.168.2.2:56224, cost: 2 ms, unacked: 1, total push: 47
+
+2024-09-15 17:48:15,653 INFO received ack: {"type": "push-ack", "lastRefTime":"1124661971158200", "data":""} from: 192.168.2.2:62761, cost: 2 ms, unacked: 0, total push: 47
+
+2024-09-15 17:48:15,743 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-15 17:48:15,743 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1124662064453300
+
+2024-09-15 17:48:15,743 INFO send udp packet: 192.168.2.2,62761,1124662064453300
+
+2024-09-15 17:48:15,743 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1124662064453300
+
+2024-09-15 17:48:15,744 INFO send udp packet: 192.168.2.2,56224,1124662064453300
+
+2024-09-15 17:48:15,744 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1124662064453300
+
+2024-09-15 17:48:15,744 INFO send udp packet: 192.168.2.2,62532,1124662064453300
+
+2024-09-15 17:48:15,744 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1124662064453300
+
+2024-09-15 17:48:15,744 INFO send udp packet: 192.168.2.2,65161,1124662064453300
+
+2024-09-15 17:48:15,745 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662064453300", "data":""} from: 192.168.2.2:56224, cost: 1 ms, unacked: 3, total push: 51
+
+2024-09-15 17:48:15,745 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662064453300", "data":""} from: 192.168.2.2:62532, cost: 1 ms, unacked: 2, total push: 51
+
+2024-09-15 17:48:15,746 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662064453300", "data":""} from: 192.168.2.2:65161, cost: 2 ms, unacked: 1, total push: 51
+
+2024-09-15 17:48:15,746 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662064453300", "data":""} from: 192.168.2.2:62761, cost: 3 ms, unacked: 0, total push: 51
+
+2024-09-15 17:48:15,959 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-15 17:48:15,959 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1124662280058600
+
+2024-09-15 17:48:15,959 INFO send udp packet: 192.168.2.2,62532,1124662280058600
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1124662280058600
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,65161,1124662280058600
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1124662280058600
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,62761,1124662280058600
+
+2024-09-15 17:48:15,960 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1124662280628100
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,62532,1124662280628100
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62762, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62762,1124662280628100
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,62762,1124662280628100
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1124662280628100
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,62761,1124662280628100
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1124662280628100
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,65161,1124662280628100
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1124662280628100
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,56224,1124662280628100
+
+2024-09-15 17:48:15,960 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1124662280628100
+
+2024-09-15 17:48:15,960 INFO send udp packet: 192.168.2.2,50317,1124662280628100
+
+2024-09-15 17:48:15,961 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280058600", "data":""} from: 192.168.2.2:62532, cost: 2 ms, unacked: 8, total push: 60
+
+2024-09-15 17:48:15,961 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280058600", "data":""} from: 192.168.2.2:65161, cost: 1 ms, unacked: 7, total push: 60
+
+2024-09-15 17:48:15,961 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280628100", "data":""} from: 192.168.2.2:65161, cost: 1 ms, unacked: 6, total push: 60
+
+2024-09-15 17:48:15,962 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280058600", "data":""} from: 192.168.2.2:62761, cost: 2 ms, unacked: 5, total push: 60
+
+2024-09-15 17:48:15,962 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280628100", "data":""} from: 192.168.2.2:62532, cost: 2 ms, unacked: 4, total push: 60
+
+2024-09-15 17:48:15,963 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280628100", "data":""} from: 192.168.2.2:62762, cost: 2 ms, unacked: 3, total push: 60
+
+2024-09-15 17:48:15,963 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280628100", "data":""} from: 192.168.2.2:62761, cost: 3 ms, unacked: 2, total push: 60
+
+2024-09-15 17:48:15,963 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280628100", "data":""} from: 192.168.2.2:56224, cost: 3 ms, unacked: 1, total push: 60
+
+2024-09-15 17:48:15,966 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662280628100", "data":""} from: 192.168.2.2:50317, cost: 6 ms, unacked: 0, total push: 60
+
+2024-09-15 17:48:16,067 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 17:48:16,067 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1124662387921799
+
+2024-09-15 17:48:16,067 INFO send udp packet: 192.168.2.2,62761,1124662387921799
+
+2024-09-15 17:48:16,067 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1124662387921799
+
+2024-09-15 17:48:16,067 INFO send udp packet: 192.168.2.2,62532,1124662387921799
+
+2024-09-15 17:48:16,068 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662387921799", "data":""} from: 192.168.2.2:62761, cost: 1 ms, unacked: 1, total push: 62
+
+2024-09-15 17:48:16,068 INFO received ack: {"type": "push-ack", "lastRefTime":"1124662387921799", "data":""} from: 192.168.2.2:62532, cost: 1 ms, unacked: 0, total push: 62
+
+2024-09-15 22:09:32,604 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-09-15 22:09:32,606 INFO serviceName: DEFAULT_GROUP@@bizspring-module-gateway changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1140341836744900
+
+2024-09-15 22:09:32,606 INFO send udp packet: 192.168.2.2,62761,1140341836744900
+
+2024-09-15 22:09:32,621 INFO received ack: {"type": "push-ack", "lastRefTime":"1140341836744900", "data":""} from: 192.168.2.2:62761, cost: 15 ms, unacked: 0, total push: 63
+
+2024-09-15 22:09:34,816 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-09-15 22:09:34,817 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1140344048243200
+
+2024-09-15 22:09:34,817 INFO send udp packet: 192.168.2.2,62532,1140344048243200
+
+2024-09-15 22:09:34,817 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62762, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62762,1140344048243200
+
+2024-09-15 22:09:34,817 INFO send udp packet: 192.168.2.2,62762,1140344048243200
+
+2024-09-15 22:09:34,817 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:62761, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62761,1140344048243200
+
+2024-09-15 22:09:34,817 INFO send udp packet: 192.168.2.2,62761,1140344048243200
+
+2024-09-15 22:09:34,817 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1140344048243200
+
+2024-09-15 22:09:34,817 INFO send udp packet: 192.168.2.2,65161,1140344048243200
+
+2024-09-15 22:09:34,817 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1140344048243200
+
+2024-09-15 22:09:34,817 INFO send udp packet: 192.168.2.2,56224,1140344048243200
+
+2024-09-15 22:09:34,817 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1140344048243200
+
+2024-09-15 22:09:34,817 INFO send udp packet: 192.168.2.2,50317,1140344048243200
+
+2024-09-15 22:09:34,825 INFO received ack: {"type": "push-ack", "lastRefTime":"1140344048243200", "data":""} from: 192.168.2.2:56224, cost: 8 ms, unacked: 5, total push: 69
+
+2024-09-15 22:09:34,826 INFO received ack: {"type": "push-ack", "lastRefTime":"1140344048243200", "data":""} from: 192.168.2.2:62761, cost: 8 ms, unacked: 4, total push: 69
+
+2024-09-15 22:09:34,829 INFO received ack: {"type": "push-ack", "lastRefTime":"1140344048243200", "data":""} from: 192.168.2.2:62762, cost: 12 ms, unacked: 3, total push: 69
+
+2024-09-15 22:09:34,833 INFO received ack: {"type": "push-ack", "lastRefTime":"1140344048243200", "data":""} from: 192.168.2.2:50317, cost: 16 ms, unacked: 2, total push: 69
+
+2024-09-15 22:09:34,835 INFO received ack: {"type": "push-ack", "lastRefTime":"1140344048243200", "data":""} from: 192.168.2.2:65161, cost: 18 ms, unacked: 1, total push: 69
+
+2024-09-15 22:09:34,850 INFO received ack: {"type": "push-ack", "lastRefTime":"1140344048243200", "data":""} from: 192.168.2.2:62532, cost: 33 ms, unacked: 0, total push: 69
+
+2024-09-15 22:09:45,874 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-09-15 22:09:45,874 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1140355105870400
+
+2024-09-15 22:09:45,874 INFO send udp packet: 192.168.2.2,62532,1140355105870400
+
+2024-09-15 22:09:45,874 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.2.2:56212, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56212,1140355105870400
+
+2024-09-15 22:09:45,874 INFO send udp packet: 192.168.2.2,56212,1140355105870400
+
+2024-09-15 22:09:45,876 INFO received ack: {"type": "push-ack", "lastRefTime":"1140355105870400", "data":""} from: 192.168.2.2:56212, cost: 2 ms, unacked: 1, total push: 71
+
+2024-09-15 22:09:45,879 INFO received ack: {"type": "push-ack", "lastRefTime":"1140355105870400", "data":""} from: 192.168.2.2:62532, cost: 5 ms, unacked: 0, total push: 71
+
+2024-09-15 22:09:46,705 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-09-15 22:09:46,705 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1140355936572300
+
+2024-09-15 22:09:46,705 INFO send udp packet: 192.168.2.2,56224,1140355936572300
+
+2024-09-15 22:09:46,705 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1140355936572300
+
+2024-09-15 22:09:46,705 INFO send udp packet: 192.168.2.2,62532,1140355936572300
+
+2024-09-15 22:09:46,705 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1140355936572300
+
+2024-09-15 22:09:46,705 INFO send udp packet: 192.168.2.2,65161,1140355936572300
+
+2024-09-15 22:09:46,708 INFO received ack: {"type": "push-ack", "lastRefTime":"1140355936572300", "data":""} from: 192.168.2.2:62532, cost: 3 ms, unacked: 2, total push: 74
+
+2024-09-15 22:09:46,709 INFO received ack: {"type": "push-ack", "lastRefTime":"1140355936572300", "data":""} from: 192.168.2.2:56224, cost: 4 ms, unacked: 1, total push: 74
+
+2024-09-15 22:09:46,709 INFO received ack: {"type": "push-ack", "lastRefTime":"1140355936572300", "data":""} from: 192.168.2.2:65161, cost: 4 ms, unacked: 0, total push: 74
+
+2024-09-15 22:09:47,217 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-09-15 22:09:47,217 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1140356449002200
+
+2024-09-15 22:09:47,217 INFO send udp packet: 192.168.2.2,50317,1140356449002200
+
+2024-09-15 22:09:47,217 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1140356449002200
+
+2024-09-15 22:09:47,217 INFO send udp packet: 192.168.2.2,65161,1140356449002200
+
+2024-09-15 22:09:47,217 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:50317, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,50317,1140356449002200
+
+2024-09-15 22:09:47,217 INFO send udp packet: 192.168.2.2,50317,1140356449002200
+
+2024-09-15 22:09:47,217 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1140356449002200
+
+2024-09-15 22:09:47,217 INFO send udp packet: 192.168.2.2,56224,1140356449002200
+
+2024-09-15 22:09:47,217 INFO serviceName: DEFAULT_GROUP@@bizspring-upms changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1140356449002200
+
+2024-09-15 22:09:47,217 INFO send udp packet: 192.168.2.2,62532,1140356449002200
+
+2024-09-15 22:09:47,217 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-09-15 22:09:47,217 INFO serviceName: DEFAULT_GROUP@@bizspring-order changed, schedule push for: 192.168.2.2:56224, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,56224,1140356449881500
+
+2024-09-15 22:09:47,218 INFO send udp packet: 192.168.2.2,56224,1140356449881500
+
+2024-09-15 22:09:47,218 INFO received ack: {"type": "push-ack", "lastRefTime":"1140356449002200", "data":""} from: 192.168.2.2:50317, cost: 1 ms, unacked: 4, total push: 79
+
+2024-09-15 22:09:47,218 ERROR [NACOS-PUSH] error while receiving ack data
+
+java.lang.IllegalStateException: unable to find ackEntry for key: 192.168.2.2,50317,1140356449002200, ack json: {"type": "push-ack", "lastRefTime":"1140356449002200", "data":""}
+	at com.alibaba.nacos.naming.push.PushService$Receiver.run(PushService.java:680)
+	at java.lang.Thread.run(Thread.java:745)
+2024-09-15 22:09:47,218 INFO received ack: {"type": "push-ack", "lastRefTime":"1140356449002200", "data":""} from: 192.168.2.2:65161, cost: 1 ms, unacked: 3, total push: 79
+
+2024-09-15 22:09:47,218 INFO received ack: {"type": "push-ack", "lastRefTime":"1140356449002200", "data":""} from: 192.168.2.2:56224, cost: 1 ms, unacked: 2, total push: 79
+
+2024-09-15 22:09:47,218 INFO received ack: {"type": "push-ack", "lastRefTime":"1140356449002200", "data":""} from: 192.168.2.2:62532, cost: 1 ms, unacked: 1, total push: 79
+
+2024-09-15 22:09:47,221 INFO received ack: {"type": "push-ack", "lastRefTime":"1140356449881500", "data":""} from: 192.168.2.2:56224, cost: 3 ms, unacked: 0, total push: 79
+
+2024-09-15 22:09:47,559 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-09-15 22:09:47,559 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:62532, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,62532,1140356790715600
+
+2024-09-15 22:09:47,559 INFO send udp packet: 192.168.2.2,62532,1140356790715600
+
+2024-09-15 22:09:47,559 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.2.2:65161, agent: Nacos-Java-Client:v1.4.1, key: 192.168.2.2,65161,1140356790715600
+
+2024-09-15 22:09:47,559 INFO send udp packet: 192.168.2.2,65161,1140356790715600
+
+2024-09-15 22:09:47,570 INFO received ack: {"type": "push-ack", "lastRefTime":"1140356790715600", "data":""} from: 192.168.2.2:62532, cost: 11 ms, unacked: 1, total push: 81
+
+2024-09-15 22:09:47,570 INFO received ack: {"type": "push-ack", "lastRefTime":"1140356790715600", "data":""} from: 192.168.2.2:65161, cost: 11 ms, unacked: 0, total push: 81
+

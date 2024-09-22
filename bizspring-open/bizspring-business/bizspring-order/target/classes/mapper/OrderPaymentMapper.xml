@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.OrderPaymentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.OrderPayment">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="account" property="account" />
+        <result column="amount" property="amount" />
+        <result column="bank" property="bank" />
+        <result column="remark" property="remark" />
+        <result column="method" property="method" />
+        <result column="payer" property="payer" />
+        <result column="payment_pattern" property="paymentPattern" />
+        <result column="sn" property="sn" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, account, amount, bank, remark, method, payer, payment_pattern, sn, order_id
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_payment`
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_payment`
+		WHERE
+			${propertyName} = #{propertyValue}
+		ORDER BY
+			created_time ASC
+	</select>
+	
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_payment`
+		<if test="ew.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<select id="findPageByEntity" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_payment` order_payment
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.sn ">
+				AND order_payment.sn LIKE concat('%',#{entity.sn},'%')
+			</if>
+			<if test=" null != entity.account ">
+				AND order_payment.account LIKE concat('%',#{entity.account},'%')
+			</if>
+			<if test=" null != entity.payer ">
+				AND order_payment.payer LIKE concat('%',#{entity.payer},'%')
+			</if>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.order.common.entity.OrderPayment">
+   		INSERT INTO biz_order_payment(
+			id ,
+			created_time ,
+			version ,
+			account ,
+			amount ,
+			bank ,
+			remark ,
+			`method` ,
+			payer ,
+			payment_pattern ,
+			sn ,
+			order_id
+		) VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.account}, 
+			#{entity.amount}, 
+			#{entity.bank}, 
+			#{entity.remark},
+			#{entity.method}, 
+			#{entity.payer},
+			#{entity.paymentPattern},
+			#{entity.sn}, 
+			#{entity.orderId}
+		)
+  	</insert>
+  
+	
+</mapper>

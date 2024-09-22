@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bizspring-business/bizspring-auth/bizspring-auth.iml" filepath="$PROJECT_DIR$/bizspring-business/bizspring-auth/bizspring-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-core/bizspring-base-core.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-core/bizspring-base-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-data/bizspring-base-data.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-data/bizspring-base-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-datasource/bizspring-base-datasource.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-datasource/bizspring-base-datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-goods/bizspring-base-goods.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-goods/bizspring-base-goods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-io/bizspring-base-io.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-io/bizspring-base-io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-log/bizspring-base-log.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-log/bizspring-base-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-marketing/bizspring-base-marketing.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-marketing/bizspring-base-marketing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-order/bizspring-base-order.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-order/bizspring-base-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-security/bizspring-base-security.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-security/bizspring-base-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-store/bizspring-base-store.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-store/bizspring-base-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-swagger/bizspring-base-swagger.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-swagger/bizspring-base-swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-base/bizspring-base-upms/bizspring-base-upms.iml" filepath="$PROJECT_DIR$/bizspring-base/bizspring-base-upms/bizspring-base-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-business/bizspring-business.iml" filepath="$PROJECT_DIR$/bizspring-business/bizspring-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-business/bizspring-goods/bizspring-goods.iml" filepath="$PROJECT_DIR$/bizspring-business/bizspring-goods/bizspring-goods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-business/bizspring-marketing/bizspring-marketing.iml" filepath="$PROJECT_DIR$/bizspring-business/bizspring-marketing/bizspring-marketing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-module/bizspring-module.iml" filepath="$PROJECT_DIR$/bizspring-module/bizspring-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-module/bizspring-module-gateway/bizspring-module-gateway.iml" filepath="$PROJECT_DIR$/bizspring-module/bizspring-module-gateway/bizspring-module-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-business/bizspring-order/bizspring-order.iml" filepath="$PROJECT_DIR$/bizspring-business/bizspring-order/bizspring-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-business/bizspring-store/bizspring-store.iml" filepath="$PROJECT_DIR$/bizspring-business/bizspring-store/bizspring-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring-business/bizspring-upms/bizspring-upms.iml" filepath="$PROJECT_DIR$/bizspring-business/bizspring-upms/bizspring-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bizspring_open.iml" filepath="$PROJECT_DIR$/bizspring_open.iml" />
+    </modules>
+  </component>
+</project>

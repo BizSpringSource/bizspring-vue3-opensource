@@ -1,0 +1,46 @@
+{
+  "name": "benz-amr-recorder",
+  "version": "1.1.5",
+  "description": "amr 音频录制与播放（微信语音所用的格式）",
+  "main": "BenzAMRRecorder.js",
+  "types": "BenzAMRRecorder.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenzLeung/benz-amr-recorder.git"
+  },
+  "keywords": [
+    "amr",
+    "Web Audio API",
+    "record",
+    "userMedia"
+  ],
+  "author": "Benz Leung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenzLeung/benz-amr-recorder/issues"
+  },
+  "homepage": "https://github.com/BenzLeung/benz-amr-recorder#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-re": "^1.0.7",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "benz-recorderjs": "^1.0.5"
+  }
+}

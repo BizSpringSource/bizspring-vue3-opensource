@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.bizspring</groupId>
+		<artifactId>bizspring-open</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<artifactId>bizspring-business</artifactId>
+	<packaging>pom</packaging>
+
+	<description>业务模块</description>
+
+	<modules>
+		<module>bizspring-upms</module>
+		<module>bizspring-auth</module>
+		<module>bizspring-store</module>
+		<module>bizspring-goods</module>
+		<module>bizspring-order</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+	</dependencies>
+</project>

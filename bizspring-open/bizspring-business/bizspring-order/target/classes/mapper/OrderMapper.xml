@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.Order">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="address" property="address" />
+        <result column="amount" property="amount" />
+        <result column="amount_paid" property="amountPaid" />
+        <result column="region_name" property="regionName" />
+        <result column="complete_date" property="completeDate" />
+        <result column="consignee" property="consignee" />
+        <result column="expire" property="expire" />
+        <result column="freight" property="freight" />
+        <result column="is_allocated_stock" property="isAllocatedStock" />
+        <result column="remark" property="remark" />
+        <result column="offset_amount" property="offsetAmount" />
+        <result column="payment_pattern_name" property="paymentPatternName" />
+        <result column="payment_pattern_type" property="paymentPatternType" />
+        <result column="phone" property="phone" />
+        <result column="price" property="price" />
+        <result column="quantity" property="quantity" />
+        <result column="shipped_quantity" property="shippedQuantity" />
+        <result column="shipping_method_name" property="shippingMethodName" />
+        <result column="sn" property="sn" />
+        <result column="status" property="status" />
+        <result column="weight" property="weight" />
+        <result column="zip_code" property="zipCode" />
+       	<result column="region_id" property="regionId"  />
+       	<result column="payment_pattern_id" property="paymentPatternId"  />
+       	<result column="shipping_method_id" property="shippingMethodId"  />
+       	<result column="member_id" property="memberId"  />
+		<result column="member_name" property="memberName"  />
+		<result column="store_id" property="storeId"  />
+        <result column="store_name" property="storeName"  />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, address, amount, amount_paid, region_name, complete_date, consignee, expire,freight, is_allocated_stock, remark, offset_amount, payment_pattern_name, payment_pattern_type, phone, price, quantity,shipped_quantity, shipping_method_name, sn, status, weight, zip_code, region_id, member_id, payment_pattern_id, shipping_method_id, store_id, 'orders'
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM 
+			`biz_orders`
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_orders`
+		WHERE
+			${propertyName } = #{propertyValue}
+	</select>
+	
+	<!-- 查询订单数量 -->
+	<select id="count" resultType="long">
+		SELECT
+			count(*)
+		FROM 
+			`biz_orders` o
+		WHERE
+			1 = 1
+		<if test="status != null" >
+			AND `status` = #{status.ordinal}
+		</if>
+
+		<if test="store != null">
+			AND store_id = #{store.id}
+		</if>
+		<if test="member != null">
+			AND member_id = #{member.id}
+		</if>
+		<if test="isPendingReceive != null">
+			<if test="isPendingReceive == true">
+				AND (expire IS NULL OR expire <![CDATA[ > ]]> NOW())
+				AND payment_pattern_type = 1
+				AND status <![CDATA[ <> ]]> 5
+				AND status <![CDATA[ <> ]]> 6
+				AND status <![CDATA[ <> ]]> 7
+				AND status <![CDATA[ <> ]]> 8
+				AND amount_paid <![CDATA[ < ]]> amount 
+			</if>
+			<if test="isPendingReceive == false">
+				AND((expire IS NOT NULL)
+					AND expire <![CDATA[ <= ]]> NOW()
+					OR payment_pattern_type <![CDATA[ <> ]]> 1
+					OR status <![CDATA[ = ]]> 5
+					OR status <![CDATA[ = ]]> 6
+					OR status <![CDATA[ = ]]> 7
+					OR status <![CDATA[ = ]]> 8
+					OR amount_paid <![CDATA[ >= ]]> amount
+				)
+			</if>
+		</if>
+		<if test="isAllocatedStock != null">
+			AND is_allocated_stock = #{isAllocatedStock}
+		</if>
+		<if test="hasExpired != null">
+			<if test="hasExpired == true">
+				 AND expire IS NOT NULL AND expire <![CDATA[ <= ]]> NOW()
+			</if>
+			<if test="hasExpired == false">
+				AND (expire IS NULL OR expire <![CDATA[ > ]]> NOW())
+			</if>
+		</if>
+	</select>
+
+
+	<select id="findOrderPaymentedPage" resultMap="BaseResultMap">
+		SELECT
+			orders.id,
+			orders.version,
+			orders.created_time, orders.updated_time, orders.address, orders.amount, orders.amount_paid, orders.region_name, orders.complete_date, orders.consignee, orders.expire, orders.freight, orders.is_allocated_stock, orders.remark, orders.offset_amount, orders.payment_pattern_name, orders.payment_pattern_type, orders.phone, orders.price, orders.quantity, orders.shipped_quantity, orders.shipping_method_name, orders.sn, orders.status, orders.weight, orders.zip_code, orders.region_id, orders.member_id, orders.payment_pattern_id, orders.shipping_method_id, orders.store_id, 'orders'
+		FROM
+			biz_orders orders
+		INNER JOIN
+			`biz_payment_log` payment_log
+		ON orders.id = payment_log.order_id
+		<where>
+			<if test="store != null">
+				AND orders.store_id = #{store.id}
+			</if>
+			<if test="isSuccess != null">
+				AND payment_log.is_success = #{isSuccess}
+			</if>
+			<if test="paymentId != null">
+				AND payment_log.payment_id = #{paymentId}
+			</if>
+			<if test="hasExpired != null">
+				<if test="hasExpired == true">
+					AND payment_log.expire IS NOT NULL AND payment_log.expire <![CDATA[ <= ]]> NOW()
+				</if>
+				<if test="hasExpired == false">
+					AND (payment_log.expire IS NULL OR payment_log.expire <![CDATA[ > ]]> NOW())
+				</if>
+			</if>
+			<if test="beginDate != null">
+				AND payment_log.created_time <![CDATA[ >= ]]> #{beginDate}
+			</if>
+			<if test="endDate != null">
+				AND payment_log.created_time <![CDATA[ <= ]]> #{endDate}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 查找分页 -->
+	<select id="findPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		<if test="null != users and users.size() > 0">
+		    ,member_name
+		</if>
+		<if test="null != stores and stores.size() > 0">
+		    ,store_name
+		</if>
+		FROM
+			`biz_orders` orders
+		<if test=" null != users and users.size() > 0">
+			left join (
+				select a.item_id,a.member_name from (
+				<foreach collection="users" item="item" index="index" separator="union all">
+					select #{item.id} as item_id,#{item.username} as member_name
+					from dual
+				</foreach>
+				) as a
+			) as aa on aa.item_id=orders.member_id
+		</if>
+		<if test="null != stores and stores.size() > 0">
+			left join (
+				select b.item_id,b.store_name from (
+				<foreach collection="stores" item="item" index="index" separator="union all">
+					select #{item.id} as item_id,#{item.name} as store_name
+					from dual
+				</foreach>
+				) as b
+			) as bb on bb.item_id=orders.store_id
+		</if>
+		WHERE  1 = 1
+		<if test="null != users and users.size() > 0">
+			and exists (
+			select 1 from (
+			<foreach collection="users" item="item" index="index" separator="union all">
+				select #{item.id} as item_id
+				from dual
+			</foreach>
+			) s where s.item_id = orders.member_id
+			)
+		</if>
+		<if test="null != stores and stores.size() > 0">
+			and exists (
+			select 1 from (
+			<foreach collection="stores" item="item" index="index" separator="union all">
+				select #{item.id} as item_id
+				from dual
+			</foreach>
+			) z where z.item_id = orders.store_id
+			)
+		</if>
+		<if test="null != entity ">
+			<if test=" null != entity.sn ">
+				AND orders.sn = #{entity.sn}
+			</if>
+			<if test=" null != entity.status ">
+				AND orders.status = #{entity.status}
+			</if>
+			<if test=" null != entity.consignee ">
+				AND orders.consignee LIKE concat('%',#{entity.consignee},'%')
+			</if>
+			<if test=" null != entity.address ">
+				AND orders.address LIKE concat('%',#{entity.address},'%')
+			</if>
+			<if test=" null != entity.zipCode ">
+				AND orders.zip_code = #{entity.zipCode}
+			</if>
+			<if test=" null != entity.phone ">
+				AND orders.phone = #{entity.phone}
+			</if>
+			<if test=" null != entity.memberId">
+				AND orders.member_id = #{entity.memberId}
+			</if>
+		</if>
+		<if test="isPendingReceive != null">
+			<if test="isPendingReceive == true">
+				AND (expire IS NULL OR expire <![CDATA[ > ]]> NOW())
+				AND payment_pattern_type = 1
+				AND status <![CDATA[ <> ]]> 5
+				AND status <![CDATA[ <> ]]> 6
+				AND status <![CDATA[ <> ]]> 7
+				AND status <![CDATA[ <> ]]> 8
+				AND amount_paid <![CDATA[ < ]]> amount
+			</if>
+			<if test="isPendingReceive == false">
+				AND((expire IS NOT NULL)
+					AND expire <![CDATA[ <= ]]> NOW()
+					OR payment_pattern_type <![CDATA[ <> ]]> 1
+					OR status <![CDATA[ = ]]> 5
+					OR status <![CDATA[ = ]]> 6
+					OR status <![CDATA[ = ]]> 7
+					OR status <![CDATA[ = ]]> 8
+					OR amount_paid <![CDATA[ >= ]]> amount
+				)
+			</if>
+		</if>
+		<if test="isAllocatedStock != null">
+			AND is_allocated_stock = #{isAllocatedStock}
+		</if>
+		<if test="hasExpired != null">
+			<if test="hasExpired == true">
+				 AND expire IS NOT NULL AND expire <![CDATA[ <= ]]> NOW()
+			</if>
+			<if test="hasExpired == false">
+				AND (expire IS NULL OR expire <![CDATA[ > ]]> NOW())
+			</if>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_orders` orders
+	</select>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAllByEntity" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_orders` orders
+		<where>
+			<if test="null != entity ">
+				<if test=" null != entity.memberId ">
+					AND orders.memberId LIKE concat('%',#{entity.memberId},'%')
+				</if>
+				<if test=" null != entity.sn ">
+					AND orders.sn LIKE concat('%',#{entity.sn},'%')
+				</if>
+				<if test=" null != entity.storeId ">
+					AND orders.storeId = #{entity.storeId}
+				</if>
+			</if>
+		</where>
+	</select>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.order.common.entity.Order">
+   		INSERT INTO biz_orders(
+			id ,
+			created_time ,
+			version ,
+			address ,
+			amount ,
+			amount_paid ,
+			region_name ,
+			complete_date ,
+			consignee ,
+			expire ,
+			freight ,
+			is_allocated_stock ,
+			remark ,
+			offset_amount ,
+			payment_pattern_name ,
+			payment_pattern_type ,
+			phone ,
+			price ,
+			quantity ,
+			shipped_quantity ,
+			shipping_method_name ,
+			sn ,
+			`status` ,
+			weight ,
+			zip_code ,
+			region_id ,
+			member_id ,
+			payment_pattern_id ,
+			shipping_method_id ,
+			store_id
+		) VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.address}, 
+			#{entity.amount}, 
+			#{entity.amountPaid}, 
+			#{entity.regionName},
+			#{entity.completeDate}, 
+			#{entity.consignee}, 
+			#{entity.expire},
+			#{entity.freight},
+			#{entity.isAllocatedStock},
+			#{entity.remark},
+			#{entity.offsetAmount}, 
+			#{entity.paymentPatternName},
+			#{entity.paymentPatternType},
+			#{entity.phone}, 
+			#{entity.price}, 
+			#{entity.quantity},
+			#{entity.shippedQuantity},
+			#{entity.shippingMethodName}, 
+			#{entity.sn}, 
+			#{entity.status}, 
+			#{entity.weight},
+			#{entity.zipCode}, 
+			#{entity.regionId},
+			#{entity.memberId},
+			#{entity.paymentPatternId},
+			#{entity.shippingMethodId},
+			#{entity.storeId}
+		);
+
+  	</insert>
+  	
+	<!-- 更新 -->
+	<update id="update" parameterType="cn.bizspring.cloud.order.common.entity.Order">
+   		UPDATE biz_orders
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version},
+			address = #{entity.address},
+			amount = #{entity.amount},
+			amount_paid = #{entity.amountPaid},
+			region_name = #{entity.regionName},
+			complete_date = #{entity.completeDate},
+			consignee = #{entity.consignee},
+			expire = #{entity.expire},
+			freight = #{entity.freight},
+			is_allocated_stock = #{entity.isAllocatedStock},
+			remark = #{entity.remark},
+			offset_amount = #{entity.offsetAmount},
+			payment_pattern_name = #{entity.paymentPatternName},
+			payment_pattern_type = #{entity.paymentPatternType},
+			phone = #{entity.phone},
+			price = #{entity.price},
+			quantity = #{entity.quantity},
+			shipped_quantity = #{entity.shippedQuantity},
+			shipping_method_name = #{entity.shippingMethodName},
+			`status` = #{entity.status},
+			weight = #{entity.weight},
+			zip_code = #{entity.zipCode},
+			region_id = #{entity.regionId},
+			payment_pattern_id = #{entity.paymentPatternId},
+			shipping_method_id = #{entity.shippingMethodId}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version};
+  	</update>
+  
+</mapper>

@@ -1,0 +1,20 @@
+server:
+  port: 5070
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: bizspring-auth
+  # 配置中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: bizspring-module-nacos:8878
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: dev

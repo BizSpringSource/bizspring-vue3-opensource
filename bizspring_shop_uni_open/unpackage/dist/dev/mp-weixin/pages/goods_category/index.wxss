@@ -1,0 +1,144 @@
+
+.section {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 200rpx;
+	background: #F6F6F6;
+	text-align: center;
+	font-size: 23rpx;
+}
+.left .active {
+	background: #FFF;
+	position: relative;
+	z-index: 2;
+}
+.left-item {
+	padding: 30rpx 20rpx;
+	text-align: center;
+	color: #6d6d6d;
+	font-size: 23rpx;
+}
+.right {
+	margin-left: 200rpx;
+	height: 100%;
+	overflow: hidden;
+	width: auto;
+	background: #fff;
+}
+.right text {
+	font-size: 23rpx
+}
+.typeTree {
+	padding-top: 10px;
+	width: 100%
+}
+.typeTree .item {
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+}
+.typeTree .brand,
+.typeTree .category {
+	flex-wrap: wrap;
+	overflow: hidden;
+	display: inline-block;
+	width: 90%;
+	margin-left: 6%
+}
+.typeTree .title {
+	padding: 10px 0;
+	display: block;
+	color: #333;
+}
+.typeTree image {
+	width: 100px;
+	margin: 0 auto;
+}
+.typeTree .ad-banner .img {
+	width: 100% !important;
+}
+.typeTree .brand image {
+	height: 100px;
+}
+.typeTree .category image {
+	height: 85px;
+}
+.typeTree .category {
+	padding-bottom: 10px;
+}
+.item text {
+	padding-bottom: 10px;
+	display: block;
+	font-weight: 600;
+}
+.cateTitle {
+	text-align: center;
+	line-height: 60rpx;
+}
+.cateTitle .icn {
+	font-size: 28rpx;
+	color: #dddddd;
+}
+.cateTitle .tt {
+	font-size: 23rpx;
+	color: #575656;
+	font-weight: bold
+}
+.ad-banner {
+	width: 94%;
+	margin: auto;
+	overflow: hidden;
+}
+.goodsTopTile {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #ffffff;
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding-bottom: 10rpx;
+}
+.back {
+	width: 30px;
+	text-align: center;
+	margin-right: 10px;
+}
+.back .iconfont {
+	font-size: 28rpx !important;
+}
+.content {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.search_line_input {
+	height: 100%;
+	border: 0px;
+	border-radius: 50px;
+	margin-left: 20rpx;
+}
+.goodsTopTile .icon-sousuo- {
+	font-size: 28rpx !important;
+	line-height: 60rpx;
+	margin-right: 20rpx;
+	color: #656565;
+}
+.cateBox {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	border-top: #e8e8e8 2rpx solid;
+	position: absolute;
+}
+

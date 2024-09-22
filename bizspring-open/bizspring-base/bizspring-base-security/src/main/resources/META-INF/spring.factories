@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.bizspring.cloud.common.security.component.GlobalExceptionHandlerResolver,\
+  cn.bizspring.cloud.common.security.service.impl.BizUserDetailsServiceImpl

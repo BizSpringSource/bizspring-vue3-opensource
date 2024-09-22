@@ -1,0 +1,17 @@
+{
+  "name": "bizspring_shop_uni",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "crypto-js": "^3.3.0",
+    "jweixin-module": "^1.6.0"
+  }
+}

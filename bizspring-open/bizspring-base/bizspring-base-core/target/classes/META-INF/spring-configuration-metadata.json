@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "home-dir",
+      "type": "cn.bizspring.cloud.common.core.config.HomeDirConfigProperties",
+      "sourceType": "cn.bizspring.cloud.common.core.config.HomeDirConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "home-dir.linux",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.common.core.config.HomeDirConfigProperties",
+      "defaultValue": "linux"
+    },
+    {
+      "name": "home-dir.windows",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.common.core.config.HomeDirConfigProperties",
+      "defaultValue": "windows"
+    }
+  ],
+  "hints": []
+}

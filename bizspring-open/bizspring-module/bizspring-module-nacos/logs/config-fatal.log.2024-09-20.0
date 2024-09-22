@@ -1,0 +1,4 @@
+2024-09-20 12:20:25,038 WARN [master-db] jdbc:mysql://bizspring-mysql:3306/bizspring_open_config?serverTimezone=GMT%2B8&characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2024-09-20 12:20:25,853 WARN isQuickStart:false
+

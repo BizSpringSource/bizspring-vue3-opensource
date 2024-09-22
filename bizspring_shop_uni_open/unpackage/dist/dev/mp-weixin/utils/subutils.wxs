@@ -1,0 +1,38 @@
+var sub = function (val) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  } // if (val.length > end) {
+  //   return val.substring(start, end) + "...";
+  // } else {
+
+
+  return val.replace("$.", ""); // }
+};
+
+var subclass = function (val) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+
+  if (val.length > 4) {
+    return val.substring(0, 4);
+  } else {
+    return val;
+  }
+};
+
+var substr = function (val, start, end) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+
+  if (val.length > end) {
+    return val.substring(start, end) + "...";
+  } else {
+    return val;
+  }
+};
+
+module.exports.sub = sub;
+module.exports.subclass = subclass;
+module.exports.substr = substr;

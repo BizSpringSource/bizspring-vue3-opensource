@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.store.admin.mapper.StoreCategoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.store.common.entity.StoreCategory">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="sort" property="sort" />
+        <result column="name" property="name" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, sort,  name, 'store_category_id'
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store_category`
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultType="cn.bizspring.cloud.store.common.entity.StoreCategory">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store_category`
+	</select>
+	
+	<!-- 查找顶级店铺商品分类 -->
+	<select id="findRoots" parameterType="int" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM
+			`biz_store_category`
+		WHERE
+			parent_id IS NULL
+		ORDER BY
+		sort ASC
+		<if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+	
+	<!-- 查找上级商品分类 -->
+	<select id="findParents" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM
+			`biz_store_category`
+		<if test="recursive == true">
+			WHERE id IN 
+			<if test="storeGoodsCategory.parentIds.length != 0">
+		        <foreach collection="storeGoodsCategory.parentIds" item="ids" open="(" separator="," close=")" >
+		        	#{ids}
+		        </foreach>
+			</if>
+			<if test="storeGoodsCategory.parentIds.length == 0">
+				('')
+			</if>
+		    ORDER BY `level` ASC
+	    </if>
+	    <if test="recursive == false">
+	    	WHERE id = #{storeGoodsCategory.parentId}
+	    </if>
+	    <if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+	
+	<!-- 查找下级商品分类 -->
+	<select id="findChildren" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List" />
+		FROM
+			`biz_store_category`
+		<if test="recursive == true">
+			<if test="storeGoodsCategory != null">
+				WHERE tree_path LIKE concat('%,',#{storeGoodsCategory.id},',%') ORDER BY `level` ASC, sort ASC
+	        </if>
+	        <if test="storeGoodsCategory == null">
+				ORDER BY `level` ASC, sort ASC
+	        </if>
+	    </if>
+	    <if test="recursive == false">
+	    	WHERE parent_id = #{storeGoodsCategory.id} ORDER BY sort ASC
+	    </if>
+	    <if test="count != null">
+			LIMIT 0, ${count}
+		</if>
+	</select>
+	
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store_category`
+		<if test="ew.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<!-- 查找实体对象分页 -->
+	<select id="findPageByEntity" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_store_category` store_category
+		WHERE 1=1
+		<if test="null != entity ">
+			<if test=" null != entity.name ">
+				AND store_category.name LIKE concat('%',#{entity.name},'%')
+			</if>
+		</if>
+		<if test="queryWrapper.nonEmptyOfWhere == true">
+			AND
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+	<!-- 判断是否存在 -->
+	<select id="exists" resultType="boolean">
+		SELECT
+			COUNT(1)
+		FROM
+			`biz_store_category`
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.store.common.entity.StoreCategory">
+    	INSERT INTO biz_store_category(
+			id ,
+			created_time ,
+			version ,
+			sort ,
+			name
+		)
+		VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.sort},
+			#{entity.name}
+		)
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.store.common.entity.StoreCategory">
+   		UPDATE biz_store_category
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			sort = #{entity.sort},
+			name = #{entity.name}
+		WHERE
+			id = #{entity.id}
+		AND version = #{entity.version}
+  	</update>
+  	
+</mapper>

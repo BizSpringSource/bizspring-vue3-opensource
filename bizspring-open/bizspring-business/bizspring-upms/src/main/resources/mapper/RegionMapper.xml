@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.RegionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.upms.common.entity.Region">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="sort" property="sort" />
+        <result column="full_name" property="fullName" />
+        <result column="level" property="level" />
+        <result column="name" property="name" />
+        <result column="tree_path" property="treePath" />
+        <result property="parentId"  column="parent_id" />
+		<result property="parentName"  column="parent_name" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+		region.id,
+        region.version,
+        region.created_time, region.updated_time, region.sort, region.full_name, region.`level`, region.name, region.tree_path, region.parent_id, 'region_id'
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			biz_region region
+		WHERE
+			id = #{id}
+	</select>
+	
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_region` region
+	</select>
+	
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_region` region
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_region` region
+		WHERE
+			parent_id = #{propertyValue}
+	</select>
+	
+	<!-- 查找上级地区 -->
+	<select id="findRoots" parameterType="int" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"/>
+		FROM
+			biz_region region
+		WHERE
+			parent_id IS NULL
+		<if test="null != name">
+			AND region.name LIKE concat('%',#{name},'%')
+		</if>
+		ORDER BY
+		sort ASC
+		<if test="count != null">
+			LIMIT 0, #{count}
+		</if>
+	</select>
+	
+	<!-- 查找下级地区 -->
+	<select id="findChildren" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		,b.name as parent_name
+		FROM
+			biz_region region left join biz_region b on region.parent_id=b.id
+		<if test="recursive == true">
+			<if test="region != null">
+				WHERE region.tree_path LIKE concat('%,',#{region.id},',%') ORDER BY region.`level` ASC, sort ASC
+			</if>
+			<if test="region == null">
+				ORDER BY region.`level` ASC, sort ASC
+			</if>
+		</if>
+		<if test="recursive == false">
+			WHERE region.parent_id = #{region.id} ORDER BY sort ASC
+		</if>
+		<if test="count != null">
+			LIMIT 0, #{count}
+		</if>
+	</select>
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.upms.common.entity.Region">
+		INSERT INTO biz_region (
+			id ,
+			created_time ,
+			version ,
+			sort ,
+			`level` ,
+			name ,
+			tree_path ,
+			parent_id ,
+			full_name
+		) VALUES (
+					 #{entity.id},
+					 #{entity.createdTime},
+					 #{entity.version},
+					 #{entity.sort},
+					 #{entity.level},
+					 #{entity.name},
+					 #{entity.treePath},
+					 #{entity.parentId},
+					 #{entity.fullName})
+  	</insert>
+  	
+  	<!-- 更新 -->
+  	<update id="update" parameterType="cn.bizspring.cloud.upms.common.entity.Region">
+		UPDATE biz_region
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			sort = #{entity.sort},
+			`level` = #{entity.level},
+			name = #{entity.name},
+			tree_path = #{entity.treePath},
+			parent_id = #{entity.parentId},
+			full_name = #{entity.fullName}
+		WHERE
+			id = #{entity.id}
+		  AND version = #{entity.version}
+  	</update>
+  	
+</mapper>

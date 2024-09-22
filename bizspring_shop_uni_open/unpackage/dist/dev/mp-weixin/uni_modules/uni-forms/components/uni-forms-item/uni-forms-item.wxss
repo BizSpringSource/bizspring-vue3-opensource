@@ -1,0 +1,94 @@
+.uni-forms-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 22px;
+  flex-direction: row;
+}
+.uni-forms-item__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  font-size: 14px;
+  color: #606266;
+  height: 36px;
+  padding: 0 12px 0 0;
+  vertical-align: middle;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.uni-forms-item__label.no-label {
+  padding: 0;
+}
+.uni-forms-item__content {
+  position: relative;
+  font-size: 14px;
+  flex: 1;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+.uni-forms-item .uni-forms-item__nuve-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.uni-forms-item__error {
+  color: #f56c6c;
+  font-size: 12px;
+  line-height: 1;
+  padding-top: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+.uni-forms-item__error .error-text {
+  color: #f56c6c;
+  font-size: 12px;
+}
+.uni-forms-item__error.msg--active {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.uni-forms-item.is-direction-left {
+  flex-direction: row;
+}
+.uni-forms-item.is-direction-top {
+  flex-direction: column;
+}
+.uni-forms-item.is-direction-top .uni-forms-item__label {
+  padding: 0 0 8px;
+  line-height: 1.5715;
+  text-align: left;
+  white-space: initial;
+}
+.uni-forms-item .is-required {
+  color: #dd524d;
+  font-weight: bold;
+}
+.uni-forms-item--border {
+  margin-bottom: 0;
+  padding: 10px 0;
+  border-top: 1px #eee solid;
+}
+.uni-forms-item--border .uni-forms-item__content {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.uni-forms-item--border .uni-forms-item__content .uni-forms-item__error {
+  position: relative;
+  top: 5px;
+  left: 0;
+  padding-top: 0;
+}
+.is-first-border {
+  border: none;
+}
+

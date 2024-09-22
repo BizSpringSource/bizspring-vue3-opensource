@@ -1,0 +1,260 @@
+2024-09-20 12:22:13,961 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 12:22:13,963 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 192.168.3.2:9979_true,
+
+2024-09-20 12:22:18,105 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 12:22:18,105 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 192.168.3.2:5070_true,
+
+2024-09-20 12:22:37,109 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 12:22:37,109 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 192.168.3.2:5979_true,
+
+2024-09-20 12:22:40,280 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 12:22:40,280 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 192.168.3.2:5879_true,
+
+2024-09-20 12:22:45,418 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 12:22:45,418 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 192.168.3.2:5779_true,
+
+2024-09-20 12:22:48,001 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 12:22:48,002 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 192.168.3.2:5579_true,
+
+2024-09-20 17:50:35,246 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 17:50:35,247 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 
+
+2024-09-20 17:50:48,817 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5979@DEFAULT@DEFAULT_GROUP@@bizspring-upms, region: unknown, msg: client timeout after 15000, last beat: 1726825830544
+
+2024-09-20 17:50:49,562 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5070@DEFAULT@DEFAULT_GROUP@@bizspring-auth, region: unknown, msg: client timeout after 15000, last beat: 1726825832086
+
+2024-09-20 17:50:49,562 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5579@DEFAULT@DEFAULT_GROUP@@bizspring-store, region: unknown, msg: client timeout after 15000, last beat: 1726825832802
+
+2024-09-20 17:50:52,154 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5879@DEFAULT@DEFAULT_GROUP@@bizspring-goods, region: unknown, msg: client timeout after 15000, last beat: 1726825835155
+
+2024-09-20 17:50:52,325 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5779@DEFAULT@DEFAULT_GROUP@@bizspring-order, region: unknown, msg: client timeout after 15000, last beat: 1726825835394
+
+2024-09-20 17:51:03,966 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 17:51:03,966 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 
+
+2024-09-20 17:51:04,599 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 17:51:04,599 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 
+
+2024-09-20 17:51:04,600 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 17:51:04,600 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 
+
+2024-09-20 17:51:07,163 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 17:51:07,163 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 
+
+2024-09-20 17:51:07,346 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 17:51:07,346 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 
+
+2024-09-20 17:51:21,030 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 17:51:21,030 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 192.168.3.2:9979_true,
+
+2024-09-20 17:51:22,217 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 17:51:22,218 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 192.168.3.2:5070_true,
+
+2024-09-20 17:51:44,481 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 17:51:44,481 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 192.168.3.2:5979_true,
+
+2024-09-20 17:51:46,265 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 17:51:46,265 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 192.168.3.2:5879_true,
+
+2024-09-20 17:51:47,708 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 17:51:47,708 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 192.168.3.2:5779_true,
+
+2024-09-20 17:51:52,331 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 17:51:52,331 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 192.168.3.2:5579_true,
+
+2024-09-20 19:48:53,836 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 19:48:53,836 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 
+
+2024-09-20 19:49:05,451 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5979@DEFAULT@DEFAULT_GROUP@@bizspring-upms, region: unknown, msg: client timeout after 15000, last beat: 1726832929650
+
+2024-09-20 19:49:08,777 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5879@DEFAULT@DEFAULT_GROUP@@bizspring-goods, region: unknown, msg: client timeout after 15000, last beat: 1726832931304
+
+2024-09-20 19:49:08,920 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5779@DEFAULT@DEFAULT_GROUP@@bizspring-order, region: unknown, msg: client timeout after 15000, last beat: 1726832929182
+
+2024-09-20 19:49:11,028 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5579@DEFAULT@DEFAULT_GROUP@@bizspring-store, region: unknown, msg: client timeout after 15000, last beat: 1726832933059
+
+2024-09-20 19:49:11,028 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5070@DEFAULT@DEFAULT_GROUP@@bizspring-auth, region: unknown, msg: client timeout after 15000, last beat: 1726832933413
+
+2024-09-20 19:49:20,480 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 19:49:20,480 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 
+
+2024-09-20 19:49:23,801 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 19:49:23,801 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 
+
+2024-09-20 19:49:23,952 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 19:49:23,952 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 
+
+2024-09-20 19:49:26,056 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 19:49:26,056 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 
+
+2024-09-20 19:49:26,057 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 19:49:26,057 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 
+
+2024-09-20 19:49:40,065 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 19:49:40,065 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 192.168.3.2:9979_true,
+
+2024-09-20 19:49:43,506 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 19:49:43,506 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 192.168.3.2:5070_true,
+
+2024-09-20 19:50:04,237 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 19:50:04,237 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 192.168.3.2:5979_true,
+
+2024-09-20 19:50:06,379 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 19:50:06,379 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 192.168.3.2:5879_true,
+
+2024-09-20 19:50:08,961 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 19:50:08,961 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 192.168.3.2:5779_true,
+
+2024-09-20 19:50:12,694 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 19:50:12,694 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 192.168.3.2:5579_true,
+
+2024-09-20 21:22:05,504 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5879@DEFAULT@DEFAULT_GROUP@@bizspring-goods, region: unknown, msg: client timeout after 15000, last beat: 1726834333128
+
+2024-09-20 21:22:05,504 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5070@DEFAULT@DEFAULT_GROUP@@bizspring-auth, region: unknown, msg: client timeout after 15000, last beat: 1726834336113
+
+2024-09-20 21:22:05,504 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5979@DEFAULT@DEFAULT_GROUP@@bizspring-upms, region: unknown, msg: client timeout after 15000, last beat: 1726834335995
+
+2024-09-20 21:22:05,504 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5579@DEFAULT@DEFAULT_GROUP@@bizspring-store, region: unknown, msg: client timeout after 15000, last beat: 1726834334315
+
+2024-09-20 21:22:05,504 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5779@DEFAULT@DEFAULT_GROUP@@bizspring-order, region: unknown, msg: client timeout after 15000, last beat: 1726834335795
+
+2024-09-20 21:22:05,504 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:9979@DEFAULT@DEFAULT_GROUP@@bizspring-module-gateway, region: unknown, msg: client timeout after 15000, last beat: 1726834336143
+
+2024-09-20 21:22:05,543 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:22:05,543 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 
+
+2024-09-20 21:22:05,543 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:22:05,543 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 
+
+2024-09-20 21:22:05,544 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:22:05,545 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 
+
+2024-09-20 21:22:05,549 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:22:05,551 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 
+
+2024-09-20 21:22:05,551 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:22:05,551 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 
+
+2024-09-20 21:22:05,552 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:22:05,552 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 
+
+2024-09-20 21:22:06,728 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:22:06,728 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 192.168.3.2:5879_true,
+
+2024-09-20 21:22:06,996 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:22:06,996 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 192.168.3.2:5579_true,
+
+2024-09-20 21:22:08,140 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:22:08,141 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 192.168.3.2:5779_true,
+
+2024-09-20 21:22:08,342 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:22:08,342 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 192.168.3.2:5979_true,
+
+2024-09-20 21:22:08,461 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:22:08,461 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 192.168.3.2:5070_true,
+
+2024-09-20 21:22:08,490 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:22:08,490 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 192.168.3.2:9979_true,
+
+2024-09-20 21:26:35,928 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5779@DEFAULT@DEFAULT_GROUP@@bizspring-order, region: unknown, msg: client timeout after 15000, last beat: 1726838778365
+
+2024-09-20 21:26:35,928 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5979@DEFAULT@DEFAULT_GROUP@@bizspring-upms, region: unknown, msg: client timeout after 15000, last beat: 1726838778534
+
+2024-09-20 21:26:35,928 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5579@DEFAULT@DEFAULT_GROUP@@bizspring-store, region: unknown, msg: client timeout after 15000, last beat: 1726838777202
+
+2024-09-20 21:26:35,928 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5070@DEFAULT@DEFAULT_GROUP@@bizspring-auth, region: unknown, msg: client timeout after 15000, last beat: 1726838779026
+
+2024-09-20 21:26:35,928 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:9979@DEFAULT@DEFAULT_GROUP@@bizspring-module-gateway, region: unknown, msg: client timeout after 15000, last beat: 1726838778736
+
+2024-09-20 21:26:40,937 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:5879@DEFAULT@DEFAULT_GROUP@@bizspring-goods, region: unknown, msg: client timeout after 15000, last beat: 1726838781932
+
+2024-09-20 21:26:50,961 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5979:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:26:50,961 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 
+
+2024-09-20 21:26:50,961 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5579:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:26:50,961 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 
+
+2024-09-20 21:26:50,961 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5779:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:26:50,961 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 
+
+2024-09-20 21:26:50,961 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5070:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:26:50,961 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 
+
+2024-09-20 21:26:50,961 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:9979:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:26:50,961 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 
+
+2024-09-20 21:26:55,969 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:5879:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2024-09-20 21:26:55,969 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 
+
+2024-09-20 21:27:06,139 INFO DEFAULT_GROUP@@bizspring-module-gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.2.2:9979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:27:06,139 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-module-gateway, ips: 192.168.2.2:9979_true,
+
+2024-09-20 21:27:12,174 INFO DEFAULT_GROUP@@bizspring-auth {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.2.2:5070:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:27:12,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-auth, ips: 192.168.2.2:5070_true,
+
+2024-09-20 21:27:33,330 INFO DEFAULT_GROUP@@bizspring-goods {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.2.2:5879:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:27:33,330 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-goods, ips: 192.168.2.2:5879_true,
+
+2024-09-20 21:27:35,792 INFO DEFAULT_GROUP@@bizspring-order {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.2.2:5779:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:27:35,792 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-order, ips: 192.168.2.2:5779_true,
+
+2024-09-20 21:27:37,192 INFO DEFAULT_GROUP@@bizspring-store {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.2.2:5579:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:27:37,192 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-store, ips: 192.168.2.2:5579_true,
+
+2024-09-20 21:27:45,175 INFO DEFAULT_GROUP@@bizspring-upms {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.2.2:5979:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2024-09-20 21:27:45,175 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bizspring-upms, ips: 192.168.2.2:5979_true,
+

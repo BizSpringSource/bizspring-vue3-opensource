@@ -1,0 +1,11 @@
+{
+    "id": "Sansnn-uQRCode",
+    "name": "uQRCode二维码生成插件",
+    "version": "1.0.8",
+    "description": "uQRCode 是一款使用方式简单，易于扩展的二维码生成插件。",
+    "keywords": [
+        "uQRCode",
+        "二维码",
+        "qrcode"
+    ]
+}

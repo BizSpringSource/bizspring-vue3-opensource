@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "email",
+      "type": "cn.bizspring.cloud.upms.common.util.EmailConfigProperties",
+      "sourceType": "cn.bizspring.cloud.upms.common.util.EmailConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "email.mail-smtp-host",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.upms.common.util.EmailConfigProperties",
+      "defaultValue": "smtpdm.aliyun.com"
+    },
+    {
+      "name": "email.mail-smtp-password",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.upms.common.util.EmailConfigProperties",
+      "defaultValue": "BizSpring12345678"
+    },
+    {
+      "name": "email.mail-smtp-username",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.upms.common.util.EmailConfigProperties",
+      "defaultValue": "official@email.bizspring.cn"
+    },
+    {
+      "name": "email.site-name",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.upms.common.util.EmailConfigProperties",
+      "defaultValue": "BizSpring"
+    }
+  ],
+  "hints": []
+}

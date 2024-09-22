@@ -1,0 +1,1 @@
+{"version":3,"file":"row.js","sources":["../../../../packages/tokens/row.ts"],"sourcesContent":["import type { ComputedRef, InjectionKey } from 'vue'\n\ninterface RowContext {\n  gutter: ComputedRef<number>\n}\n\nexport const rowContextKey: InjectionKey<RowContext> = Symbol('rowContextKey')\n"],"names":[],"mappings":";;;;AAAY,MAAC,aAAa,GAAG,MAAM,CAAC,eAAe;;;;"}

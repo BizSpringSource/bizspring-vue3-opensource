@@ -1,0 +1,17 @@
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\filter\HttpBasicGatewayFilter.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\BizSpringGateWayApplication.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\config\KaptchaConfiguration.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\filter\PasswordDecoderFilter.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\filter\ValidateCodeGatewayFilter.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\config\RateLimiterConfiguration.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\handler\SwaggerSecurityHandler.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\init\DynamicRouteInit.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\filter\BaseRequestGlobalFilter.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\handler\SwaggerResourceHandler.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\config\RouterFunctionConfiguration.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\config\FilterIgnorePropertiesConfig.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\handler\SwaggerUiHandler.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\handler\ImageCodeHandler.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\handler\SentinelFallbackHandler.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\config\SwaggerProvider.java
+C:\IDEA_Space\bizspring-open\bizspring-module\bizspring-module-gateway\src\main\java\cn\bizspring\cloud\gateway\entity\GatewayRouteList.java

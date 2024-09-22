@@ -1,0 +1,93 @@
+## spring security 配置
+security:
+  oauth2:
+    client:
+      client-id: admin
+      client-secret: admin
+      scope: server
+      # 无需token访问的url
+      release-urls:
+        - /member/**
+        - /merchant/**
+        - /actuator/**
+        - /v2/api-docs
+        - /user/register
+        - /api/**
+        - /druid/**
+# 数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      use-ping-method: false
+      username: root
+      password: root      
+      url: jdbc:mysql://bizspring-mysql:3306/bizspring_open_upms?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true&allowPublicKeyRetrieval=true
+      web-stat-filter: 
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+        # 设置白名单，不填则允许所有访问
+        allow: 
+        url-pattern: /druid/*
+        # 控制台管理用户名和密码
+        login-username: admin
+        login-password: 123456
+      filter:
+        stat:
+            enabled: true
+            # 慢SQL记录
+            log-slow-sql: true
+            slow-sql-millis: 1000
+            merge-sql: true
+        wall:
+            config:
+                multi-statement-allow: true
+# Logger Config sql日志
+logging:
+  level:
+    cn.bizspring.cloud.upms.admin.mapper: debug  
+base:
+  # 租户表维护
+  tenant:
+    column: tenant_id
+    tables: 
+      # - biz_users
+      # - biz_roles
+      # - biz_oauth_client
+      # - biz_organ
+      # - biz_config_storage
+      # - biz_organ_relation
+      # - biz_role_menu
+      # - biz_user_role
+     
+  #数据权限配置
+  datascope:
+    mapperIds:
+      - cn.bizspring.cloud.upms.admin.mapper.UserMapper.getUserVosPage        
+#邮箱配置
+email:
+  mailSmtpHost: smtpdm.aliyun.com
+  mailSmtpUsername: official@email.bizspring.cn
+  mailSmtpPassword: BizSpring12345678
+  siteName: BizSpring
+#阿里短信配置
+sms:
+  regionId: cn-hangzhou
+  accessKeyId: xxxxxxxxx
+  accessKeySecret: xxxxxxxxxxxxxxxxxx
+  #模板
+  templates:
+    #登录模板
+    signName1: bizspring商城
+    templateCode1: SMS_183247308
+    #绑定模板
+    signName2: bizspring商城
+    templateCode2: SMS_183247308
+    #解绑模板
+    signName3: bizspring
+    templateCode3: SMS_183247308
+
+showStoreCenter: true
+redisCacheUrl: 127.0.0.1:6381

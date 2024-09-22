@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.bizspring</groupId>
+		<artifactId>bizspring-base</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<artifactId>bizspring-base-swagger</artifactId>
+	<packaging>jar</packaging>
+
+	<description>接口文档</description>
+
+
+	<dependencies>
+		<!--swagger 依赖-->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>swagger-bootstrap-ui</artifactId>
+		</dependency>
+	</dependencies>
+</project>

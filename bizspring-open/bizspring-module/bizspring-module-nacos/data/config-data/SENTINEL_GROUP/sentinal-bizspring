@@ -1,0 +1,38 @@
+[
+    {
+        "resource": "bizspring-auth",
+        "count": 500,
+        "grade": 1,
+        "limitApp": "default",
+        "strategy": 0,
+        "controlBehavior": 0
+    },{
+        "resource": "bizspring-upms",
+        "count": 1000,
+        "grade": 1,
+        "limitApp": "default",
+        "strategy": 0,
+        "controlBehavior": 0
+    },{
+        "resource": "bizspring-goods",
+        "count": 1000,
+        "grade": 1,
+        "limitApp": "default",
+        "strategy": 0,
+        "controlBehavior": 0
+    },{
+        "resource": "bizspring-order",
+        "count": 1000,
+        "grade": 1,
+        "limitApp": "default",
+        "strategy": 0,
+        "controlBehavior": 0
+    },{
+        "resource": "bizspring-store",
+        "count": 1000,
+        "grade": 1,
+        "limitApp": "default",
+        "strategy": 0,
+        "controlBehavior": 0
+    }
+]

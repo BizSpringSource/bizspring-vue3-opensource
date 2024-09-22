@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bizspring-admin-open" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bizspring_merchant_uni_open" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bizspring_shop_uni_open" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bizspring_shop_uni_open - 副本" vcs="Git" />
+  </component>
+</project>

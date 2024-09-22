@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.bizspring</groupId>
+		<artifactId>bizspring-base</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<artifactId>bizspring-base-data</artifactId>
+	<packaging>jar</packaging>
+
+	<description>数据操作相关</description>
+
+
+	<dependencies>
+		<!--工具类核心包-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-core</artifactId>
+		</dependency>
+		<!--mybatis plus extension,包含了mybatis plus core-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-extension</artifactId>
+		</dependency>
+		<!--安全依赖获取上下文信息-->
+		<dependency>
+			<groupId>cn.bizspring</groupId>
+			<artifactId>bizspring-base-security</artifactId>
+		</dependency>
+		<!--缓存依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!--redisson-->
+<!--		<dependency>-->
+<!--			<groupId>org.redisson</groupId>-->
+<!--			<artifactId>redisson-spring-boot-starter</artifactId>-->
+<!--			<version>3.13.6</version>-->
+<!--		</dependency>-->
+	</dependencies>
+</project>

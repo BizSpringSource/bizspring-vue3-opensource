@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.goods.admin.mapper.SpecificationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.goods.common.entity.Specification">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="sort" property="sort" />
+        <result column="name" property="name" />
+        <result column="options" property="options" jdbcType="LONGVARCHAR"
+				javaType="java.util.ArrayList" typeHandler="cn.bizspring.cloud.common.core.handlers.OptionConverter" />
+        <result column="goods_category_id" property="goodsCategoryId" />
+		<result column="goods_category_name" property="goodsCategoryName" />
+	</resultMap>
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		specification.id,
+        specification.version,
+        specification.created_time, specification.updated_time, specification.sort, specification.name, specification.options, specification.goods_category_id
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_specification` specification
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_specification` specification
+		WHERE
+		${propertyName} = #{propertyValue}
+		ORDER BY sort ASC
+	</select>
+
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+		`biz_specification` specification
+	</select>
+
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		,goods_category.name as goods_category_name
+		FROM
+		`biz_specification` specification
+		left join biz_goods_category goods_category on goods_category.id=specification.goods_category_id
+		<if test="ew.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<select id="findPageByEntity" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		,goods_category.name as goods_category_name
+		FROM
+		`biz_specification` specification
+		left join biz_goods_category goods_category on goods_category.id=specification.goods_category_id
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.name ">
+				AND specification.name LIKE concat('%',#{entity.name},'%')
+			</if>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+	<select id="findAllByEntity" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+			,goods_category.name as goods_category_name
+		FROM
+			`biz_specification` specification
+		left join biz_goods_category goods_category on goods_category.id=specification.goods_category_id
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.goodsCategoryId ">
+				AND specification.goods_category_id = #{entity.goodsCategoryId}
+			</if>
+		</if>
+	</select>
+
+
+	<!-- 查找实体对象分页 -->
+	<select id="findPage" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		,goods_category.name as goods_category_name
+		FROM
+		`biz_specification` specification
+		left join biz_goods_category goods_category on goods_category.id=specification.goods_category_id
+		<if test="queryWrapper.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.goods.common.entity.Specification">
+		INSERT INTO biz_specification(
+			id ,
+			created_time ,
+			version ,
+			sort ,
+			`name` ,
+			`options` ,
+			goods_category_id
+		) VALUES (
+					 #{entity.id},
+					 #{entity.createdTime},
+					 #{entity.version},
+					 #{entity.sort},
+					 #{entity.name},
+					 #{entity.options, typeHandler=cn.bizspring.cloud.common.core.handlers.OptionConverter},
+					 #{entity.goodsCategoryId}
+				 )
+	</insert>
+
+	<!-- 更新 -->
+	<update id="update" parameterType="cn.bizspring.cloud.goods.common.entity.Specification">
+		UPDATE biz_specification
+		SET updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			sort = #{entity.sort},
+			`name` = #{entity.name},
+			`options` = #{entity.options, typeHandler=cn.bizspring.cloud.common.core.handlers.OptionConverter},
+			goods_category_id = #{entity.goodsCategoryId}
+		WHERE
+			id = #{entity.id}
+		  AND version = #{entity.version}
+	</update>
+  
+</mapper>

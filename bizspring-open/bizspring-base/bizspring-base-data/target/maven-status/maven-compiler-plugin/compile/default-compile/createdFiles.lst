@@ -1,0 +1,14 @@
+cn\bizspring\cloud\common\data\datascope\DataScopeInterceptor.class
+cn\bizspring\cloud\common\data\tenant\TenantContextHolderFilter.class
+cn\bizspring\cloud\common\data\resolver\WebMvcConfig.class
+cn\bizspring\cloud\common\data\tenant\TenantContextHolder.class
+cn\bizspring\cloud\common\data\datascope\DataScopeProperties.class
+cn\bizspring\cloud\common\data\tenant\BaseTenantHandler.class
+cn\bizspring\cloud\common\data\cache\RedisTemplateConfig.class
+cn\bizspring\cloud\common\data\tenant\BaseFeignTenantConfiguration.class
+cn\bizspring\cloud\common\data\tenant\TenantConfigProperties.class
+cn\bizspring\cloud\common\data\tenant\BaseFeignTenantInterceptor.class
+cn\bizspring\cloud\common\data\cache\RedissonProperties.class
+cn\bizspring\cloud\common\data\mybatis\MybatisPlusConfig.class
+cn\bizspring\cloud\common\data\resolver\SqlFilterArgumentResolver.class
+cn\bizspring\cloud\common\data\enums\DataScopeTypeEnum.class

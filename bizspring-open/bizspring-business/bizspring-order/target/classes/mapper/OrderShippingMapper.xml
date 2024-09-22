@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.OrderShippingMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.OrderShipping">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="address" property="address" />
+        <result column="region" property="region" />
+        <result column="consignee" property="consignee" />
+        <result column="express_company" property="expressCompany" />
+        <result column="express_company_code" property="expressCompanyCode" />
+        <result column="express_company_url" property="expressCompanyUrl" />
+        <result column="freight" property="freight" />
+        <result column="remark" property="remark" />
+        <result column="phone" property="phone" />
+        <result column="shipping_method" property="shippingMethod" />
+        <result column="sn" property="sn" />
+        <result column="tracking_no" property="trackingNo" />
+        <result column="zip_code" property="zipCode" />
+		<result column="order_id" property="orderId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+        created_time, updated_time, address, region, consignee, express_company, express_company_code, express_company_url, freight, remark, phone, shipping_method, sn, tracking_no, zip_code, order_id, 'order_shipping_id'
+    </sql>
+	
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_shipping`
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_shipping`
+		WHERE
+			${propertyName } = #{propertyValue}
+		ORDER BY
+			created_time ASC
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_shipping`
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+	
+	<!-- 查找最后一条订单发货 -->
+	<select id="findLast" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			biz_order_shipping
+		WHERE
+			order_id = #{order.id}
+		ORDER BY
+			created_time DESC
+		LIMIT 0, 1
+	</select>
+	
+	<!-- 查找实体对象分页 -->
+	<select id="selectPage" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_shipping`
+		<if test="ew.nonEmptyOfWhere == true">
+			WHERE
+		</if>
+		${ew.sqlSegment}
+	</select>
+
+	<select id="findPageByEntity" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_order_shipping` order_shipping
+		WHERE 1 = 1
+		<if test="null != entity ">
+			<if test=" null != entity.sn ">
+				AND order_shipping.sn = #{entity.sn}
+			</if>
+			<if test=" null != entity.trackingNo ">
+				AND order_shipping.tracking_no = #{entity.trackingNo}
+			</if>
+			<if test=" null != entity.consignee ">
+				AND order_shipping.consignee = #{entity.consignee}
+			</if>
+			<if test=" null != entity.phone ">
+				AND order_shipping.phone = #{entity.phone}
+			</if>
+			<if test=" null != entity.address ">
+				AND order_shipping.address LIKE concat('%',#{entity.address},'%')
+			</if>
+			<if test=" null != entity.region ">
+				AND order_shipping.region LIKE concat('%',#{entity.region},'%')
+			</if>
+			<if test=" null != entity.zipCode ">
+				AND order_shipping.zip_code = #{entity.zipCode}
+			</if>
+		</if>
+		${queryWrapper.sqlSegment}
+	</select>
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.order.common.entity.OrderShipping">
+   		INSERT INTO biz_order_shipping(
+			id ,
+			created_time ,
+			version ,
+			address ,
+			region ,
+			consignee ,
+			express_company ,
+			express_company_code ,
+			express_company_url ,
+			freight ,
+			remark ,
+			phone ,
+			shipping_method ,
+			sn ,
+			tracking_no ,
+			zip_code ,
+			order_id
+		) VALUES (
+			#{entity.id}, 
+			#{entity.createdTime},
+			#{entity.version}, 
+			#{entity.address}, 
+			#{entity.region},
+			#{entity.consignee}, 
+			#{entity.expressCompany},
+			#{entity.expressCompanyCode},
+			#{entity.expressCompanyUrl},
+			#{entity.freight}, 
+			#{entity.remark},
+			#{entity.phone}, 
+			#{entity.shippingMethod}, 
+			#{entity.sn}, 
+			#{entity.trackingNo}, 
+			#{entity.zipCode}, 
+			#{entity.orderId}
+		)
+  	</insert>
+  
+</mapper>

@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": ["> 5% in CN", "safari >= 9", "iOS >= 9", "not IE > 0"]
+      },
+      "modules": false
+    }]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
+  ]
+}

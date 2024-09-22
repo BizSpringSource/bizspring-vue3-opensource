@@ -1,0 +1,84 @@
+var getstatus = function (val, start = 0, end = 17) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+
+  if (val == 10) {
+    return "待支付";
+  } else if (val == 20) {
+    return "待发货";
+  } else if (val == 16) {
+    return "货到付款";
+  } else if (val == 30) {
+    return "待收货";
+  } else if (val == 40) {
+    return "待评价";
+  } else if (val == 50) {
+    return "已评价";
+  } else if (val == 60) {
+    return "已完成";
+  } else if (val == 0) {
+    return "订单已取消";
+  } else if (val == 45) {
+    return "申请退款";
+  } else if (val == 47) {
+    return "退货完成";
+  } else if (val == 48) {
+    return "拒绝退货";
+  } else if (val == 49) {
+    return "退货失败";
+  } else if (val == 46) {
+    return "同意退货";
+  } else if (val == 65) {
+    return "已结束";
+  } else {
+    return "";
+  }
+};
+
+var getbutton = function (val, but, start = 0, end = 17) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+
+  if (but.length == 0 || but == undefined) {
+    return;
+  } //去评价
+
+
+  if (but == 1) {
+    if (val == 40 || val == 48) {
+      return true;
+    } //订单支付
+
+  } else if (but == 2) {
+    if (val == 10) {
+      return true;
+    } //取消订单
+
+  } else if (but == 3) {
+    if (val == 10 || val == 16) {
+      return true;
+    } //申请退款
+
+  } else if (but == 4) {
+    if (val == 20 || val == 30 || val == 40) {
+      return true;
+    } //确认收货
+
+  } else if (but == 5) {
+    if (val == 30 || val == 43 || val == 46 || val == 48 || val == 49) {
+      return true;
+    } //订单详情
+
+  } else if (but == 6) {
+    return true; // if (val == 40 || val == 48) {
+    //   true;
+    // }
+  } else {
+    return false;
+  }
+};
+
+module.exports.getstatus = getstatus;
+module.exports.getbutton = getbutton;

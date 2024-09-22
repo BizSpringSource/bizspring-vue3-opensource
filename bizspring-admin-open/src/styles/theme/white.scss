@@ -1,0 +1,119 @@
+.theme-white {
+    .el-menu--popup{
+        .el-menu-item{
+            background-color: #fff;
+            i,span{
+                color:#666;
+            }
+            &:hover{
+                i,span{
+                    color:#333;
+                }
+            }
+            &.is-active {
+                background-color: #409EFF;
+                &:before {
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 4px;
+                    background: #409eff;
+                    position: absolute;
+                }
+                i,span{
+                    color:#fff;
+                }
+            }
+        }
+    }
+  .avue-top,
+  .avue-logo,
+  .tags-container {
+      background-color: #409EFF;
+  }
+  .avue-sidebar--tip{
+    background-color:transparent;
+    color:#333;
+  }
+  .el-dropdown{
+    color:#fff;
+  }
+  .avue-logo_title{
+    font-weight: 400;
+    color:#fff;
+  }
+  .logo_title,
+  .avue-breadcrumb
+  {
+      color: #fff ;
+      i {
+          color: #fff;
+      }
+  }
+  .avue-top{
+    .el-menu-item {
+      i,
+      span {
+          color: #fff ;
+      }
+      &:hover {
+          i,
+          span {
+              color: #fff ;
+          }
+      }
+    }
+  }
+  .avue-sidebar{
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.15);
+    background-color: #fff;
+    .el-menu-item,.el-sub-menu__title{
+      i,span{
+          color:#666
+      }
+      &:hover{
+          background: transparent;
+          i,span{
+             color:#333;
+          }
+      }
+      &.is-active {
+          background-color: #409EFF;
+          i,span{
+              color:#fff;
+          }
+      }
+    }
+  }
+  .top-search {
+      .el-input__inner{
+        color: #333;
+      }
+      input::-webkit-input-placeholder,
+      textarea::-webkit-input-placeholder {
+          /* WebKit browsers */
+          color: #fff;
+      }
+      input:-moz-placeholder,
+      textarea:-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: #fff;
+      }
+      input::-moz-placeholder,
+      textarea::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: #fff;
+      }
+      input:-ms-input-placeholder,
+      textarea:-ms-input-placeholder {
+          /* Internet Explorer 10+ */
+          color: #fff;
+      }
+  }
+  .top-bar__item {
+      i {
+          color: #fff;
+      }
+  }
+}

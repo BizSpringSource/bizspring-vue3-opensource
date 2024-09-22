@@ -1,0 +1,7 @@
+cn\bizspring\cloud\common\datasource\config\JdbcDynamicDataSourceProvider.class
+cn\bizspring\cloud\common\datasource\annotation\EnableDynamicDataSource.class
+cn\bizspring\cloud\common\datasource\util\DynamicDataSourceUtils.class
+cn\bizspring\cloud\common\datasource\config\DruidDataSourceProperties.class
+cn\bizspring\cloud\common\datasource\constants\DataSourceConstants.class
+cn\bizspring\cloud\common\datasource\config\DynamicDataSourceAutoConfiguration.class
+META-INF\spring-configuration-metadata.json

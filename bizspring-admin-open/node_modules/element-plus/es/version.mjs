@@ -1,0 +1,4 @@
+const version = "2.2.28";
+
+export { version };
+//# sourceMappingURL=version.mjs.map

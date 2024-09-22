@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.order.admin.mapper.PaymentConfigMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="cn.bizspring.cloud.order.common.entity.PaymentConfig">
+		<result column="id" property="id" />
+		<result column="version" property="version" />
+		<result column="created_time" property="createdTime" />
+		<result column="updated_time" property="updatedTime" />
+		<result column="sort" property="sort" />
+		<result column="propertys" property="propertys" jdbcType="LONGVARCHAR"
+				javaType="java.util.HashMap" typeHandler="cn.bizspring.cloud.common.core.handlers.PropertyConverter" />
+		<result column="mode_id" property="modeId" />
+	</resultMap>
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id,
+        version,
+        created_time, updated_time, sort, propertys, mode_id
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_config`
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<!-- 根据属性查找实体对象 -->
+	<select id="findByProperty" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_payment_config`
+		WHERE
+		${propertyName} = #{propertyValue}
+	</select>
+
+	<!-- 判断是否存在 -->
+	<select id="exists" resultType="boolean">
+		SELECT
+			COUNT(1)
+		FROM
+			`biz_payment_config`
+		WHERE
+			${propertyName} = #{propertyValue}
+	</select>
+
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.order.common.entity.PaymentConfig">
+		INSERT INTO biz_payment_config(
+			id ,
+			created_time ,
+			version ,
+			sort ,
+			mode_id ,
+			propertys
+		)
+		VALUES (
+				   #{entity.id},
+				   #{entity.createdTime},
+				   #{entity.version},
+				   #{entity.sort},
+				   #{entity.modeId},
+				   #{entity.propertys, typeHandler=cn.bizspring.cloud.common.core.handlers.PropertyConverter}
+			   )
+	</insert>
+
+	<!-- 更新实体对象 -->
+	<update id="update" parameterType="cn.bizspring.cloud.order.common.entity.PaymentConfig">
+		UPDATE `biz_payment_config`
+		SET
+			`updated_time` = #{entity.updatedTime},
+			`version` = #{entity.version} + 1,
+			`sort` = #{entity.sort} ,
+			`mode_id` = #{entity.modeId} ,
+			`propertys` = #{entity.propertys, typeHandler=cn.bizspring.cloud.common.core.handlers.PropertyConverter}
+		WHERE
+			`id` = #{entity.id}
+		  AND `version` = #{entity.version}
+	</update>
+
+</mapper>

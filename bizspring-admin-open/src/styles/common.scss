@@ -1,0 +1,176 @@
+// 全局变量
+@import './variables.scss';
+
+// ele样式覆盖
+@import './element-ui.scss';
+
+// 顶部右侧显示
+@import './top.scss';
+
+// 导航标签
+@import './tags.scss';
+
+// 工具类函数
+@import './mixin.scss';
+
+// 侧面导航栏
+@import './sidebar.scss';
+
+// 动画
+@import './animate/vue-transition.scss';
+
+//通用配置
+@import './normalize.scss';
+
+//图标配置
+@import './iconfont.scss';
+
+//登录样式
+@import "./login.scss";
+
+//适配
+@import './media.scss';
+
+//滚动条样式
+@include scrollBar;
+
+//主题
+// @import './theme/index.scss';
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+* {
+  outline: none;
+}
+
+.el-link {
+  margin-right: 10px;
+}
+
+.avue-layout {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  &--horizontal {
+    flex-direction: column;
+    .avue-sidebar {
+      width: 100%;
+      height: $top_height;
+      display: flex;
+      .avue-menu,
+      .el-menu-item,
+      .el-sub-menu__title {
+        height: $top_height;
+        line-height: $top_height;
+      }
+      .is-active:before {
+        display: none;
+      }
+    }
+    .avue-logo {
+      width: $sidebar_width
+    }
+  }
+}
+
+.avue-input-icon__item {
+  text-align: center;
+  width: 120px;
+  padding: 10px 10px;
+  line-height: 30px;
+  transition: all .2s;
+}
+.avue-contail {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.avue-sidebar,
+.avue-top,
+.avue-logo,
+.avue-layout .login-logo,
+.avue-main {
+  transition: all .3s;
+}
+
+.avue--collapse {
+  .avue-sidebar,
+  .avue-logo {
+    width: $sidebar_collapse;
+  }
+}
+
+.avue-main {
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #f0f2f5;
+}
+
+#avue-view {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.avue-view {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.avue-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+  .copyright {
+    color: #666;
+    font-size: 12px;
+  }
+}
+
+.mac_bg {
+  background-image: url("/img/bg.jpg");
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.avue--detail .el-col {
+  margin-bottom: 0;
+}
+
+.avue-shade {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 1024;
+
+  &--show {
+    display: block;
+  }
+}
+.avue-logo_title{
+  text-align: left;
+}

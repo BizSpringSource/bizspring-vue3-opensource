@@ -1,0 +1,142 @@
+{
+  "groups": [
+    {
+      "name": "swagger",
+      "type": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.authorization",
+      "type": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Authorization",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.contact",
+      "type": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Contact",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "swagger.authorization.auth-regex",
+      "type": "java.lang.String",
+      "description": "需要开启鉴权URL的正则",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Authorization",
+      "defaultValue": "^.*$"
+    },
+    {
+      "name": "swagger.authorization.authorization-scope-list",
+      "type": "java.util.List<cn.bizspring.cloud.common.swagger.config.SwaggerProperties$AuthorizationScope>",
+      "description": "鉴权作用域列表",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Authorization"
+    },
+    {
+      "name": "swagger.authorization.name",
+      "type": "java.lang.String",
+      "description": "鉴权策略ID，需要和SecurityReferences ID保持一致",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Authorization",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.authorization.token-url-list",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Authorization"
+    },
+    {
+      "name": "swagger.base-package",
+      "type": "java.lang.String",
+      "description": "swagger会解析的包路径",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.base-path",
+      "type": "java.util.List<java.lang.String>",
+      "description": "swagger会解析的url规则",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.contact.email",
+      "type": "java.lang.String",
+      "description": "联系人email",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Contact",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.contact.name",
+      "type": "java.lang.String",
+      "description": "联系人",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Contact",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.contact.url",
+      "type": "java.lang.String",
+      "description": "联系人url",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties$Contact",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.description",
+      "type": "java.lang.String",
+      "description": "描述",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启swagger",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.exclude-path",
+      "type": "java.util.List<java.lang.String>",
+      "description": "在basePath基础上需要排除的url规则",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties"
+    },
+    {
+      "name": "swagger.host",
+      "type": "java.lang.String",
+      "description": "host信息",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.license",
+      "type": "java.lang.String",
+      "description": "许可证",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.license-url",
+      "type": "java.lang.String",
+      "description": "许可证URL",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.terms-of-service-url",
+      "type": "java.lang.String",
+      "description": "服务条款URL",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.title",
+      "type": "java.lang.String",
+      "description": "标题",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.version",
+      "type": "java.lang.String",
+      "description": "版本",
+      "sourceType": "cn.bizspring.cloud.common.swagger.config.SwaggerProperties",
+      "defaultValue": ""
+    }
+  ],
+  "hints": []
+}

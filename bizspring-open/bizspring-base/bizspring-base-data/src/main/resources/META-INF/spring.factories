@@ -1,0 +1,10 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    cn.bizspring.cloud.common.data.cache.ClusterConfigurationProperties,\
+    cn.bizspring.cloud.common.data.cache.RedisTemplateConfig,\
+    cn.bizspring.cloud.common.data.cache.RedisCacheManagerConfig,\
+    cn.bizspring.cloud.common.data.cache.RedisCacheAutoConfiguration,\
+    cn.bizspring.cloud.common.data.tenant.TenantConfigProperties,\
+    cn.bizspring.cloud.common.data.datascope.DataScopeProperties,\
+    cn.bizspring.cloud.common.data.tenant.TenantContextHolderFilter,\
+    cn.bizspring.cloud.common.data.tenant.BaseFeignTenantConfiguration,\
+    cn.bizspring.cloud.common.data.mybatis.MybatisPlusConfig

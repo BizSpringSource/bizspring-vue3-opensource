@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid",
+      "type": "cn.bizspring.cloud.common.datasource.config.DruidDataSourceProperties",
+      "sourceType": "cn.bizspring.cloud.common.datasource.config.DruidDataSourceProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.datasource.druid.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.common.datasource.config.DruidDataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.druid.password",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.common.datasource.config.DruidDataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.druid.url",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.common.datasource.config.DruidDataSourceProperties"
+    },
+    {
+      "name": "spring.datasource.druid.username",
+      "type": "java.lang.String",
+      "sourceType": "cn.bizspring.cloud.common.datasource.config.DruidDataSourceProperties"
+    }
+  ],
+  "hints": []
+}

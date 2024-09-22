@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PayPal支付</title>
+		<style>
+			#returnButton {
+				display: inline-block;
+				padding: 10px 20px;
+				background-color: #007BFF;
+				color: white;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+
+			#returnButton:hover {
+				background-color: #0056b3;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="total"> </div>
+		<div id="paypal-button-container"></div>
+		<!-- 引入 UniApp 的 WebView 脚本 -->
+		<script type="text/javascript" src="https://unpkg.com/@dcloudio/uni-webview-js@0.0.1/index.js"></script>
+		<script>
+			var script = document.createElement('script');
+			// 设置script的type和src属性
+			script.type = 'text/javascript';
+			script.onload = function() {
+				// console.log('Script loaded and executed.');
+				// 这里可以放置任何你想在script加载后立即执行的代码
+				paypal.Buttons({
+					createOrder: function(data, actions) {
+						// 定义一下要付多少钱 
+						// 使用 URLSearchParams 构造一个 URLSearchParams 对象，将 URL 解析为其组成部分
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: total,
+									items: [{
+										name: 'recharge', // 修改为对象形式
+										description: '支付',
+										currency_code: 'USD'
+									}]
+								},
+								reference_id: out_trade_no
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							console.log('onApprove details', details)
+							console.log(data)
+							var detail = {
+								id: details.id,
+								status: details.status,
+								purchase_units: details.purchase_units,
+								payer: details.payer
+							}
+							console.log('--------------------------- details', details)
+							// 使用POST方法给我们的服务器发送请求，保存和更新相关数据库
+							return fetch(return_url, {
+								method: 'GET',
+								headers: {
+									'content-type': 'application/x-www-form-urlencoded'
+								}
+							}).then(function(res) {
+								console.log('return_url 返回-->', res);
+							}).then(function(response) {
+								var totalElement = document.getElementById('total');
+								// if (totalElement) {
+								// 	totalElement.innerHTML = '支付成功：$' + total;
+								// }
+								
+								console.log('---------------------------111 details', details)
+								
+								if (details.status === "COMPLETED") {
+									console.log('details.status === COMPLETED --------------->');
+									
+									
+									// document.addEventListener('UniAppJSBridgeReady', function() {
+										uni.switchTab({
+											url: '/pages/member/index'
+										}); 
+									// });
+									
+									
+									// window.postMessage(JSON.stringify({
+									// 	'action': 'jumpback'
+									// }));
+								}
+								var paypalElement = document.getElementById(
+									'paypal-button-container');
+								paypalElement.style.display = 'none';
+							}).catch(function(error) {
+								console.error('Error:', error);
+							});
+						});
+					},
+					onCancel: function(data, actions) {
+						// 买家取消了支付触发
+						console.error('onCancel:', data, actions);
+					},
+					onError: function(err) {
+						// 当交易发生错误时触发
+						console.error('Error:', err);
+					},
+				}).render("#paypal-button-container");
+			};
+		</script>
+		<script>
+			// 在页面加载时存储 如下 到全局变量
+			let total;
+			let out_trade_no;
+			let return_url;
+			let client_id;
+			document.addEventListener('DOMContentLoaded', function() {
+				// client_id = 'Abe3jghHSASJ8YivUJmYswPGV8eApmkm8DUD2U1M8xL7wHI5XDRIaIji1GvRJde561QC6i0ztQRenBfc';
+				var url = window.location.search;
+				// 使用 URLSearchParams 构造一个 URLSearchParams 对象，将 URL 解析为其组成部分
+				const params = new URLSearchParams(url);
+				
+				// 获取特定参数的值
+				total = params.get('total');
+				out_trade_no = params.get('out_trade_no');
+				client_id = params.get('client_id');
+				return_url = decodeURIComponent(params.get('return_url'));
+				script.src = 'https://www.paypal.com/sdk/js?client-id=' + client_id;
+				document.head.appendChild(script);
+			});
+		</script>
+	</body>
+</html>

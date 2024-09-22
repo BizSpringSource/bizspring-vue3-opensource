@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.GoodsFavoriteMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bizspring.cloud.upms.common.entity.GoodsFavorite">
+	    <result column="id" property="id" />
+	    <result column="version" property="version" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result property="memberId" column="member_id" />
+        <result property="goodsId" column="goods_id" />
+		<result property="goodsName" column="goods_name" />
+    </resultMap>
+
+
+	<!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id,
+        version,
+        created_time, updated_time, member_id, goods_id
+	</sql>
+
+	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_goods_favorite`
+		WHERE
+		`id` = #{id}
+	</select>
+
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_goods_favorite`
+		WHERE
+		${propertyName} = #{propertyValue}
+	</select>
+
+	<!-- 判断商品收藏是否存在 -->
+	<select id="exists" resultType="boolean">
+		SELECT
+		count(*)
+		FROM
+			`biz_goods_favorite`
+		<where>
+			<if test="member != null">
+				AND member_id = #{member.id}
+			</if>
+			<if test="goodsId != null">
+				AND goods_id = #{goodsId}
+			</if>
+		</where>
+	</select>
+
+	<!-- 查找商品收藏数量 -->
+	<select id="count" resultType="long">
+		SELECT
+		count(*)
+		FROM
+			`biz_goods_favorite`
+		<where>
+			<if test="member != null">
+				AND member_id = #{member.id}
+			</if>
+		</where>
+	</select>
+
+	<!-- 查找店铺中商品收藏数量 -->
+	<select id="countStoreGoods" resultType="long">
+		SELECT
+		count(*)
+		FROM
+			`biz_goods_favorite` goods_favorite
+		<if test=" null != goodss and goodss.size() > 0">
+			LEFT JOIN (
+			SELECT a.item_id FROM (
+			<foreach collection="goodss" item="item" index="index" separator="union all">
+				SELECT #{item.id} as item_id
+				FROM dual
+			</foreach>
+			) as a
+			) as aa on aa.item_id=goods_favorite.goods_id
+		</if>
+		<where>
+			<if test="beginDate != null">
+				AND goods_favorite.created_time <![CDATA[ >= ]]> #{beginDate}
+			</if>
+			<if test="endDate != null">
+				AND goods_favorite.created_time <![CDATA[ <= ]]> #{endDate}
+			</if>
+		</where>
+	</select>
+
+	<!-- 查找品牌 -->
+	<select id="findList" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_goods_favorite`
+		<where>
+			<if test="member != null">
+				AND member_id = #{member.id}
+			</if>
+		</where>
+	</select>
+
+	<!-- 查找商品收藏分页 -->
+	<select id="findPage" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			biz_goods_favorite
+		<where>
+			<if test="member != null">
+				AND member_id = #{member.id}
+			</if>
+			${queryWrapper.sqlSegment}
+		</where>
+	</select>
+
+
+	<select id="findFavoritePageOfStore" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+			<if test="null != goodss and goodss.size() > 0">
+				,goods_name
+			</if>
+		FROM
+			biz_goods_favorite goods_favorite
+		<if test=" null != goodss and goodss.size() > 0">
+			LEFT JOIN (
+			SELECT a.item_id,a.goods_name FROM (
+			<foreach collection="goodss" item="item" index="index" separator="union all">
+				SELECT #{item.id} as item_id,#{item.name} as goods_name
+				FROM dual
+			</foreach>
+			) as a
+			) as aa on aa.item_id=goods_favorite.goods_id
+		</if>
+		<where>
+			<if test="queryWrapper.nonEmptyOfWhere == true">
+				AND
+			</if>
+			${queryWrapper.sqlSegment}
+		</where>
+	</select>
+
+	
+	<!-- 保存 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.upms.common.entity.GoodsFavorite">
+		INSERT INTO biz_goods_favorite(
+			id ,
+			created_time ,
+			version ,
+			member_id ,
+			goods_id
+		) VALUES (
+					 #{entity.id},
+					 #{entity.createdTime},
+					 #{entity.version},
+					 #{entity.memberId},
+					 #{entity.goodsId}
+				 )
+  	</insert>
+</mapper>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bizspring.cloud.upms.admin.mapper.RoleMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="cn.bizspring.cloud.upms.common.entity.Role">
+		<id column="id" property="id"/>
+		<result column="role_name" property="roleName"/>
+		<result column="role_code" property="roleCode"/>
+		<result column="role_desc" property="roleDesc"/>
+		<result column="ds_type" property="dsType"/>
+		<result column="ds_scope" property="dsScope"/>
+		<result column="created_time" property="createdTime"/>
+		<result column="updated_time" property="updatedTime"/>
+		<result column="is_enabled" property="isEnabled"/>
+		<result column="udel_flag" property="delFlag"/>
+		<result column="tenant_id" property="tenantId"/>
+		<result column="version" property="version" />
+		<result column="is_system" property="isSystem" />
+
+	</resultMap>
+
+	<select id="listRoleIdsByUserId" resultType="java.lang.String">
+		SELECT
+			r.id
+		FROM
+			biz_roles r, biz_user_role ur WHERE r.id = ur.role_id AND r.del_flag = 0 and  ur.user_id IN (#{userId})
+	</select>
+
+    <!-- 通用查询结果列 -->
+	<sql id="Base_Column_List">
+		id,
+        version,
+        created_time,
+		updated_time,
+		role_desc,
+		is_system,
+		role_name,
+		role_code,
+		role_desc,
+		ds_type,
+		ds_scope,
+		is_enabled,
+		del_flag,
+		tenant_id
+	</sql>
+
+    	<!-- 查找实体对象 -->
+	<select id="find" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			biz_roles
+		WHERE
+			id = #{id}
+	</select>
+	
+	<!-- 查找实体对象集合 -->
+	<select id="findSet" resultMap="BaseResultMap">
+		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			`biz_roles` role
+		LEFT JOIN `biz_users_role` ar ON ar.`roles_id` = role.`id`
+		WHERE
+			ar.admins_id = #{propertyValue}
+	</select>
+	
+	<!-- 查找所有实体对象集合 -->
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List"></include>
+		FROM
+			`biz_roles`
+	</select>
+	
+	<!-- 保存实体对象 -->
+	<insert id="save" parameterType="cn.bizspring.cloud.upms.common.entity.Role">
+		INSERT INTO biz_roles (
+			id ,
+			created_time ,
+			version ,
+			is_system ,
+			updated_time,
+			role_desc,
+			role_name,
+			role_code,
+			ds_type,
+			ds_scope,
+			is_enabled,
+			del_flag,
+			tenant_id
+		)
+		VALUES (
+				   #{entity.id} ,
+				   #{entity.createdTime},
+				   #{entity.version},
+				   #{entity.isSystem},
+				   #{entity.updatedTime},
+				   #{entity.roleDesc},
+				   #{entity.roleName},
+				   #{entity.roleCode},
+				   #{entity.dsType},
+				   #{entity.dsScope},
+				   #{entity.isEnabled},
+				   #{entity.delFlag},
+				   #{entity.tenantId}
+			   )
+	 </insert>
+	 
+	 <!-- 更新实体对象 -->
+  	 <update id="update" parameterType="cn.bizspring.cloud.upms.common.entity.Role">
+		 UPDATE biz_roles
+	    SET
+			updated_time = #{entity.updatedTime},
+			version = #{entity.version} + 1,
+			role_desc = #{entity.roleDesc} ,
+			is_system = #{entity.isSystem} ,
+			role_name = #{entity.roleName},
+			role_code = #{entity.roleCode},
+			ds_type = #{entity.dsType},
+			ds_scope = #{entity.dsScope},
+			is_enabled = #{entity.isEnabled},
+			del_flag = #{entity.delFlag},
+			tenant_id = #{entity.tenantId}
+		 WHERE
+			id = #{entity.id}
+		 AND version = #{entity.version}
+	 </update>
+
+</mapper>

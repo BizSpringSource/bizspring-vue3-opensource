@@ -1,0 +1,136 @@
+2024-07-22 08:05:48,835 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-07-22 08:05:48,840 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-07-22 08:05:48,841 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250582509172200
+
+2024-07-22 08:05:48,842 INFO send udp packet: 192.168.3.2,49213,250582509172200
+
+2024-07-22 08:05:48,842 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-07-22 08:05:48,842 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-07-22 08:05:48,843 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250582512107900
+
+2024-07-22 08:05:48,843 INFO send udp packet: 192.168.3.2,49213,250582512107900
+
+2024-07-22 08:05:48,843 INFO DEFAULT_GROUP@@bizspring-goods is changed, add it to push queue.
+
+2024-07-22 08:05:48,843 INFO serviceName: DEFAULT_GROUP@@bizspring-goods changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250582512424100
+
+2024-07-22 08:05:48,843 INFO send udp packet: 192.168.3.2,49213,250582512424100
+
+2024-07-22 08:05:48,843 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-07-22 08:05:48,843 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-07-22 08:05:48,844 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250582512784500
+
+2024-07-22 08:05:48,844 INFO send udp packet: 192.168.3.2,49213,250582512784500
+
+2024-07-22 08:05:48,844 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-07-22 08:05:48,844 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250582512956900
+
+2024-07-22 08:05:48,844 INFO send udp packet: 192.168.3.2,49213,250582512956900
+
+2024-07-22 08:05:51,247 INFO DEFAULT_GROUP@@bizspring-auth is changed, add it to push queue.
+
+2024-07-22 08:05:51,253 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:55481, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,55481,250584921314200
+
+2024-07-22 08:05:51,253 INFO send udp packet: 192.168.3.2,55481,250584921314200
+
+2024-07-22 08:05:51,254 INFO serviceName: DEFAULT_GROUP@@bizspring-auth changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250584921314200
+
+2024-07-22 08:05:51,254 INFO send udp packet: 192.168.3.2,49213,250584921314200
+
+2024-07-22 08:05:51,366 INFO DEFAULT_GROUP@@bizspring-order is changed, add it to push queue.
+
+2024-07-22 08:05:51,398 INFO DEFAULT_GROUP@@bizspring-marketing is changed, add it to push queue.
+
+2024-07-22 08:05:51,400 INFO serviceName: DEFAULT_GROUP@@bizspring-marketing changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250585067346600
+
+2024-07-22 08:05:51,400 INFO send udp packet: 192.168.3.2,49213,250585067346600
+
+2024-07-22 08:05:51,760 INFO DEFAULT_GROUP@@bizspring-module-gateway is changed, add it to push queue.
+
+2024-07-22 08:05:52,384 INFO DEFAULT_GROUP@@bizspring-store is changed, add it to push queue.
+
+2024-07-22 08:05:52,385 INFO serviceName: DEFAULT_GROUP@@bizspring-store changed, schedule push for: 192.168.3.2:49213, agent: Nacos-Java-Client:v1.4.1, key: 192.168.3.2,49213,250586053740500
+
+2024-07-22 08:05:52,385 INFO send udp packet: 192.168.3.2,49213,250586053740500
+
+2024-07-22 08:05:52,874 INFO DEFAULT_GROUP@@bizspring-upms is changed, add it to push queue.
+
+2024-07-22 08:06:02,873 INFO retry to push data, key: 192.168.3.2,49213,250582509172200
+
+2024-07-22 08:06:02,873 INFO send udp packet: 192.168.3.2,49213,250582509172200
+
+2024-07-22 08:06:02,874 INFO retry to push data, key: 192.168.3.2,49213,250582512107900
+
+2024-07-22 08:06:02,875 INFO send udp packet: 192.168.3.2,49213,250582512107900
+
+2024-07-22 08:06:02,876 INFO retry to push data, key: 192.168.3.2,49213,250582512424100
+
+2024-07-22 08:06:02,876 INFO send udp packet: 192.168.3.2,49213,250582512424100
+
+2024-07-22 08:06:02,877 INFO retry to push data, key: 192.168.3.2,49213,250582512784500
+
+2024-07-22 08:06:02,877 INFO send udp packet: 192.168.3.2,49213,250582512784500
+
+2024-07-22 08:06:02,877 INFO retry to push data, key: 192.168.3.2,49213,250582512956900
+
+2024-07-22 08:06:02,877 INFO send udp packet: 192.168.3.2,49213,250582512956900
+
+2024-07-22 08:06:02,878 INFO retry to push data, key: 192.168.3.2,55481,250584921314200
+
+2024-07-22 08:06:02,878 INFO send udp packet: 192.168.3.2,55481,250584921314200
+
+2024-07-22 08:06:02,878 INFO retry to push data, key: 192.168.3.2,49213,250584921314200
+
+2024-07-22 08:06:02,878 INFO send udp packet: 192.168.3.2,49213,250584921314200
+
+2024-07-22 08:06:02,879 INFO retry to push data, key: 192.168.3.2,49213,250585067346600
+
+2024-07-22 08:06:02,879 INFO send udp packet: 192.168.3.2,49213,250585067346600
+
+2024-07-22 08:06:02,879 INFO retry to push data, key: 192.168.3.2,49213,250586053740500
+
+2024-07-22 08:06:02,879 INFO send udp packet: 192.168.3.2,49213,250586053740500
+
+2024-07-22 08:06:12,887 INFO retry to push data, key: 192.168.3.2,49213,250582509172200
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250582509172200
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,49213,250582512107900
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250582512107900
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,49213,250582512424100
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250582512424100
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,49213,250582512784500
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250582512784500
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,49213,250582512956900
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250582512956900
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,55481,250584921314200
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,55481,250584921314200
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,49213,250584921314200
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250584921314200
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,49213,250585067346600
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250585067346600
+
+2024-07-22 08:06:12,888 INFO retry to push data, key: 192.168.3.2,49213,250586053740500
+
+2024-07-22 08:06:12,888 WARN max re-push times reached, retry times 2, key: 192.168.3.2,49213,250586053740500
+
