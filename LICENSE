@@ -43,17 +43,17 @@ source code to the public.
 ensure that, in such cases, the modified source code becomes available
 to the community.  It requires the operator of a network server to
 provide the source code of the modified version running there to the
-该服务器的用户。因此，公开使用修改后的版本，
-可公开访问的服务器，允许公众访问源代码
-修改版本的代码。
+users of that server.  Therefore, public use of a modified version, on
+a publicly accessible server, gives the public access to the source
+code of the modified version.
 
-  较旧的许可证称为 Affero 通用公共许可证，
-由 Affero 出版，旨在实现类似的目标。这是
-不同的许可证，不是 Affero GPL 的一个版本，但是 Affero 有
-发布了新版 Affero GPL，允许在
-本许可证。
+  An older license, called the Affero General Public License and
+published by Affero, was designed to accomplish similar goals.  This is
+a different license, not a version of the Affero GPL, but Affero has
+released a new version of the Affero GPL which permits relicensing under
+this license.
 
-  复制、分发和
+  The precise terms and conditions for copying, distribution and
 modification follow.
 
                        TERMS AND CONDITIONS
