@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "店铺",
-  "usingComponents": {
-    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
-    "uni-popup-share": "/uni_modules/uni-popup/components/uni-popup-share/uni-popup-share"
-  }
-}

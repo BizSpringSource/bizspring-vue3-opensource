@@ -1,1 +1,0 @@
-<view><block wx:if="{{!$root.g0}}"><slot></slot></block><view style="{{(showAm+(selectable?';user-select:text;-webkit-user-select:text':''))}}" id="_top"><trees vue-id="6b79763c-1" nodes="{{nodes}}" lazyLoad="{{lazyLoad}}" loading="{{loadingImg}}" bind:__l="__l"></trees></view></view>
