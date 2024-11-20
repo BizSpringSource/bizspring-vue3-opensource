@@ -51,42 +51,6 @@ public class TokenController {
 	private final CacheManager cacheManager;
 
 	/**
-	 * 认证页面
-	 * @param modelAndView
-	 * @return ModelAndView
-	 */
-	@GetMapping("/login")
-	public ModelAndView require(ModelAndView modelAndView) {
-		modelAndView.setViewName("ftl/login");
-		return modelAndView;
-	}
-
-	/**
-	 * 确认授权页面
-	 *
-	 * @param request
-	 * @param session
-	 * @param modelAndView
-	 * @return
-	 */
-	@GetMapping("/confirm_access")
-	public ModelAndView confirm(HttpServletRequest request, HttpSession session, ModelAndView modelAndView) {
-		Map<String, Object> scopeList = (Map<String, Object>) request.getAttribute("scopes");
-		modelAndView.addObject("scopeList", scopeList.keySet());
-
-		Object auth = session.getAttribute("authorizationRequest");
-		if (auth != null) {
-			AuthorizationRequest authorizationRequest = (AuthorizationRequest) auth;
-			ClientDetails clientDetails = clientDetailsService.loadClientByClientId(authorizationRequest.getClientId());
-			modelAndView.addObject("app", clientDetails.getAdditionalInformation());
-			modelAndView.addObject("user", SecurityUtils.getUser());
-		}
-
-		modelAndView.setViewName("ftl/confirm");
-		return modelAndView;
-	}
-
-	/**
 	 * 退出token
 	 *
 	 * @param authHeader Authorization
