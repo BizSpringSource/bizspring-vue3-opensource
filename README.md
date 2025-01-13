@@ -88,11 +88,11 @@ BizSpring电商平台实现移动全渠道消费者覆盖，手机触屏商城�
 
 # 试用体验
 
-| 系统 | APP下载 | H5 URL |
-|--|--|--|
-| 商城 | https://cross-border.bizspring.cn/shop.apk | https://cross-border.bizspring.cn/shop/# |
-| 商家 | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# |
-| 管理 |  |  https://cross-border.bizspring.cn |
+| 系统 | APP下载 | H5 URL | PC URL|
+|--|--|--|--|
+| 商城 | https://cross-border.bizspring.cn/shop.apk | https://cross-border.bizspring.cn/shop/# | https://cross-border.bizspring.cn/pc/# |
+| 商家 | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
+| 管理 |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
 # 实施及售后
 ### 安装前准备
