@@ -3,6 +3,14 @@
   做好跨境电商要选择合适的产品，了解海外市场，选择合适的跨境电商平台，**建设独立站树立品牌形象，制定合适的定价策略，提供优质的售后服务，创新营销模式**。
 
 # BizSpring商城、跨境电商，专注精品独立站
+# 体验地址
+
+| 系统 | APP下载 | H5 URL | PC URL|
+|--|--|--|--|
+| 商城 | https://cross-border.bizspring.cn/shop.apk | https://cross-border.bizspring.cn/shop/# | https://cross-border.bizspring.cn/pc/# |
+| 商家 | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
+| 管理 |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
+
 ### 开源文档
 [http://docs.bizspring.cn](http://docs.bizspring.cn)
 
@@ -86,7 +94,7 @@ BizSpring电商平台实现移动全渠道消费者覆盖，手机触屏商城�
 # 系统预览
 ![跨境电商预览.jpg](https://upload-images.jianshu.io/upload_images/28926578-c92f4a5fac5a8e26.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-# 试用体验
+# 体验地址
 
 | 系统 | APP下载 | H5 URL | PC URL|
 |--|--|--|--|
