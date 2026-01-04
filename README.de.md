@@ -31,6 +31,9 @@
 | Admin-Portal |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
 
+ ### Offizielle Website-Adresse
+[https://www.bizspring.cn](https://docs.bizspring.cn)
+
 
  ### Open-Source-Dokumentation
 [http://docs.bizspring.cn](http://docs.bizspring.cn)
@@ -190,6 +193,7 @@ https://docs.bizspring.cn
 
 
  # Kontakt
+- Offizielle Website-URL: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - E-Mail-Adresse des Vertriebs: 2069901076@qq.com
 - Vertriebsmitarbeiter A Zhen (WeChat): 16619915737
 - QQ-Gruppe für technischen Support: 576790917

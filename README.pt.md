@@ -30,6 +30,8 @@
 | Portal do comerciante | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | Portal do administrador |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+ ### Endereço do site oficial
+[https://www.bizspring.cn](https://docs.bizspring.cn)
 
 
  ### Documentação de código aberto
@@ -190,6 +192,7 @@ https://docs.bizspring.cn
 
 
  # Contacte-nos
+- URL do site oficial: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - E-mail de vendas: 2069901076@qq.com
 - Representante de vendas A Zhen (WeChat): 16619915737
 - Grupo QQ de suporte técnico: 576790917

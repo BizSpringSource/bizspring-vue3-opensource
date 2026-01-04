@@ -30,6 +30,8 @@
 | Nhà bán lẻ | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | Quản lý |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+ ### Địa chỉ trang web chính thức
+[https://www.bizspring.cn](https://docs.bizspring.cn)
 
 
  ### Tài liệu mã nguồn mở
@@ -190,6 +192,7 @@ https://docs.bizspring.cn
 
 
  # Liên hệ với chúng tôi
+- URL trang web chính thức: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - Email bán hàng: 2069901076@qq.com
 - WeChat bán hàng: 16619915737
 - QQ kỹ thuật trao đổi: 576790917

@@ -30,6 +30,9 @@
 | 販売者 | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | 管理 |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+ ### 公式サイトアドレス
+[https://www.bizspring.cn](https://docs.bizspring.cn)
+
 
 
 ### オープンソースドキュメント
@@ -190,6 +193,7 @@ https://docs.bizspring.cn
 
 
 # お問い合わせ
+- 公式サイトURL: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - 営業メール: 2069901076@qq.com
 - 営業担当 阿真 WeChat: 16619915737
 - QQ技術交流グループ: 576790917

@@ -30,6 +30,8 @@
 | Портал продавца | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | Портал администратора |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+ ### Адрес официального веб-сайта
+[https://www.bizspring.cn](https://docs.bizspring.cn)
 
 
  ### Документация по открытому исходному коду
@@ -190,6 +192,7 @@ https://docs.bizspring.cn
 
 
  # Свяжитесь с нами
+- URL официального веб-сайта: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - Электронная почта отдела продаж: 2069901076@qq.com
 - Торговый представитель A Zhen (WeChat): 16619915737
 - Группа технической поддержки QQ: 576790917

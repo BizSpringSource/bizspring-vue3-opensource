@@ -30,6 +30,8 @@
 | พอร์ทัลสำหรับผู้ค้า | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | พอร์ทัลสำหรับผู้ดูแลระบบ |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+ ### ที่อยู่เว็บไซต์อย่างเป็นทางการ
+[https://www.bizspring.cn](https://docs.bizspring.cn)
 
 
 ### เอกสารโอเพนซอร์ส
@@ -190,6 +192,7 @@ https://docs.bizspring.cn
 
 
 # ติดต่อเรา
+- URL เว็บไซต์อย่างเป็นทางการ: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - อีเมลฝ่ายขาย: 2069901076@qq.com
 - ตัวแทนฝ่ายขาย A Zhen (WeChat): 16619915737
 - กลุ่ม QQ ฝ่ายสนับสนุนทางเทคนิค: 576790917

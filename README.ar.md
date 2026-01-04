@@ -30,11 +30,12 @@
 | بوابة التاجر | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | بوابة الإدارة |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+ ### عنوان الموقع الرسمي
+[https://www.bizspring.cn](https://docs.bizspring.cn)
 
 
  ### وثائق مفتوحة المصدر
 [http://docs.bizspring.cn](http://docs.bizspring.cn)
-
 
 
  ### مستودعات مفتوحة المصدر
@@ -190,6 +191,7 @@ https://docs.bizspring.cn
 
 
  # اتصل بنا
+- عنوان الموقع الرسمي: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - البريد الإلكتروني للمبيعات: 2069901076@qq.com
 - مندوب المبيعات A Zhen (WeChat): 16619915737
 - مجموعة الدعم الفني QQ: 576790917

@@ -19,6 +19,9 @@
 | 商家 | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | 管理 |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+### 官網地址
+[https://www.bizspring.cn](https://docs.bizspring.cn)
+
 ### 開源文檔
 [http://docs.bizspring.cn](http://docs.bizspring.cn)
 
@@ -127,6 +130,7 @@ https://docs.bizspring.cn
 2. 更新修復：客戶發現影響使用的系統漏洞、缺陷、業務需求等，提交我方客服。我們定期更新修復、確保軟件的穩定性和安全性。
 
 # 聯系我們
+- 官網URL: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - 銷售郵箱: 2069901076@qq.com
 - 銷售阿真 微信: 16619915737
 - QQ技術交流群: 576790917

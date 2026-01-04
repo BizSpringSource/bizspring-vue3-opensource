@@ -30,6 +30,8 @@
 | ကုန်သည် Portal | https://cross-border.bizspring.cn/merchant.apk | https://cross-border.bizspring.cn/merchant/# | https://cross-border.bizspring.cn/biz/#|
 | အုပ်ချုပ်သူ Portal |  |  https://cross-border.bizspring.cn |https://cross-border.bizspring.cn |
 
+ ### တရားဝင် ဝက်ဘ်ဆိုဒ် လိပ်စာ
+[https://www.bizspring.cn](https://docs.bizspring.cn)
 
 
  ### ဖွင့်လှစ်အရင်းအမြစ် စာရွက်စာတမ်းများ
@@ -190,6 +192,7 @@ https://docs.bizspring.cn
 
 
  # ဆက်သွယ်ရန်
+- တရားဝင် ဝက်ဘ်ဆိုဒ် URL: [https://www.bizspring.cn](https://docs.bizspring.cn)
 - အရောင်း အီးမေးလ်: 2069901076@qq.com
 - အရောင်း ကိုယ်စားလှယ် A Zhen (WeChat): 16619915737
 - နည်းပညာဆိုင်ရာ ထောက်ပံ့ရေး QQ အဖွဲ့: 576790917
